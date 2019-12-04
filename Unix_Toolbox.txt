@@ -1,0 +1,22 @@
+_RACCOURCIS CLAVIER__________________________________________________
+
+Toutes les commandes se trouvent dans le dossier /bin.
+
+
+- ctrl + c :
+Arrêter un processus en cours dans ce même terminal
+
+- q :
+Quitter une interface (comme "more", "man" ou "vim")
+
+- option + maj + L :
+pipe. uniquement sur clavier Apple (à droite du clavier)
+
+- option + maj + N :
+tilde. uniquement sur clavier Apple (à droite du clavier)
+
+
+
+
+_UTILISATEUR & SESSION_______________________________________________
+
