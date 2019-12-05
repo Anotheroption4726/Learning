@@ -1,16 +1,20 @@
 _RACCOURCIS CLAVIER__________________________________________________
 
+
 Toutes les commandes se trouvent dans le dossier /bin.
 
 
 - ctrl + c :
 Arrêter un processus en cours dans ce même terminal
 
+
 - q :
 Quitter une interface (comme "more", "man" ou "vim")
 
+
 - option + maj + L :
 pipe. uniquement sur clavier Apple (à droite du clavier)
+
 
 - option + maj + N :
 tilde. uniquement sur clavier Apple (à droite du clavier)
@@ -20,3 +24,80 @@ tilde. uniquement sur clavier Apple (à droite du clavier)
 
 _UTILISATEUR & SESSION_______________________________________________
 
+
+- whoami :
+Affiche le nom d'utilisateur de la session courante
+
+
+- id NomUtilisateur :
+Affiche les informations spécifiques à l'utilisateur "NomUtilisateur".
+
+
+
+
+_NAVIGATION__________________________________________________________
+
+
+- pwd :
+Affiche le nom et le chemin du dossier courant dans lequel l'utilisateur se trouve
+
+
+- ls :
+Énumérer (lister) les fichiers «ordinaires» (ne commençant pas par ".") dans le répertoire courant
+
+
+- ls -l :
+Comme "ls" mais affiche aussi des informations supplémentaires comme les droits
+
+
+- ls -la :
+Comme "ls" mais affiche aussi les fichiers cachés
+
+
+- ls s* :
+Affiche tous les fichiers (et dossiers...?) dont le nom commence par la lettre "s"
+
+
+- ls .h :
+Affiche tous les fichiers (et dossiers...?) dont le nom se termine par la lettre "h"
+
+
+- cd / :
+Déplace l'utilisateur/session à l'origine du disque
+
+
+- cd nomDuDossier :
+Déplace l'utilisateur dans le dossier "nomDuDossier" (si ce dernier se trouve dans le répertoire courant)
+
+
+- cd /home/NomUtilisateur/nomDuDossier :
+Déplace l'utilisateur/session dans le repertoire "nomDuDossier"
+
+
+- cd .. :
+Revenir un répertoire en arrière dans l'arborescence de dossiers
+
+
+- cd ~ :
+Permet de revenir directement au répertoire /home/NomUtilisateur
+
+
+
+
+_COMPILATION EN C____________________________________________________
+
+
+- gcc nomDuProgramme.c :
+Compile un fichier en ".c". Le nouveau programme obtenu s'appelle "a.out"
+
+
+- gcc nomDuProgramme.c -o nomDuProgramme :
+Compile un fichier en ".c". Le nouveau programme obtenu s'appelle "nomDuProgramme"
+
+
+- make nomDuProgramme :
+Compilation intelligente. Attribue automatiquement le nom au nouveau programme en fonction du nom de fichier reconnu
+
+
+- ./nomDuProgramme :
+Execute "nomDuProgramme" dans le terminal (si ce dernier se trouve dans le répertoire courant)
