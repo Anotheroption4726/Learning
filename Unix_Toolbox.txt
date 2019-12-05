@@ -43,7 +43,11 @@ Affiche le nom et le chemin du dossier courant dans lequel l'utilisateur se trou
 
 
 - ls :
-Énumérer (lister) les fichiers «ordinaires» (ne commençant pas par ".") dans le répertoire courant
+Énumérer (lister) les fichiers "ordinaires" (ne commençant pas par ".") dans le répertoire courant
+
+
+- ls nomDuDossier :
+Énumérer (lister) les fichiers situés dans le répertoire "nomDuDossier"
 
 
 - ls -l :
@@ -62,10 +66,6 @@ Affiche tous les fichiers (et dossiers...?) dont le nom commence par la lettre "
 Affiche tous les fichiers (et dossiers...?) dont le nom se termine par la lettre "h"
 
 
-- cd / :
-Déplace l'utilisateur/session à l'origine du disque
-
-
 - cd nomDuDossier :
 Déplace l'utilisateur dans le dossier "nomDuDossier" (si ce dernier se trouve dans le répertoire courant)
 
@@ -79,7 +79,76 @@ Revenir un répertoire en arrière dans l'arborescence de dossiers
 
 
 - cd ~ :
-Permet de revenir directement au répertoire /home/NomUtilisateur
+Permet de revenir directement au répertoire "/home/NomUtilisateur"
+
+
+- cd / :
+Déplace l'utilisateur/session à l'origine du disque
+
+
+
+
+_MANIPULATION DE DOSSIERS & FICHIERS_________________________________
+
+
+- mkdir nomDuDossier :
+Crée un dossier nommé "nomDuDossier" dans le répertoire courant
+
+
+- mkdir nomDuDossier1 nomDuDossier2 :
+Crée deux dossiers nommés "nomDuDossier1" et "nomDuDossier2" dans le répertoire courant
+
+
+- touch nomDuFichier :
+Crée un fichier portant le nom "nomDuFichier"
+
+
+- touch nomDuFichier.txt :
+Crée un fichier portant le nom spécifié avec l'extention ".txt"
+
+
+- mv nomDuFichier nomDuDossier :
+Change l'emplacement/déplace le fichier "nomDuFichier" (initialement situé dans le dossier courant) dans le dossier "nomDuDossier" (lui aussi situé dans le dossier courant)
+
+
+- mv ~/Documents/nomDuFichier nomDuDossier :
+Déplace le fichier depuis un dossier spécifié par son chemin vers un autre dossier situé dans le répertoire courant
+
+
+- mv ~/Documents/nomDuFichier ~/Documents/nomDuDossier :
+Déplace le fichier depuis un dossier spécifié par son chemin vers un autre dossier lui aussi spécifié par son chemin
+
+
+- mv nomDuFichierOld nomDuFichierNew :
+Renomme le fichier "nomDuFichierOld" en "nomDuFichierNew"
+
+
+- cp nomDuFichier nomDuFichierCopie :
+Fait une copie du fichier spécifié dans le dossier courant
+
+
+- cp nomDuFichier nomDuDossier :
+Fait une copie du fichier spécifié et le place dans le dossier "nomDuDossier" (situé dans le répertoire courant)
+
+
+- cp  Documents/nomDuFichier nomDuDossier :
+Fait une copie du fichier spécifié par son chemin et le place dans le dossier "nomDuDossier" (situé dans le répertoire courant)
+
+
+- cp /usr/include/s*.h :
+Copie tous les fichiers situés dans le dossier courant commençant par "s" et se terminant par "h" dans le dossier /usr/include.
+
+
+- rm nomDuFichier :
+Supprime le fichier spécifié. Ne pas oublier de rajouter l'extention à la fin du nom si jamais le fichier en a une
+
+
+- rm -r nomDuDossier :
+Supprime le dossier spécifié ainsi que tous les fichiers situés à l'intérieur
+
+
+- rmdir nomDuDossier :
+Supprime le dossier "nomDuDossier" (uniquement si celui-ci ne possède pas de contenu)
 
 
 
