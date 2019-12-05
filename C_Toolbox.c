@@ -11,6 +11,8 @@ int main(void)
 }
 
 
+
+
 /*
 /*
 /*_VARIABLES_______________________________________________________*/
@@ -23,7 +25,7 @@ int nombreEntier = 10;
 /*  taille: 4 octets/bytes
 	exemples: 16(decimal), 020(octal), 0x10(hexadecimal)  */
 
-float nombre = 2.5f;
+float nombreRationnel = 2.5f;
 /*  taille: 4 octets/bytes
 	exemples: 0.00225, 2.25e-3  */
 
@@ -65,6 +67,8 @@ double nombreDouble = 2.0745;
 */
 
 
+
+
 /*
 /*
 /*_TAILLE DE TYPE/OPERATEUR________________________________________*/
@@ -82,6 +86,8 @@ double d = 10.21;
 printf("%lu", sizeof(a + d));	/*Affiche 8*/
 
 
+
+
 /*
 /*
 /*_TYPE CASTING____________________________________________________*/
@@ -92,3 +98,74 @@ f = (float) i;	/*assigned 10.0 to f*/
 
 f = 3.14;
 i = (int) f;	/*assigned 3 to i. doesn't round the number*/
+
+
+
+
+/*
+/*
+/*_INPUT/OUTPUT____________________________________________________*/
+
+/*
+
+Symboles/Spécificateurs de format :
+
+
+*NOMBRES ENTIERS
+
+- %d ou %i : entier relatif (type int)
+
+- %u : entier naturel, unsigned (type int)
+
+- %o : entier exprimé en octal (type int)
+
+- %x : entier exprimé en hexadécimal (type int)
+
+
+*NOMBRES RATIONNELS
+
+- %f : rationnel en notation décimale (type double)
+
+- %e : rationnel en notation scientifique (type double)
+
+
+*CARACTERES
+
+- %c : caractère (type int)
+
+- %s : chaîne de caractères (type char*)
+
+*/
+
+
+printf("Hello World!\n");	/*Affiche "Hello World!" puis saute une ligne*/
+
+
+int entier = 4;
+printf("%d", entier);		/*Affiche 4 sans aller à la ligne*/
+
+char caractere = 'A';
+printf("%c\n", caractere);	/*Affiche "A" puis saute une ligne*/
+
+int entier_1 = 10;
+printf("%d\n", entier_1);	/*Affiche 10 puis saute une ligne*/
+
+int entier_2 = 12;
+printf("%i\n", entier_2);	/*Affiche 12 puis saute une ligne*/
+
+
+long nombreLong = 1500000;
+printf("%ld, %lx", nombreLong, nombreLong); /*Affiche 1500000 et 16e360 sans aller à la ligne*/
+
+
+float nombreRationnel = 12.1234;
+double nombreDouble = 12.123456789;
+long double nombreDoubleLong = 15.5;
+
+printf("%f", nombreRationnel);		/*Affiche 12.123400 sans aller à la ligne*/
+printf("%f", nombreDouble);			/*Affiche 12.123457 sans aller à la ligne*/
+printf("%e", nombreRationnel);		/*Affiche 1.212340e+01 sans aller à la ligne*/
+printf("%e", nombreDouble);			/*Affiche 1.212346e+01 sans aller à la ligne*/
+printf("%Le", nombreDoubleLong);	/*Affiche 1.550000e+01 sans aller à la ligne*/
+
+/*Pour pouvoir traiter correctement les arguments du type long double, il faut utiliser les spécificateurs %Lf et %Le.*/
