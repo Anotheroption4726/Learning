@@ -138,20 +138,33 @@ Symboles/Spécificateurs de format :
 */
 
 
+printf("%", );
+scanf("%", &);
+
 printf("Hello World!\n");	/*Affiche "Hello World!" puis saute une ligne*/
 
 
-int entier = 4;
-printf("%d", entier);		/*Affiche 4 sans aller à la ligne*/
+int entier;
+printf("%d", entier);		/*Affiche 0 sans aller à la ligne*/
 
 char caractere = 'A';
 printf("%c\n", caractere);	/*Affiche "A" puis saute une ligne*/
 
 int entier_1 = 10;
-printf("%d\n", entier_1);	/*Affiche 10 puis saute une ligne*/
-
 int entier_2 = 12;
-printf("%i\n", entier_2);	/*Affiche 12 puis saute une ligne*/
+
+printf("%d\n%d\n", entier_1, entier_2);	/*Affiche 10 puis saute une ligne. Affiche 12 puis saute une ligne*/
+
+
+char caractere = 'C';
+int entier = 8;
+printf("Le caractère selectionné est %c\n", 'B');			/*Affiche "Le caractère selectionné est B" puis saute une ligne*/
+printf("Caractère: %c\nEntier: %d\n", caractere, entier);
+/*Affiche:
+	Le caractère selectionné est B
+	Caractère: C
+	Entier: 8
+*/
 
 
 long nombreLong = 1500000;
@@ -169,3 +182,12 @@ printf("%e", nombreDouble);			/*Affiche 1.212346e+01 sans aller à la ligne*/
 printf("%Le", nombreDoubleLong);	/*Affiche 1.550000e+01 sans aller à la ligne*/
 
 /*Pour pouvoir traiter correctement les arguments du type long double, il faut utiliser les spécificateurs %Lf et %Le.*/
+
+
+int entier;
+char caractere;
+
+scanf("%d", &entier);					/*Récupère un input clavier en int et l'insère dans la variable "entier"*/
+scanf("%c %d", &caractere, &entier);	/*Récupère deux inputs clavier, le premier en char et le deuxième en int. On les insère dans leurs variables respectives*/
+
+printf("Inputs selectionnés: %c%d.\n", caractere, entier);	/*Affiche les valeurs récupérées dans la console*/
