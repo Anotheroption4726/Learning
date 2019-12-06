@@ -192,3 +192,186 @@ scanf("%d", &entier);					/*Récupère un input clavier en int et l'insère dans
 scanf("%c %d", &caractere, &entier);	/*Récupère deux inputs clavier, le premier en char et le deuxième en int. On les insère dans leurs variables respectives*/
 
 printf("Inputs selectionnés: %c%d.\n", caractere, entier);	/*Affiche les valeurs récupérées dans la console*/
+
+
+
+
+/*
+/*
+/*_OPERATORS_______________________________________________________*/
+
+/*
+
+*ARITHMETIC
+
+	- + : addition
+
+	- - : substraction
+
+	- / : division
+
+	- * : multiplication
+    
+    - % : modulo
+    
+    - -- : decrement (post and pre)
+    
+    - ++ : increment (post and pre)
+
+
+*ASSIGNMENT
+
+These all perform an arithmetic operation on the value and assign the result to the value:
+
+   counter = counter + 1; 
+
+can be reduced to:
+
+	counter += 1;           
+
+    - = : equals
+    
+    - *= : multiply
+    
+    - /= : divide
+    
+    - %= : modulus
+    
+    - += : add
+    
+    - -= : subtract
+    
+    - <<= : left shift
+    
+    - >>= : right shift
+    
+    - &= : bitwise AND
+    
+    - ^= : bitwise exclusive OR (XOR)
+    
+    - |= : bitwise inclusive OR
+
+
+*LOGICAL/RELATIONAL
+
+    - == : equal to
+    
+    - != : not equal to
+    
+    - > : greater than
+     
+    - < : less than
+    
+    - >= : greater than or equal to
+    
+    - <= : less than or equal to
+    
+    - && : logical AND
+    
+    - || : logical OR
+    
+    - ! :ogical NOT
+
+
+*BITWISE
+    
+    - & : AND (Binary operator)
+    
+    - | : inclusive OR
+    
+    - ^ : exclusive OR
+    
+    - << : shift left
+
+    - >> : shift right
+    
+    - ~ : one's complement
+
+
+*OTHER
+
+    - sizeof() : size of objects and data types. "strlen()" may also be of interest.
+    
+    - & : Address of (Unary operator)
+        
+    - * : pointer (Unary operator)
+    
+    - ? : conditional expressions
+    
+    - : : conditional expressions
+    
+    - , : Series operator
+
+
+*PRECEDENCES
+
+- Precedence 1 : () [] -> .
+	use: pointers, separators
+	associativity: left to right
+
+- Precedence 2 : ! ~ ++ -- + - * & (type) sizeof
+	use: unary operations
+	associativity: right to left
+
+- Precedence 3 : * / %
+	use: binary operations
+	associativity: left to right
+
+- Precedence 4 : + -
+	use: binary operations
+	associativity: left to right
+
+- Precedence 5 : << >>
+	use: bit-shift
+	associativity: left to right
+
+- Precedence 6 : < <= > >=
+	use: logical comparison
+	associativity: left to right
+
+- Precedence 7 : != ==
+	use: logical comparison
+	associativity: left to right
+
+- Precedence 8 : &
+	use: bitwise mask
+	associativity: left to right
+
+- Precedence 9 : ^
+	use: bitwise mask
+	associativity: left to right
+
+- Precedence 10 : |
+	use: bitwise mask
+	associativity: left to right
+
+- Precedence 11 : &&
+	use: logical AND
+	associativity: left to right
+
+- Precedence 12 : ||
+	use: logical OR
+	associativity: left to right
+
+- Precedence 13 : ?:
+	use: if/else
+	associativity: right to left
+
+- Precedence 14 : += -= *= /= %= &= ^= |= <<= >>= =
+	use: compact operators
+	associativity: right to left
+
+- Precedence 15 : .
+	use: separator
+	associativity: left to right
+
+
+A variable (in logical sense) is either TRUE or FALSE. Variable is FALSE if it is zero. Variable is TRUE if it is non-zero.
+
+	int x = 7;				TRUE
+	double z = 0.0001;		TRUE
+	char abc = 0x00;		FALSE
+	char x = 'a';			TRUE
+	float b = 0.0;			FALSE
+	
+*/
