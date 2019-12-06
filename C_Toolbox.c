@@ -179,6 +179,7 @@ printf("%f", nombreRationnel);		/*Affiche 12.123400 sans aller à la ligne*/
 printf("%f", nombreDouble);			/*Affiche 12.123457 sans aller à la ligne*/
 printf("%e", nombreRationnel);		/*Affiche 1.212340e+01 sans aller à la ligne*/
 printf("%e", nombreDouble);			/*Affiche 1.212346e+01 sans aller à la ligne*/
+printf("%lf\n", (unsigned long)sizeof(nombreDouble));
 printf("%Le", nombreDoubleLong);	/*Affiche 1.550000e+01 sans aller à la ligne*/
 
 /*Pour pouvoir traiter correctement les arguments du type long double, il faut utiliser les spécificateurs %Lf et %Le.*/
