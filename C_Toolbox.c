@@ -19,19 +19,29 @@ int main(void)
 
 char lettre = 'A';
 /*  taille: 1 octet/byte
-	exemples: 'a', 'b', 'c', '2'  */
+	exemples: 'a', 'b', 'c', '2'
+	min : -128
+	max : 127
+	unsigned max : 255
+*/
 
 int nombreEntier = 10;
 /*  taille: 4 octets/bytes
-	exemples: 16(decimal), 020(octal), 0x10(hexadecimal)  */
+	exemples: 16(decimal), 020(octal), 0x10(hexadecimal)
+	min : -2147483648
+	max : 2147483647
+	unsigned max : 4294967295
+*/
 
 float nombreRationnel = 2.5f;
 /*  taille: 4 octets/bytes
-	exemples: 0.00225, 2.25e-3  */
+	exemples: 0.00225, 2.25e-3
+*/
 
 double nombreDouble = 2.0745;
 /*  taille: 8 octets/bytes
-	tout float est considéré comme étant un double par le compilateur si l'on ne rajoute pas de "f" après sa valeur  */
+	tout float est considéré comme étant un double par le compilateur si l'on ne rajoute pas de "f" après sa valeur
+*/
 
 /*
 	-long, long long: increases memory size of variable. can be used with int, double
@@ -373,5 +383,12 @@ A variable (in logical sense) is either TRUE or FALSE. Variable is FALSE if it i
 	char abc = 0x00;		FALSE
 	char x = 'a';			TRUE
 	float b = 0.0;			FALSE
-	
+
 */
+
+
+
+
+/*
+/*
+/*_LOOPING AND BRANCHING______________________________________________*/
