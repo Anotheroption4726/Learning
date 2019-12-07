@@ -8,6 +8,14 @@ Toutes les commandes se trouvent dans le dossier /bin.
 Arrêter un processus en cours dans ce même terminal
 
 
+- ctrl + d :
+Envoyer l'entrée en attente à l'application. Si aucune saisie n'a été faite, la valeur envoyée est alors égale à 0
+
+
+- ctrl + z :
+Suspendre un processus en cours
+
+
 - q :
 Quitter une interface (comme "more", "man" ou "vim")
 

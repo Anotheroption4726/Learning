@@ -392,3 +392,31 @@ A variable (in logical sense) is either TRUE or FALSE. Variable is FALSE if it i
 /*
 /*
 /*_LOOPING AND BRANCHING______________________________________________*/
+
+
+int i;
+
+for (i = 10; i >= 0; i--)
+{
+	print("%d\n", i);
+}
+
+
+int cnt 10;
+
+while (cnt >= 0)
+{
+	print("%d\n", cnt);
+	cnt--;
+}
+
+do
+{
+	print("%d\n", cnt--);
+} while (cnt >= 0);
+
+
+/*
+break; can be used to break out of a loop
+continue; is used to bypass the rest of the loop and begin the next iteration
+*/
