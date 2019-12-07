@@ -114,6 +114,25 @@ i = (int) f;	/*assigned 3 to i. doesn't round the number*/
 
 /*
 /*
+/*_ARRAYS__________________________________________________________*/
+
+int values[100];
+char name[25];
+
+int values[4] = {0, 1, 2, 3};						//Array size 4. Index from 0 to 3
+char greeting[5] = {'h', 'e', 'l', 'l', 'o'};		//Array size 5. Index from 0 to 4
+char name[] = {'f', 'r', 'e', 'd'};					//Array size 4. Index from 0 to 3
+int bigarray[] = {[0] = 1, [1] = 10, [999] = 0};	//Array size 1000. Index from 0 to 999
+
+int values[2][2];
+int values[2][2] = {{0,1},{1,0}};
+int values[2][2] = {0,1,1,0};
+
+
+
+
+/*
+/*
 /*_INPUT/OUTPUT____________________________________________________*/
 
 /*
