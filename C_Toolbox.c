@@ -92,25 +92,6 @@ double nombreDouble = 2.0745;
 
 /*
 /*
-/*_TAILLE DE TYPE/OPERATEUR________________________________________*/
-
-sizeof(nomDeVariable)	/*Récupère la taille mémoire (en bytes) de la variable nomDeVariable*/
-
-printf("%lu\n", sizeof(char));	/*Affiche 1*/
-printf("%lu\n", sizeof(int));	/*Affiche 4*/
-printf("%lu\n", sizeof(float));	/*Affiche 4*/
-printf("%lu", sizeof(double));	/*Affiche 8*/
-
-/*When sizeof() is used with an expression, it returns the size of the expression:*/
-int a = 0; 
-double d = 10.21; 
-printf("%lu", sizeof(a + d));	/*Affiche 8*/
-
-
-
-
-/*
-/*
 /*_TYPE CASTING____________________________________________________*/
 
 float f;
@@ -149,6 +130,8 @@ int values[2][2] = {0,1,1,0};
 /*
 
 Symboles/Spécificateurs de format :
+
+- %p : addresse pointeur (en hexadécimal)
 
 
 *NOMBRES ENTIERS
@@ -190,6 +173,7 @@ printf("%d", entier);		/*Affiche 0 sans aller à la ligne*/
 char caractere = 'A';
 printf("%c\n", caractere);	/*Affiche "A" puis saute une ligne*/
 
+
 int entier_1 = 10;
 int entier_2 = 12;
 
@@ -207,8 +191,12 @@ printf("Caractère: %c\nEntier: %d\n", caractere, entier);
 */
 
 
+int nombreHexadecimal = 10;
+printf("%x\n", nombreHexadecimal);				//Affiche "a" car "10" en héxadécimal équivaut à "a" ou "000A"
+
+
 long nombreLong = 1500000;
-printf("%ld, %lx", nombreLong, nombreLong); /*Affiche 1500000 et 16e360 sans aller à la ligne*/
+printf("%ld, %lx", nombreLong, nombreLong); 	/*Affiche 1500000 et 16e360 sans aller à la ligne*/
 
 
 float nombreRationnel = 12.1234;
@@ -232,6 +220,104 @@ scanf("%d", &entier);					/*Récupère un input clavier en int et l'insère dans
 scanf("%c %d", &caractere, &entier);	/*Récupère deux inputs clavier, le premier en char et le deuxième en int. On les insère dans leurs variables respectives*/
 
 printf("Inputs selectionnés: %c%d.\n", caractere, entier);	/*Affiche les valeurs récupérées dans la console*/
+
+
+
+
+/*
+/*
+/*_TAILLE DE TYPE/OPERATEUR________________________________________*/
+
+sizeof(nomDeVariable)	/*Récupère la taille mémoire (en bytes) de la variable nomDeVariable*/
+
+printf("%lu\n", sizeof(char));	/*Affiche 1*/
+printf("%lu\n", sizeof(int));	/*Affiche 4*/
+printf("%lu\n", sizeof(float));	/*Affiche 4*/
+printf("%lu", sizeof(double));	/*Affiche 8*/
+
+/*When sizeof() is used with an expression, it returns the size of the expression:*/
+int a = 0; 
+double d = 10.21; 
+printf("%lu", sizeof(a + d));	/*Affiche 8*/
+
+
+
+
+/*
+/*
+/*_POINTERS________________________________________________________*/
+
+int* nombreEntier;
+int *nombreEntier_1;
+int * nombreEntier_2;
+int* nombreEntier_1, nombreEntier_2;
+
+
+int nombreEntier;
+int* p_nombreEntier;
+p_nombreEntier = &nombreEntier;
+
+
+int* p_nombreEntier, nombreEntier;
+nombreEntier = 5;
+p_nombreEntier = &nombreEntier;
+
+
+int nombreEntier = 8;
+printf("Address of variable nombreEntier: %d\n", &nombreEntier);
+//On remarquera que les valeurs changent à chaque fois que l'on relance le programme car l'adresse est différente pour chaque 
+//itération.
+
+//!!! ATTENTION!!! Utiliser un %d est fortement déconseillé pour manipuler une addresse mémoire.
+//On ne peut pas trop prédire ce qui va en sortir (résultat négatif par exemple).
+
+
+int nombreEntier;
+printf("Address of variable nombreEntier: %p\n", &nombreEntier);		//Affiche l'addresse mémoire de la variable nombreEntier
+
+
+int nombreEntier;
+int* p_nombreEntier = &nombreEntier;
+printf("Address of variable nombreEntier: %p\n", p_nombreEntier);		//Affiche l'addresse mémoire de la variable nombreEntier
+
+
+int* p_nombreEntier, nombreEntier;
+nombreEntier = 3;
+p_nombreEntier = &nombreEntier;
+printf("%d\n", nombreEntier);											//Affiche "3"
+printf("Address of variable nombreEntier: %p\n", p_nombreEntier);		//Affiche l'addresse mémoire de la variable nombreEntier
+
+
+int* p_nombreEntier, nombreEntier;
+nombreEntier = 6;
+p_nombreEntier = &nombreEntier;
+printf("%d\n", *p_nombreEntier);										// Affiche "6"
+
+//Here, the address of "nombreEntier" is assigned to the "p_nombreEntier" pointer. To get the value stored in that address, we used "*p_nombreEntier".
+//Note: In the above example, "p_nombreEntier" is a pointer, not "*p_nombreEntier". You cannot and should not do something like *p_nombreEntier = &nombreEntier;
+//By the way, * is called the dereference operator (when working with pointers). It operates on a pointer and gives the value stored in that pointer.
+
+
+int* p_nombreEntier, nombreEntier;
+nombreEntier = 7;
+p_nombreEntier = &nombreEntier;
+*p_nombreEntier = 1;
+printf("%d\n", *p_nombreEntier);										// Affiche "1"
+printf("%d\n", nombreEntier);											// Affiche "1"
+
+
+
+
+int nombreEntier = 10;
+int* p_nombreEntier = &nombreEntier; 
+printf("Address of variable nombreEntier: %p\n", (void *)&nombreEntier);	//Affiche l'addresse mémoire de la variable nombreEntier
+printf("Address of variable nombreEntier: %lu\n", p_nombreEntier);			//Affiche l'addresse mémoire de la variable nombreEntier sous forme long unsigned (non recommandé)
+
+//void * est un pointeur sur un type non définit. Ce type de pointeur est utilisé, lorsque le type de pointeur qui lui affecté change suivant les 
+//situations. On peut réutiliser les données se trouvant à l'adresse pointée par ce type de pointeur, en faisant un casting.
+
+//Une addresse mémoire peut s'afficher en valeur int (ou autre). En fonction du compilateur, le format spécifié sera donc lu mais affichera un 
+//message d'alerte lors de la compilation
 
 
 
@@ -423,7 +509,6 @@ A variable (in logical sense) is either TRUE or FALSE. Variable is FALSE if it i
 /*
 /*_LOOPING AND BRANCHING______________________________________________*/
 
-
 int i;
 
 for (i = 10; i >= 0; i--)
@@ -450,3 +535,35 @@ do
 break; can be used to break out of a loop
 continue; is used to bypass the rest of the loop and begin the next iteration
 */
+
+
+
+
+/*
+/*
+/*_READING/WRITTING FILES__________________________________________*/
+
+int nombreEntier;
+FILE *filePointer_read;
+FILE *filePointer_write;
+
+filePointer_read = fopen("fileToRead.txt", "r");
+filePointer_write = fopen("fileToWrite.txt", "w");
+
+if(filePointer_read == NULL)
+{
+	printf("Could not open file.\n");
+	return(0);
+}
+
+if(filePointer_write == NULL)
+{
+	printf("Could not open output.txt for writting.\n");
+	return(0);
+}
+
+fscanf(filePointer_read, "%d", &nombreEntier);						//lis la première information de type int située dans le fichier et l'insère dans la variable "nombreEntier"
+fprintf(filePointer_write, "nombreEntier is: %d\n", nombreEntier);	//Insertion de l'information dans un autre fichier
+
+fclose(filePointer_read);
+fclose(filePointer_write);
