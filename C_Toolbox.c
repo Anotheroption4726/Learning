@@ -1,5 +1,7 @@
 #include <stdio.h>
-//«Standard Input/Output Header» ou «En-tête Standard d'Entrée/Sortie», est l'en-tête de la bibliothèque standard du C déclarant les macros, les constantes et les définitions de fonctions utilisées dans les opérations d'entrée/sortie.
+//	«Standard Input/Output Header» ou «En-tête Standard d'Entrée/Sortie», est l'en-tête de la bibliothèque 
+//	standard du C déclarant les macros, les constantes et les définitions de fonctions utilisées dans les 
+//	opérations d'entrée/sortie.
 
 #define MAX 10
 //Constante?
