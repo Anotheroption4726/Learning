@@ -306,6 +306,12 @@ printf("%d\n", *p_nombreEntier);										// Affiche "1"
 printf("%d\n", nombreEntier);											// Affiche "1"
 
 
+int* p_nombreEntier, nombreEntier;
+nombreEntier = 7;
+p_nombreEntier = &nombreEntier;
+p_nombreEntier = 1;														//Programme ne marche pas: Segmentation fault (core dumped)
+printf("%d\n", *p_nombreEntier);
+printf("%d\n", nombreEntier);
 
 
 int nombreEntier = 10;
