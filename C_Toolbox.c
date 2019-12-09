@@ -326,6 +326,23 @@ printf("Address of variable nombreEntier: %lu\n", p_nombreEntier);			//Affiche l
 //message d'alerte lors de la compilation
 
 
+//*ERREURS FREQUENTES
+
+int c, *pc;
+
+// pc is address but c is not
+pc = c;	// Error
+
+// both &c and pc are addresses
+pc = &c;
+
+// &c is address but *pc is not
+*pc = &c; // Error
+
+// both c and *pc are values 
+*pc = c;
+
+
 
 
 /*
@@ -547,14 +564,53 @@ continue; is used to bypass the rest of the loop and begin the next iteration
 
 /*
 /*
+/*_FUNCTIONS_______________________________________________________*/
+
+// FUNCTIONS MUST BE DECLARED PRIOR TO USAGE
+
+int factorial(int n)
+{
+	int retval = 1;
+	while(n != 1)
+	{
+		retval *= n--;
+	}
+	return retval;
+}
+
+int main(void)
+{
+	printf("%d\n", factorial(5));
+}
+
+
+void printHello(char* name)
+{
+	return;			//Une fonction void ne retourne rien mais mais il est quand meme conseillé d'utiliser le mot-clé "return;"
+}
+
+printGoodbye(char* name)
+{
+	return (1);		//Une fonction sans type spécifé est considérée comme retournant un int par défaut
+}
+
+
+
+
+/*
+/*
 /*_READING/WRITTING FILES__________________________________________*/
+
+//*READING
+
+fscanf();	//similar to scanf, except this time input comes from file and not keyboard
+fgetc();	//reads text file one character at a time
+fgets();	//reads text file one line at a time
+
 
 int nombreEntier;
 FILE *filePointer_read;
-FILE *filePointer_write;
-
 filePointer_read = fopen("fileToRead.txt", "r");
-filePointer_write = fopen("fileToWrite.txt", "w");
 
 if(filePointer_read == NULL)
 {
@@ -562,14 +618,36 @@ if(filePointer_read == NULL)
 	return(0);
 }
 
+fscanf(filePointer_read, "%d", &nombreEntier);						//Lecture de l'information depuis un fichier
+fclose(filePointer_read);
+
+
+//*WRITTING
+
+fprintf();	////similar to printf, except this time output goes into file
+fputc();	//write to text file one character at a time
+fputs();	//write to text file one line at a time
+
+
+int nombreEntier;
+FILE *filePointer_write;
+filePointer_write = fopen("fileToWrite.txt", "w");
+
 if(filePointer_write == NULL)
 {
 	printf("Could not open output.txt for writting.\n");
 	return(0);
 }
 
-fscanf(filePointer_read, "%d", &nombreEntier);						//lis la première information de type int située dans le fichier et l'insère dans la variable "nombreEntier"
 fprintf(filePointer_write, "nombreEntier is: %d\n", nombreEntier);	//Insertion de l'information dans un autre fichier
-
-fclose(filePointer_read);
 fclose(filePointer_write);
+
+
+//*ERRORS
+
+#include <errno.h>
+
+//errno : globally defined external integer that is set to the last error code
+
+ferror();	//returns errno for file ops.
+perror();	//handy output function for printing textual description of error
