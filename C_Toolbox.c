@@ -3,6 +3,8 @@
 //	standard du C déclarant les macros, les constantes et les définitions de fonctions utilisées dans les 
 //	opérations d'entrée/sortie.
 
+#include<string.h>
+
 #define MAX 10
 //Constante?
 
@@ -566,7 +568,16 @@ continue; is used to bypass the rest of the loop and begin the next iteration
 /*
 /*_FUNCTIONS_______________________________________________________*/
 
-// FUNCTIONS MUST BE DECLARED PRIOR TO USAGE
+// FUNCTIONS MUST BE DECLARED PRIOR TO USAGE (main() should be at the end of your file)
+// If you still need to use a function before declaring it, you should still state her name, arguments and return type at the top of your
+//code:
+
+int nomDeFonction(int entierLocal);
+//Ici, même si l'on a pas encore écrit la fonction, on a au moins déclaré le type qu'elle retourne, son nom et ses arguments. Le compilateur
+//n'affichera alors pas de message d'alerte.
+
+
+
 
 int factorial(int n)
 {
@@ -584,15 +595,95 @@ int main(void)
 }
 
 
-void printHello(char* name)
+
+
+#include<string.h>
+
+void nomDeFonction_1(char* name)
 {
 	return;			//Une fonction void ne retourne rien mais mais il est quand meme conseillé d'utiliser le mot-clé "return;"
 }
 
-printGoodbye(char* name)
+nomDeFonction_2(char* name)
 {
 	return (1);		//Une fonction sans type spécifé est considérée comme retournant un int par défaut
 }
+
+
+
+
+void localVariable(int i)
+{
+	printf("%p\n", &i);
+	return;
+}
+
+int main(void)
+{
+	auto int i;
+	localVariable(i);
+	printf("%p\n", &i);
+	return 0;
+}
+
+//Même si elles portent le même nom, les adresses de chaque "i" ici sont différentes. Il ne s'agit pas des mêmes variables et elles n'ont pas la même portée.
+//In computer programming, an automatic variable is a local variable which is allocated and deallocated automatically when program flow enters and 
+//leaves the variable's scope.
+//Le mot clé "auto" n'est pas obligatoire (les variables sont considérées comme étant "auto" par le compilateur si jamais on ne spécifie rien)
+
+
+
+
+void fonctionArray(int localEntierArray[]) 
+{
+	printf("%p\n", &localEntierArray[0]);
+  	return; 
+} 
+   
+int main() 
+{ 
+	int entierArray[] = {0, 1, 2, 3};
+	fonctionArray(entierArray);
+  	printf("%p\n", &entierArray[0]);
+  	return 0; 
+}
+
+//contrairement à l'exemple précédent, les deux addresses affichées ci-dessus sont les mêmes (alors que les variables auxquelles elles sont associées ne font pas 
+//partie du même contexte). Cela est dû au fait que les Arrays sont envoyés à travers leurs références dans les fonctions et non à travers des copies mémoire
+
+
+
+
+//*STATIC VARIABLES
+
+int countingStatic() 
+{
+	static int count = 0;
+  	count++; 
+  	return count; 
+} 
+   
+int main() 
+{ 
+  	printf("%d\n", countingStatic());		//Affiche "1"
+  	printf("%d\n", countingStatic());		//Affiche "2"
+  	printf("%d\n", countingStatic());		//Affiche "3"
+  	return 0; 
+}
+
+//Une variable "static" garde sa valeur même une fois sortie du contexte de la fonction dans laquelle elle a été déclarée.
+
+
+int main() 
+{ 
+    static int x; 
+    int y; 
+    printf("%d\n", x);						//Affiche "0"
+    printf("%d\n", y);						//Affiche n'importe quoi
+}
+
+//Static variables (like global variables) are initialized as 0 if not initialized explicitly. For example in the above program, 
+//value of x is printed as 0, while value of y is something garbage.
 
 
 
