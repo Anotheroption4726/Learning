@@ -742,3 +742,36 @@ fclose(filePointer_write);
 
 ferror();	//returns errno for file ops.
 perror();	//handy output function for printing textual description of error
+
+
+
+
+/*
+/*
+/*_STRINGS_________________________________________________________*/
+
+char[] str = {'b','y','e','\0'}
+//Tableau de caractères représentant le mot "bye". Le "\0" représente un caractère "NULL", cad la fin du string. Quand on
+//fait des opérations sur des strings (tableaux de "char"), le marqueur de fin du string doit toujours être vérifié
+
+
+//*CHAR VALUES
+
+/*
+
+\0 - NULL value
+\a - audible alert
+\b - backspace
+\f - form feed
+\n - new line
+\r - carriage return
+\t - horizontal tab
+\v - vertical tab
+\\ - backslash character
+\" - double quote
+\' - single quote
+\? - question mark
+\nnn - octal char val = nnn
+\xnn - hex char val = nn
+
+*/
