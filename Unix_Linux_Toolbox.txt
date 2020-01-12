@@ -178,3 +178,17 @@ Compilation intelligente. Attribue automatiquement le nom au nouveau programme e
 
 - ./nomDuProgramme :
 Execute "nomDuProgramme" dans le terminal (si ce dernier se trouve dans le répertoire courant)
+
+
+
+
+_DROITS______________________________________________________________
+
+- rwx rw- r--
+
+Au tout début (la première information), si "-" est affiché, il s'agit d'un fichier. Si "d" est affiché, alors c'est un dossier.
+
+
+
+- chmod 777 nomDuFichier :
+Donne tous les droits (lecture, écriture et éxecution) à tous les utilisateurs (même les invités)
