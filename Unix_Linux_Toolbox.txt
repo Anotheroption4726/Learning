@@ -91,7 +91,11 @@ Permet de revenir directement au répertoire "/home/NomUtilisateur"
 
 
 - cd / :
-Déplace l'utilisateur/session à l'origine du disque
+Déplace l'utilisateur/session à l'origine de la partition sur laquelle l'OS est installé
+
+
+- cd /media/NomUtilisateur/D\:/ :
+Déplace l'utilisateur/session à l'origine de la partition D\: (uniquement si celle-ci a été préalablement montée)
 
 
 
