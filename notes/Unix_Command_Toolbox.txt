@@ -46,7 +46,7 @@ Affiche les informations spécifiques à l'utilisateur "NomUtilisateur"
 
 
 - sudo :
-'Superuser do'. Placé devant une commande, "sudo" permet de donner les droits superuser/root à l'utilisateur courant
+'Superuser do'. Placé devant une commande, "sudo" permet de donner les droits superuser/root à l'utilisateur courant (mot de passe requis)
 
 
 - useradd -m nomUtilisateur :
@@ -55,6 +55,7 @@ Attention! Il est impossible de se connecter avec le compte "nomUtilisateur" tan
 
 
 - passwd nomUtilisateur :
+Permet de modifier le mot de passe de l'utilisateur "nomUtilisateur"
 (necessite les droits superuser/root)
 
 
