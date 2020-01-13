@@ -1,0 +1,71 @@
+CHMOD________________________________________________________________
+
+
+
+
+u - user 		(propriétaire du fichier aka l'utilisateur qui l'a créé)
+g - group
+o - other 		(n'importe qui)
+
+
+
+
+4 - read
+2 - write
+1 - execute
+0 - no permissions
+
+
+
+
+LS -L________________________________________________________________
+
+
+
+
+0 1  2  3   4 5              6           7  8       9
+
+d rwxr-xr-x 2 nomUtilisateur nomDuGroupe 96 janv. 1 16:57 nomDuDossier
+- rw-rwxr-- 1 nomUtilisateur nomDuGroupe 59 janv. 2 18:42 nomDuFichier
+
+0 1  2  3   4 5              6           7  8       9
+
+
+
+
+0 :
+Type. "d" indique qu'il s'agit d'un dossier. "-" indique qu'il s'agit d'un fichier.
+
+
+1 :
+Droits de lecture (r), d'écriture (w) et d'execution (x) pour le propriétaire (u) du fichier/dossier (aka l'utilisateur qui l'a créé)
+Ici il s'agit de "nomUtilisateur"
+
+
+2 :
+Droits de lecture (r), d'écriture (w) et d'execution (x) pour le groupe (g) associé au fichier/dossier
+Ici il s'agit de "nomDuGroupe"
+
+
+3 :
+Droits de lecture (r), d'écriture (w) et d'execution (x) pour n'importe qui d'autre (o)
+
+
+
+
+4 :
+
+
+5 :
+
+
+6 :
+
+
+7 :
+
+
+8 :
+
+
+9 :

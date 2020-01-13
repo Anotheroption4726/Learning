@@ -30,6 +30,10 @@ tilde. uniquement sur clavier Apple (à droite du clavier)
 
 
 
+
+
+
+
 _UTILISATEUR & SESSION_______________________________________________
 
 
@@ -38,7 +42,28 @@ Affiche le nom d'utilisateur de la session courante
 
 
 - id NomUtilisateur :
-Affiche les informations spécifiques à l'utilisateur "NomUtilisateur".
+Affiche les informations spécifiques à l'utilisateur "NomUtilisateur"
+
+
+- sudo :
+'Superuser do'. Placé devant une commande, "sudo" permet de donner les droits superuser/root à l'utilisateur courant
+
+
+- useradd -m nomUtilisateur :
+Crée/ajoute un nouvel utilisateur appellé "nomUtilisateur" (necessite les droits superuser/root). L'option "-m" permet de lui ajouter un dossier "home" à la racine du disque
+Attention! Il est impossible de se connecter avec le compte "nomUtilisateur" tant qu'aucun mot de passe n'a été attribué
+
+
+- passwd nomUtilisateur :
+(necessite les droits superuser/root)
+
+
+- userdel -r nomUtilisateur :
+Supprime l'utilisateur appellé "nomUtilisateur" (necessite les droits superuser/root). L'option "-r" permet aussi d'effacer le dossier "home" spécifique à cet utilisateur
+
+
+
+
 
 
 
@@ -59,7 +84,7 @@ Affiche le nom et le chemin du dossier courant dans lequel l'utilisateur se trou
 
 
 - ls -l :
-Comme "ls" mais affiche aussi des informations supplémentaires comme les droits
+Comme "ls" mais affiche aussi des informations supplémentaires comme les droits (VOIR FICHIER "Unix_File_Folder_Notes.txt")
 
 
 - ls -la :
@@ -96,6 +121,10 @@ Déplace l'utilisateur/session à l'origine de la partition sur laquelle l'OS es
 
 - cd /media/NomUtilisateur/D\:/ :
 Déplace l'utilisateur/session à l'origine de la partition D\: (uniquement si celle-ci a été préalablement montée)
+
+
+
+
 
 
 
@@ -165,6 +194,50 @@ Supprime le dossier "nomDuDossier" (uniquement si celui-ci ne possède pas de co
 
 
 
+
+
+
+
+_PERMISSIONS_________________________________________________________
+
+VOIR FICHIER "Unix_File_Folder_Notes.txt"
+
+
+- chmod o+w nomDuFichier :
+Donne les droits d'écriture du fichier "nomDuFichier" à n'importe qui
+
+
+- chmod g-x nomDuFichier :
+Enlève les droits d'execution au groupe auquel le fichier "nomDuFichier" est associé
+
+
+- chmod u-r nomDuFichier :
+Enlève les droits de lecture à l'utilisateur propriétaire du fichier "nomDuFichier" (aka l'utilisateur qui l'a créé)
+
+
+- chmod +x nomDuFichier :
+Donne les droits d'éxecution à l'utilisateur propriétaire, le groupe ainsi qu'à tous les autres utilisateurs
+
+
+- chmod 777 nomDuFichier :
+Donne tous les droits (lecture, écriture et éxecution / 4 + 2 + 1) à tous les utilisateurs (même les invités)
+
+
+- chmod 000 nomDuFichier :
+Enlève tous les droits (0) à tous les utilisateurs (même les invités)
+
+
+- chmod 754 nomDuFichier :
+Donne tous les droits (lecture, écriture et éxecution / 4 + 2 + 1) au propriétaire du fichier, les droits de lecture et d'execution (4 + 1) au groupe
+et les droits de lecture (4) à n'importe quel autre utilisateur
+
+
+
+
+
+
+
+
 _COMPILATION EN C____________________________________________________
 
 
@@ -182,17 +255,3 @@ Compilation intelligente. Attribue automatiquement le nom au nouveau programme e
 
 - ./nomDuProgramme :
 Execute "nomDuProgramme" dans le terminal (si ce dernier se trouve dans le répertoire courant)
-
-
-
-
-_DROITS______________________________________________________________
-
-- rwx rw- r--
-
-Au tout début (la première information), si "-" est affiché, il s'agit d'un fichier. Si "d" est affiché, alors c'est un dossier.
-
-
-
-- chmod 777 nomDuFichier :
-Donne tous les droits (lecture, écriture et éxecution) à tous les utilisateurs (même les invités)
