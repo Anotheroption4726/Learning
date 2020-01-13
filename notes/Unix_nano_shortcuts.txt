@@ -1,0 +1,6 @@
+- ctrl + x :
+Quitter
+
+
+- ctrl + o :
+Sauvegarder

@@ -24,8 +24,21 @@ Quitter une interface (comme "more", "man" ou "vim")
 pipe. uniquement sur clavier Apple (à droite du clavier)
 
 
-- option + maj + N :
-tilde. uniquement sur clavier Apple (à droite du clavier)
+- exit :
+Quitter
+
+
+
+
+
+
+
+
+_SYSTEME_____________________________________________________________
+
+
+- lsb_release -d :
+Affiche la version courante d'Ubuntu utilisée
 
 
 
@@ -256,3 +269,20 @@ Compilation intelligente. Attribue automatiquement le nom au nouveau programme e
 
 - ./nomDuProgramme :
 Execute "nomDuProgramme" dans le terminal (si ce dernier se trouve dans le répertoire courant)
+
+
+
+
+
+
+
+
+_EDITEURS DE TEXTE___________________________________________________
+
+
+- nano nomDuFichier.txt :
+Ouvre "nomDuFichier.txt" dans nano (VOIR "Unix_nano_shortcuts.txt")
+
+
+- subl nomDuFichier.txt :
+Ouvre "nomDuFichier.txt" dans le programme Sublime Text (si ce dernier est installé)
