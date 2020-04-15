@@ -16,13 +16,13 @@ Stage le fichier "nomDuFichier" (en utilisant son chemin d'emplacement) pour un 
 Stage tous les fichiers (à partir de l'emplacement courant) pour un commit
 
 
-- git commit -m "nomDuCommit":
+- git commit -m "nomDuCommit" :
 Effectue un nouveau commit appellé "nomDuCommit"
 
 
+- git pull :
+Mise à jour du dépôt local
 
 
-
-
-
-
+- git push :
+Envoyer les commits vers le dépôt distant
