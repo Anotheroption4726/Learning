@@ -76,6 +76,10 @@ Permet de modifier le mot de passe de l'utilisateur "nomUtilisateur"
 Supprime l'utilisateur appellé "nomUtilisateur" (necessite les droits superuser/root). L'option "-r" permet aussi d'effacer le dossier "home" spécifique à cet utilisateur
 
 
+- cat /etc/passwd :
+Liste tous les utilisateurs enregistrés sur le système ainsi que leurs UIDs
+
+
 
 
 
@@ -244,6 +248,19 @@ Enlève tous les droits (0) à tous les utilisateurs (même les invités)
 - chmod 754 nomDuFichier :
 Donne tous les droits (lecture, écriture et éxecution / 4 + 2 + 1) au propriétaire du fichier, les droits de lecture et d'execution (4 + 1) au groupe
 et les droits de lecture (4) à n'importe quel autre utilisateur
+
+
+
+
+
+
+
+
+_LECTURE DE CONTENU__________________________________________________
+
+
+- cat nomDuFichier :
+Affiche le contenu du fichier "nomDuFichier" en texte dans la console
 
 
 
