@@ -601,7 +601,12 @@ int main(void)
 
 void nomDeFonction_1(char* name)
 {
-	return;			//Une fonction void ne retourne rien mais mais il est quand meme conseillé d'utiliser le mot-clé "return;"
+	
+}
+
+void nomDeFonction_1(char* name)
+{
+	return;			//Une fonction void ne retourne rien mais mais on peut quand même utiliser le mot-clé "return"
 }
 
 nomDeFonction_2(char* name)
@@ -615,7 +620,6 @@ nomDeFonction_2(char* name)
 void localVariable(int i)
 {
 	printf("%p\n", &i);
-	return;
 }
 
 int main(void)
@@ -637,7 +641,6 @@ int main(void)
 void fonctionArray(int localEntierArray[]) 
 {
 	printf("%p\n", &localEntierArray[0]);
-  	return; 
 } 
    
 int main() 
@@ -650,6 +653,39 @@ int main()
 
 //contrairement à l'exemple précédent, les deux addresses affichées ci-dessus sont les mêmes (alors que les variables auxquelles elles sont associées ne font pas 
 //partie du même contexte). Cela est dû au fait que les Arrays sont envoyés à travers leurs références dans les fonctions et non à travers des copies mémoire
+
+
+
+
+#include <stdio.h>
+
+int globalVar = 1;
+int  globalArray[] = {1, 2, 3};
+
+void checkValueOrReference(int arg_var, int arg_array[])
+{
+	arg_var = 4;
+	arg_array[2] = 4;
+
+	printf("Local int value: %d\n", arg_var);							//	Affiche "Local int value: 4"
+	printf("Local array value at index 2: %d\n", arg_array[2]);			//	Affiche "Local array value at index 2: 4"
+}
+
+int main(void)
+{
+	checkValueOrReference(globalVar, globalArray);
+
+	printf("Local int value: %d\n", globalVar);							//	Affiche "Global int value: 1"
+	printf("Global array value at index 2: %d\n", globalArray[2]);		//	Affiche "Global array value at index 2: 4"
+
+	return 0;
+}
+
+//Lorsqu'une variable est passée en parametre dans une fonction, une copie de cette dernière est faite. Si jamais on venait à modifier la variable passée en 
+//argument, la variable d'origine garderait sa valeur initiale sans tenir compte des modifications effectuées dans la fonction.
+
+//Au contraire, un Array est passé en référence lorsqu'il est utilisé dans une fonction. Cela veut dire que si l'on venait à changer une valeur à un index de 
+//ce tableau, la valeur à l'index du tableau d'origine changerait aussi
 
 
 
@@ -684,6 +720,29 @@ int main()
 
 //Static variables (like global variables) are initialized as 0 if not initialized explicitly. For example in the above program, 
 //value of x is printed as 0, while value of y is something garbage.
+
+
+
+
+//*RECURSION
+
+int factorial(int n)
+{
+	int retval = 1;
+	if(n != 1)
+	{
+		retval = n * factorial(n-1);
+	}
+
+	return retval;
+}
+
+int main(void)
+{
+	int val = factorial(5);
+	printf("%d! = %d\n", 5, val);
+	printf("%d! = %d\n", 4, factorial(4));
+}
 
 
 
