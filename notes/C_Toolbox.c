@@ -747,6 +747,29 @@ int main(void)
 
 
 
+//*POINTERS
+
+#include <stdio.h>
+
+void swap (int *v1, int *v2)
+{
+	int tmp;
+	tmp = *v1;
+	*v1 = *v2;
+	*v2 = tmp;
+}
+
+int main (void)
+{
+	int i = 1, j = 2;
+	printf("i = %d, j = %d", i, j);		//Affiche "i = 1, j = 2"
+	swap(&i, &j);						//Attention, il est important de passer en paramètre des addresses mémoires avec "&nomDeVariable"
+	printf("i = %d, j = %d", i, j);		//Affiche "i = 2, j = 1"
+	return 0;
+}
+
+
+
 /*
 /*
 /*_READING/WRITTING FILES__________________________________________*/
