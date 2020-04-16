@@ -834,3 +834,26 @@ char[] str = {'b','y','e','\0'}
 \xnn - hex char val = nn
 
 */
+
+
+//*POINTERS
+
+char str1[6] = {'h', 'e', 'l', 'l', 'o', '\0',}		//string array "hello"
+char* str2 = str1;									//str2 points to "hello"
+char* str3 = &str1[1];								//str3 points to "ello"
+char* str4 = &str1[3];								//str4 points to "lo"
+
+//char* can be used to refer to a string.
+
+
+//*LIBRARY FUNCTIONS
+
+/*
+
+strcpy: copy one string into another
+strdup: allocates memory and makes a copy
+strlen: computes the length of a string
+strcat: string concatenation
+strtok: tokenize a string
+
+*/
