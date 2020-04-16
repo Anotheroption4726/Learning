@@ -1,3 +1,7 @@
+//Tutorial playlist : https://www.youtube.com/playlist?list=PLkB3phqR3X40reMCBYSoNUPbDvM4kybMs
+//Current video (timestamped) : https://youtu.be/m2ooG5akhS8?t=884
+
+
 #include <stdio.h>
 //	«Standard Input/Output Header» ou «En-tête Standard d'Entrée/Sortie», est l'en-tête de la bibliothèque 
 //	standard du C déclarant les macros, les constantes et les définitions de fonctions utilisées dans les 
@@ -831,6 +835,8 @@ perror();	//handy output function for printing textual description of error
 /*
 /*
 /*_STRINGS_________________________________________________________*/
+
+#include<string.h>
 
 char[] str = {'b','y','e','\0'}
 //Tableau de caractères représentant le mot "bye". Le "\0" représente un caractère "NULL", cad la fin du string. Quand on
