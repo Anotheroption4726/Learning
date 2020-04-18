@@ -1,0 +1,15 @@
+https://github.com/ytdl-org/youtube-dl#installation
+http://ytdl-org.github.io/youtube-dl/download.html
+
+
+- Installation :
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+
+
+- Update :
+sudo youtube-dl -U
+
+
+- Usage :
+youtube-dl https://www.youtube.com/watch?v=OtQZ_eyVhKQ
