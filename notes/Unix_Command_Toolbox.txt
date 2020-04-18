@@ -41,6 +41,10 @@ _SYSTEME_____________________________________________________________
 Affiche la version courante d'Ubuntu utilisée
 
 
+- sudo apt autoremove :
+Supprime les packets installés par d'autres packets qui ne sont plus necessaires
+
+
 
 
 
