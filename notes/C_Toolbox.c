@@ -2,6 +2,37 @@
 //Current video (timestamped) : https://youtu.be/m2ooG5akhS8?t=884
 
 
+
+
+
+
+
+
+/*
+/*
+/*	_UNIX COMMANDS_________________________________________________*/
+
+/*
+	- gcc nomDuProgramme.c :
+		Compile un fichier en ".c". Le nouveau programme obtenu s'appelle "a.out"
+
+	- gcc nomDuProgramme.c -o nomDuProgramme :
+		Compile un fichier en ".c". Le nouveau programme obtenu s'appelle "nomDuProgramme"
+
+	- make nomDuProgramme :
+		Compilation intelligente. Attribue automatiquement le nom au nouveau programme en fonction du nom de fichier reconnu
+
+	- ./nomDuProgramme :
+		Execute "nomDuProgramme" dans le terminal (si ce dernier se trouve dans le répertoire courant)
+*/
+
+
+
+
+
+
+
+
 #include <stdio.h>
 //	«Standard Input/Output Header» ou «En-tête Standard d'Entrée/Sortie», est l'en-tête de la bibliothèque 
 //	standard du C déclarant les macros, les constantes et les définitions de fonctions utilisées dans les 

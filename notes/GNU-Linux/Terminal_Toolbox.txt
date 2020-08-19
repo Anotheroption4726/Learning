@@ -3,7 +3,7 @@ _GENERAL________________________________________________________________________
 
 
 
-	>> RACCOURCIS CLAVIER
+	>> RACCOURCIS
 
 
 		- Option + maj + L :
@@ -85,6 +85,8 @@ _GENERAL________________________________________________________________________
 			- sudo :
 				'Superuser do'. Placé devant une commande, "sudo" permet de donner les droits superuser/root à l'utilisateur 
 				courant (mot de passe requis)
+					* 'username@computer-J45DS:~$' : mode utilisateur normal *
+					* 'username@computer-J45DS:~#' : mode superutilisateur *
 
 			- useradd -m nomUtilisateur :
 				Crée/ajoute un nouvel utilisateur appellé "nomUtilisateur" (necessite les droits superuser/root). L'option "-m" 
@@ -201,6 +203,101 @@ _GENERAL________________________________________________________________________
 				Supprime le dossier "nomDuDossier" (uniquement si celui-ci ne possède pas de contenu)
 
 
+		> PERMISSIONS
+
+			VOIR FICHIER "File_Folder_Notes.txt"
+
+			- chmod o+w nomDuFichier :
+				Donne les droits d'écriture du fichier "nomDuFichier" à n'importe qui
+
+			- chmod g-x nomDuFichier :
+				Enlève les droits d'execution au groupe auquel le fichier "nomDuFichier" est associé
+
+			- chmod u-r nomDuFichier :
+				Enlève les droits de lecture à l'utilisateur propriétaire du fichier "nomDuFichier" (aka l'utilisateur qui l'a 
+				créé)
+
+			- chmod +x nomDuFichier :
+				Donne les droits d'éxecution à l'utilisateur propriétaire, le groupe ainsi qu'à tous les autres utilisateurs
+
+			- chmod 777 nomDuFichier :
+				Donne tous les droits (lecture, écriture et éxecution / 4 + 2 + 1) à tous les utilisateurs (même les invités)
+
+			- chmod 000 nomDuFichier :
+				Enlève tous les droits (0) à tous les utilisateurs (même les invités)
+
+			- chmod 754 nomDuFichier :
+				Donne tous les droits (lecture, écriture et éxecution / 4 + 2 + 1) au propriétaire du fichier, les droits de 
+				lecture et d'execution (4 + 1) au groupe et les droits de lecture (4) à n'importe quel autre utilisateur
+
+
+		> LECTURE DE CONTENU
+
+			- cat nomDuFichier :
+				Affiche le contenu du fichier "nomDuFichier" en texte dans la console
+
+
+
+
+
+
+
+
+_NANO__________________________________________________________________________________________________________________________
+
+
+
+
+	>> RACCOURCIS
+
+		- Ctrl + x :
+			Quitter
+
+		- Ctrl + o :
+			Sauvegarder
+
+
+	>> COMMANDES
+
+		- nano nomDuFichier.txt :
+			Ouvre "nomDuFichier.txt" dans nano
+
+
+
+
+
+
+
+
+_GIT___________________________________________________________________________________________________________________________
+
+
+
+
+	>> COMMANDES
+
+		- git status :
+			Status des fichiers. Affiche les dernières modifications effectuées dans le dossier
+
+		- git add nomDuFichier :
+			Stage le fichier "nomDuFichier" (localisé dans le dossier courant) pour un commit
+
+		- git add nomDuDossier/nomDuFichier :
+			Stage le fichier "nomDuFichier" (en utilisant son chemin d'emplacement) pour un commit
+
+		- git add . :
+			Stage tous les fichiers (à partir de l'emplacement courant) pour un commit
+
+		- git commit -m "nomDuCommit" :
+			Effectue un nouveau commit appellé "nomDuCommit"
+
+		- git pull :
+			Mise à jour du dépôt local
+
+		- git push :
+			Envoyer les commits vers le dépôt distant
+
+
 
 
 
@@ -212,7 +309,7 @@ _CINNAMON_______________________________________________________________________
 
 
 
-	>> RACCOURCIS CLAVIER
+	>> RACCOURCIS
 
 
 		> GUI
@@ -239,143 +336,46 @@ _CINNAMON_______________________________________________________________________
 
 
 
+_YOUTUBE-DL____________________________________________________________________________________________________________________
 
 
 
 
+https://github.com/ytdl-org/youtube-dl#installation
+http://ytdl-org.github.io/youtube-dl/download.html
 
+https://www.ostechnix.com/youtube-dl-tutorial-with-examples-for-beginners/
+https://apple.stackexchange.com/questions/349697/how-to-use-youtube-dl-cookies
 
+Cookies downloader extension:
+https://chrome.google.com/webstore/detail/cookiestxt/njabckikapfpffapmjgojcnbfjonfjfg
 
 
 
 
+	>> COMMANDES
 
 
+		> INSTALLATION
 
+			sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 
+			sudo chmod a+rx /usr/local/bin/youtube-dl
 
 
+		> UPDATE
 
+			sudo youtube-dl -U
 
 
+		> UTILISATION
 
+			youtube-dl <url>
 
+			youtube-dl <url1> <url2>
 
+			youtube-dl --cookies ~/<path>/cookies.txt <url>
 
+			youtube-dl https://www.youtube.com/watch?v=OtQZ_eyVhKQ
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-_MANIPULATION DE DOSSIERS & FICHIERS_________________________________
-
-
-
-
-
-
-
-
-
-
-
-_PERMISSIONS_________________________________________________________
-
-VOIR FICHIER "Unix_File_Folder_Notes.txt"
-
-
-- chmod o+w nomDuFichier :
-Donne les droits d'écriture du fichier "nomDuFichier" à n'importe qui
-
-
-- chmod g-x nomDuFichier :
-Enlève les droits d'execution au groupe auquel le fichier "nomDuFichier" est associé
-
-
-- chmod u-r nomDuFichier :
-Enlève les droits de lecture à l'utilisateur propriétaire du fichier "nomDuFichier" (aka l'utilisateur qui l'a créé)
-
-
-- chmod +x nomDuFichier :
-Donne les droits d'éxecution à l'utilisateur propriétaire, le groupe ainsi qu'à tous les autres utilisateurs
-
-
-- chmod 777 nomDuFichier :
-Donne tous les droits (lecture, écriture et éxecution / 4 + 2 + 1) à tous les utilisateurs (même les invités)
-
-
-- chmod 000 nomDuFichier :
-Enlève tous les droits (0) à tous les utilisateurs (même les invités)
-
-
-- chmod 754 nomDuFichier :
-Donne tous les droits (lecture, écriture et éxecution / 4 + 2 + 1) au propriétaire du fichier, les droits de lecture et d'execution (4 + 1) au groupe
-et les droits de lecture (4) à n'importe quel autre utilisateur
-
-
-
-
-
-
-
-
-_LECTURE DE CONTENU__________________________________________________
-
-
-- cat nomDuFichier :
-Affiche le contenu du fichier "nomDuFichier" en texte dans la console
-
-
-
-
-
-
-
-
-_COMPILATION EN C____________________________________________________
-
-
-- gcc nomDuProgramme.c :
-Compile un fichier en ".c". Le nouveau programme obtenu s'appelle "a.out"
-
-
-- gcc nomDuProgramme.c -o nomDuProgramme :
-Compile un fichier en ".c". Le nouveau programme obtenu s'appelle "nomDuProgramme"
-
-
-- make nomDuProgramme :
-Compilation intelligente. Attribue automatiquement le nom au nouveau programme en fonction du nom de fichier reconnu
-
-
-- ./nomDuProgramme :
-Execute "nomDuProgramme" dans le terminal (si ce dernier se trouve dans le répertoire courant)
-
-
-
-
-
-
-
-
-_EDITEURS DE TEXTE___________________________________________________
-
-
-- nano nomDuFichier.txt :
-Ouvre "nomDuFichier.txt" dans nano (VOIR "Unix_nano_shortcuts.txt")
-
-
-- subl nomDuFichier.txt :
-Ouvre "nomDuFichier.txt" dans le programme Sublime Text (si ce dernier est installé)
+			youtube-dl --cookies ~/Downloads/cookies.txt https://www.youtube.com/watch?v=OtQZ_eyVhKQ
