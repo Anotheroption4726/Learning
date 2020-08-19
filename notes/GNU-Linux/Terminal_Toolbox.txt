@@ -35,6 +35,15 @@ _GENERAL________________________________________________________________________
 
 			Tous les raccourcis se trouvent dans le dossier /bin.
 
+			- Up :
+				Retrouver les commandes entrées précédemment dans la console
+
+			- Ctrl + L :
+				Efface le contenu de la console
+
+			- Ctrl + d :
+				Déconnexion/quitter la console				
+
 			- Ctrl + Alt + F7 :
 				Retour en mode interface graphique (si l'on était en train d'utiliser tty1, tty2...)
 
@@ -47,6 +56,15 @@ _GENERAL________________________________________________________________________
 
 			- Ctrl + z :
 				Suspendre un processus en cours
+
+			- Ctrl + r :
+				Permet de rechercher et d'executer une commande que l'on a déjà entré dans la console
+
+			- Ctrl + a :
+				Ramène le curseur au début de la commande
+
+			- Ctrl + e :
+				Ramène le curseur à la fin de la ligne de commandes
 
 
 		> INTERFACES
@@ -62,7 +80,35 @@ _GENERAL________________________________________________________________________
 	>> COMMANDES
 
 
+		> SYNTAXE
+
+			- Paramètres courts :
+				commande -d
+				commande -d -a -U -h
+				commande -daUh
+
+			- Paramètres longs :
+				commande --parametre
+				commande --parametre1 --parametre2
+
+			- Paramètres courts et longs :
+				commande -daUh --autreparametre
+
+			- Paramètres avec valeurs :
+				commande -p 14
+				commande --parametre=14
+
+
 		> SYSTEME
+
+			- history :
+				Affiche l'historique des commandes entrées dans la console durant la session
+
+			- date :
+				Affiche la date, l'heure et le fuseau horaire
+
+			- clear :
+				Efface le contenu de la console
 
 			- exit :
 				Déconnexion/quitter la console
@@ -115,12 +161,15 @@ _GENERAL________________________________________________________________________
 			- ls nomDuDossier :
 				Énumérer (lister) les fichiers situés dans le répertoire "nomDuDossier"
 
+			- ls -a :
+				Comme "ls" mais affiche aussi tous les fichiers et dossiers cachés
+
 			- ls -l :
-				Comme "ls" mais affiche aussi des informations supplémentaires comme les droits (VOIR FICHIER 
-				"Unix_File_Folder_Notes.txt")
+				Comme "ls" mais affiche aussi des informations supplémentaires comme les droits (Voir section "LS -L"
+				dans le fichier "Notes.txt")
 
 			- ls -la :
-				Comme "ls" mais affiche aussi les fichiers cachés
+				Comme "ls" mais affiche aussi les fichiers et dossiers cachés ainsi que leurs informations
 
 			- ls s* :
 				Affiche tous les fichiers (et dossiers...?) dont le nom commence par la lettre "s"
@@ -205,7 +254,7 @@ _GENERAL________________________________________________________________________
 
 		> PERMISSIONS
 
-			VOIR FICHIER "File_Folder_Notes.txt"
+			Voir les sections "CHMOD" et "LS -L" dans le fichier "Notes.txt"
 
 			- chmod o+w nomDuFichier :
 				Donne les droits d'écriture du fichier "nomDuFichier" à n'importe qui
