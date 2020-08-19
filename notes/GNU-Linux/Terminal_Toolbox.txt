@@ -71,7 +71,7 @@ _GENERAL________________________________________________________________________
 
 			Ces raccourcis s'appliquent aux interfaces comme "more", "man" ou "vim"
 
-			- Q :
+			- q :
 				Quitter l'interface
 
 
@@ -210,6 +210,18 @@ _GENERAL________________________________________________________________________
 				Déplace l'utilisateur/session à l'origine de la partition D\: (uniquement si celle-ci a été préalablement 
 				montée)
 
+			- du :
+				Renvoie la taille totale que font les dossiers contenus dans le dossier
+
+			- du -h :
+				Renvoie la taille totale que font les dossiers contenus dans le dossier (en Ko, Mo, Go, etc...)
+
+			- du -ah :
+				Renvoie la taille totale que font les dossiers et les fichiers contenus dans le dossier (en Ko, Mo, Go, etc...)
+
+			- du -sh :
+				Renvoie l'espace total occupé par le dossier courant
+
 
 		> MANIPULATION DE DOSSIERS & FICHIERS
 
@@ -297,7 +309,22 @@ _GENERAL________________________________________________________________________
 		> LECTURE DE CONTENU
 
 			- cat nomDuFichier :
-				Affiche le contenu du fichier "nomDuFichier" en texte dans la console
+				Affiche le contenu du fichier "nomDuFichier" en texte dans la console. Affiche tout le contenu en une fois
+
+			- cat -n nomDuFichier :
+				Affiche le contenu du fichier "nomDuFichier" en texte dans la console avec les lignes numérotées
+
+			- less nomDuFichier :
+				Affiche progressivement le contenu du fichier, page par page
+				* Espace : affiche la suite du fichier d'un écran *
+				* Entrée : affiche la suite du fichier d'une ligne *
+				* = : indique où en est dans le fichier (numéro des lignes affichées et pourcentage) *
+				* h : affiche l'aide *
+				* / : mode recherche *
+
+			- tail -f /var/log/syslog :
+				Lance un process qui va mettre à jour l'affichage de la fin du contenu d'un fichier en temps réel (ici pour 
+				surveiller les log du système)
 
 
 
