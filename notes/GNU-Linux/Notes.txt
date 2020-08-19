@@ -56,7 +56,7 @@ Règle importante : il ne peut y avoir qu'un seul système de fichiers par parti
 
 
 
-_CHMOD_______________________________________________________________
+_CHMOD_________________________________________________________________________________________________________________________
 
 
 
@@ -80,19 +80,17 @@ _CHMOD_______________________________________________________________
 
 
 
-_LS -L________________________________________________________________
+_LS -L_________________________________________________________________________________________________________________________
 
 
 
 
-	0 1  2  3   4 5              6           7  8       9
+	0 1  2  3   4 5              6           7  8			  9			   10
 
 	d rwxr-xr-x 2 nomUtilisateur nomDuGroupe 96 janv. 1 16:57 nomDuDossier
-	- rw-rwxr-- 1 nomUtilisateur nomDuGroupe 59 janv. 2 18:42 nomDuFichier
+	- rw-rwxr-- 1 nomUtilisateur nomDuGroupe 59 janv. 2 18:42 nomDuFichier -> /usr/share/example-content
 
-	0 1  2  3   4 5              6           7  8       9
-
-
+	
 
 
 	0 :
@@ -100,8 +98,8 @@ _LS -L________________________________________________________________
 
 
 	1 :
-		Droits de lecture (r), d'écriture (w) et d'execution (x) pour le propriétaire (u) du fichier/dossier (aka l'utilisateur qui l'a créé)
-		Ici il s'agit de "nomUtilisateur"
+		Droits de lecture (r), d'écriture (w) et d'execution (x) pour le propriétaire (u) du fichier/dossier (aka 
+		l'utilisateur qui l'a créé). Ici il s'agit de "nomUtilisateur"
 
 
 	2 :
@@ -111,3 +109,76 @@ _LS -L________________________________________________________________
 
 	3 :
 		Droits de lecture (r), d'écriture (w) et d'execution (x) pour n'importe qui d'autre (o)
+
+
+	4 :
+		Nombre de liens physiques
+
+
+	5 :
+		Nom de l'utilisateur propriétaire du fichier (celui qui l'a créé)
+
+
+	6 :
+		Groupe auquel appartient le fichier. Il se peut que le nom du groupe soit le même que celui du propriétaire
+
+
+	7 :
+		Taille du fichier en octets
+
+
+	8 :
+		Date et heure de la dernière modification
+
+
+	9 :
+		Nom du fichier ou du dossier
+
+
+	10 :
+		Dans le cas d'un raccourci (lien symbolique), cette partie précise vers où le fichier pointe
+
+
+
+
+
+
+
+
+_ROOT FOLDERS__________________________________________________________________________________________________________________
+
+
+
+
+	- bin :
+		Contient des programmes (exécutables) susceptibles d'être utilisés par tous les utilisateurs de la machine
+
+	- sbin :
+		Contient des programmes système importants. Uniquement utilisables en mode 'superutilisateur'
+
+	- boot :
+		Fichiers permettant le démarrage de Linux
+
+	- dev :
+		Fichiers contenant les périphériques. Ce dossier contient des sous-dossiers qui « représentent » chacun un 
+		périphérique. On y retrouve ainsi par exemple le fichier qui représente le lecteur CD
+
+	- home : 
+		Répertoires personnels des utilisateurs
+
+	- media :
+		Lorsqu'un périphérique amovible (comme une carte mémoire SD ou une clé USB) est inséré dans votre ordinateur, Linux 
+		vous permet d'y accéder à partir d'un sous-dossier de media
+
+	- tmp :
+		Dossier temporaire utilisé par les programmes pour stocker des fichiers
+
+	- usr :
+		C'est un des plus gros dossiers, dans lequel vont s'installer la plupart des programmes demandés par l'utilisateur
+
+	- var :
+		Ce dossier contient des données « variables », souvent des logs (traces écrites de ce qui s'est passé récemment sur l'ordinateur)
+
+	- lib :
+		Dossier contenant les bibliothèques partagées (généralement des fichiers.so) utilisées par les programmes. C'est en 
+		fait là qu'on trouve l'équivalent des.dll de Windows
