@@ -112,7 +112,7 @@ _LS -L__________________________________________________________________________
 
 
 	4 :
-		Nombre de liens physiques
+		Nombre de liens physiques (dans le cas d'un fichier). Sinon nombre de liens physiques contenus dans le dossier?
 
 
 	5 :

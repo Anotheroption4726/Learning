@@ -231,8 +231,15 @@ _GENERAL________________________________________________________________________
 			- mkdir nomDuDossier1 nomDuDossier2 :
 				Crée deux dossiers nommés "nomDuDossier1" et "nomDuDossier2" dans le répertoire courant
 
+			- mkdir -p nomDuDossier1/nomDuDossier2/nomDuDossier3 :
+				Créé le dossier nomDuDossier1, puis à l'intérieur le sous-dossier nomDuDossier2, puis à l'intérieur encore le 
+				sous-dossier nomDuDossier3
+
 			- touch nomDuFichier :
 				Crée un fichier portant le nom "nomDuFichier"
+
+			- touch "nom du fichier" :
+				Crée un fichier portant le nom "nom du fichier"
 
 			- touch nomDuFichier.txt :
 				Crée un fichier portant le nom spécifié avec l'extention ".txt"
@@ -252,6 +259,13 @@ _GENERAL________________________________________________________________________
 			- mv nomDuFichierOld nomDuFichierNew :
 				Renomme le fichier "nomDuFichierOld" en "nomDuFichierNew"
 
+			- mv nomDuFichierOld nomDuDossier/nomDuFichierNew :
+				Renomme le fichier "nomDuFichierOld" en "nomDuFichierNew" et le déplace dans le dossier "nomDuDossier"
+
+			- mv nomDuDossier1 nomDuDossier2 :
+				Déplace le dossier "nomDuDossier1" (avec tous les fichiers et sous-dossiers qu'il contient) dans le dossier 
+				"nomDuDossier2"
+
 			- cp nomDuFichier nomDuFichierCopie :
 				Fait une copie du fichier spécifié dans le dossier courant
 
@@ -259,23 +273,52 @@ _GENERAL________________________________________________________________________
 				Fait une copie du fichier spécifié et le place dans le dossier "nomDuDossier" (situé dans le répertoire 
 				courant)
 
+			- cp nomDuFichier nomDuDossier/nomDuFichierCopie :
+				Fait une copie du fichier spcifié, le renomme et le place dans le dossier "nomDuDossier"
+
 			- cp  Documents/nomDuFichier nomDuDossier :
 				Fait une copie du fichier spécifié par son chemin et le place dans le dossier "nomDuDossier" (situé dans le 
 				répertoire courant)
+
+			- cp *.jpg nomDuDossier :
+				Fait une copie de tous les fichiers se finissant avec l'extension ".jpg" dans le dossier "nomDuDossier"
 
 			- cp /usr/include/s*.h :
 				Copie tous les fichiers situés dans le dossier courant commençant par "s" et se terminant par "h" dans le 
 				dossier /usr/include.
 
+			- cp -R nomDuDossier nomDuDossierCopie :
+				Fait une copie du dossier spécifié (avec tous les fichiers et sous-dossiers qu'il contient) dans le dossier 
+				courant
+
 			- rm nomDuFichier :
 				Supprime le fichier spécifié. Ne pas oublier de rajouter l'extention à la fin du nom si jamais le fichier en a 
 				une
+
+			- rm -v nomDuFichier :
+				Supprime le fichier spécifié en rajoutant une ligne de dialogue dans la console expliquant ce qui vient 
+				d'être fait
+
+			- rm -i nomDuFichier1 nomDuFichier2 :
+				Supprime les fichiers spécifiés mais demande une confirmation pour chacun d'eux ("o" pour "oui" et "n" pour 
+				"non")
+
+			- rm -f nomDuFichier :
+				Force la suppression du fichier
+
+			- rm -fiv nomDuFichier1 nomDuFichier2 :
+				Force la suppression des fichiers spécifiés mais demande une confirmation pour chacun d'eux, puis rajoute 
+				une ligne de dialogue dans la console expliquant ce qui vient d'être fait
 
 			- rm -r nomDuDossier :
 				Supprime le dossier spécifié ainsi que tous les fichiers situés à l'intérieur
 
 			- rmdir nomDuDossier :
 				Supprime le dossier "nomDuDossier" (uniquement si celui-ci ne possède pas de contenu)
+
+			- sudo rm -rf /* :
+				Supprime tout le disque dur depuis la racine, sous-dossiers compris, et ne demande aucune confirmation (à part 
+				le mot de passe superutilisateur). Il n'y a aucune possibilité de récupération, il faut réinstaller Linux
 
 
 		> PERMISSIONS
@@ -325,6 +368,18 @@ _GENERAL________________________________________________________________________
 			- tail -f /var/log/syslog :
 				Lance un process qui va mettre à jour l'affichage de la fin du contenu d'un fichier en temps réel (ici pour 
 				surveiller les log du système)
+
+
+		> LIENS PHYSIQUES ET SYMBOLIQUES
+
+			- ln nomDuFichier1 nomDuFichier2 :
+				Crée un fichier "nomDuFichier2" possédant un lien physique avec "nomDuFichier1". Cette commande ne marche
+				pas sur les répertoires
+
+			- ln -s nomDuFichier1 nomDuFichier2 :
+				Crée un fichier "nomDuFichier2" possédant un lien symbolique avec "nomDuFichier1". Si l'on supprime 
+				"nomDuFichier1", "nomDuFichier2" pointera vers un fichier qui n'existe plus. Le lien symbolique sera cassé, on 
+				parlera alors de « lien mort ». Cette commande marche aussi sur les répertoires
 
 
 
