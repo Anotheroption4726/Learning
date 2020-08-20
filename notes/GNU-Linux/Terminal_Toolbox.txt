@@ -52,7 +52,7 @@ _GENERAL________________________________________________________________________
 
 			- Ctrl + d :
 				Envoyer l'entrée en attente à l'application. Si aucune saisie n'a été faite, la valeur envoyée est alors égale 
-				à 0
+				à 0. Permet aussi de quitter le mode 'superuser' permanent
 
 			- Ctrl + z :
 				Suspendre un processus en cours
@@ -118,7 +118,7 @@ _GENERAL________________________________________________________________________
 				Efface le contenu de la console
 
 			- exit :
-				Déconnexion/quitter la console
+				Déconnexion/quitter la console mais aussi le mode 'superuser' permanent
 
 			- sudo apt autoremove :
 				Supprime les packets installés par d'autres packets qui ne sont plus necessaires
@@ -133,10 +133,18 @@ _GENERAL________________________________________________________________________
 				Affiche les informations spécifiques à l'utilisateur "NomUtilisateur"
 
 			- sudo :
-				'Superuser do'. Placé devant une commande, "sudo" permet de donner les droits superuser/root à l'utilisateur 
-				courant (mot de passe requis)
-					* 'username@computer-J45DS:~$' : mode utilisateur normal *
-					* 'username@computer-J45DS:~#' : mode superutilisateur *
+				'Superuser do'. Placé devant une commande, "sudo" permet de donner temporairement les droits superuser/root à 
+				l'utilisateur courant (mot de passe requis)
+
+			- sudo su :
+				Donne de manière permanente les droits superuser/root à l'utilisateur courant (mot de passe requis). Utiliser 
+				la commande 'exit' ou le raccourci 'Ctrl + d' pour sortir de ce mode
+					* 'username@computer-J45DS:~$' : '$' indique qu'on est en mode utilisateur normal *
+					* 'username@computer-J45DS:~#' : '#' indique qu'on est en mode superutilisateur *
+
+			- su nomUtilisateur :
+				Démarre un process avec lequel on sera connecté en tant que "nomUtilisateur" (mot de passe requis). On quitte 
+				le process avec le raccourci 'Ctrl + d' ou la commande 'exit'
 
 			- useradd -m nomUtilisateur :
 				Crée/ajoute un nouvel utilisateur appellé "nomUtilisateur" (necessite les droits superuser/root). L'option "-m" 
@@ -465,6 +473,9 @@ _CINNAMON_______________________________________________________________________
 			- Alt + F2 :
 				Lance une interface alternative qui permet d'executer des commandes. 'r', par exemple, arrête et redémarre 
 				l'interface graphique Cinnamon
+
+			- Ctrl + Alt + L :
+				Verrouillage de l'écran
 
 
 
