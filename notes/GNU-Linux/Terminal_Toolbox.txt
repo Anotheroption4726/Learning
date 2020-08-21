@@ -124,7 +124,7 @@ _GENERAL________________________________________________________________________
 				Supprime les packets installés par d'autres packets qui ne sont plus necessaires
 
 
-		> UTILISATEUR & SESSION
+		> UTILISATEUR, GROUPES & SESSION
 
 			- whoami :
 				Affiche le nom d'utilisateur de la session courante
@@ -154,12 +154,30 @@ _GENERAL________________________________________________________________________
 			- passwd nomUtilisateur :
 				Permet de modifier le mot de passe de l'utilisateur "nomUtilisateur" (necessite les droits superuser/root)
 
+			- usermod -l nomUtilisateurNew nomUtilisateurOld :
+				Change le nom de l'utilisateur "nomUtilisateurOld" en "nomUtilisateurNew" (necessite les droits superuser/root)
+				Attention! Cette commande ne change pas le nom du dossier 'Home' correspondant à l'utilisateur
+
+			- usermod -g nomDuGroupe nomUtilisateur :
+				Attribue le groupe "nomDuGroupe" à l'utilisateur "nomUtilisateur" (et remplace l'ancien groupe auquel il 
+				appartenait)
+
 			- userdel -r nomUtilisateur :
 				Supprime l'utilisateur appellé "nomUtilisateur" (necessite les droits superuser/root). L'option "-r" permet 
 				aussi d'effacer le dossier "home" spécifique à cet utilisateur
 
 			- cat /etc/passwd :
-				Liste tous les utilisateurs enregistrés sur le système ainsi que leurs UIDs
+				Liste tous les utilisateurs enregistrés sur le système ainsi que leurs UIDs et les groupes auxquels ils 
+				appartiennent
+
+			- addgroup nomDuGroupe :
+				Ajoute un nouveau groupe nommé "nomDuGroupe" (nécessite les droits superuser/root)
+
+			- cat /etc/group :
+				Affiche la liste des groupes présents dans le système
+
+			- delgroup nomDuGroupe :
+				Supprime le groupe "nomDuGroupe" (nécessite les droits superuser/root)
 
 
 		> NAVIGATION
@@ -355,6 +373,24 @@ _GENERAL________________________________________________________________________
 			- chmod 754 nomDuFichier :
 				Donne tous les droits (lecture, écriture et éxecution / 4 + 2 + 1) au propriétaire du fichier, les droits de 
 				lecture et d'execution (4 + 1) au groupe et les droits de lecture (4) à n'importe quel autre utilisateur
+
+			- chmod -R 754 nomDuDossier :
+				Applique un changement de droits au dossier "nomDuDossier" qui s'applique aussi sur tous les fichiers et 
+				sous-dossiers que le dossier contient
+
+			- chown nomUtilisateur nomDuFichier :
+				Le propriétaire du fichier "nomDuFichier" est maintenant "nomUtilisateur" (necessite les droits superuser/root)
+
+			-chown -R nomUtilisateur nomDuDossier :
+				Le propriétaire du dossier "nomDuDossier" (avec tous les fichiers et sous-dossiers qu'il contient) est
+				maintenant "nomUtilisateur" (necessite les droits superuser/root)
+
+			- chgrp nomDuGroupe nomDuFichier :
+				Le groupe du fichier "nomDuFichier" est maintenant "nomDuGroupe" (necessite les droits superuser/root)
+
+			- chown -R nomUtilisateur:nomDuGroupe nomDuDossier :
+				Le propriétaire du dossier "nomDuDossier" est maintenant "nomUtilisateur" et son groupe est nomDuGroupe (avec 
+				tous les fichiers et sous-dossiers qu'il contient) (necessite les droits superuser/root)
 
 
 		> LECTURE DE CONTENU

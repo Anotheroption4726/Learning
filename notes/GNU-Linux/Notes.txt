@@ -94,7 +94,8 @@ _LS -L__________________________________________________________________________
 
 
 	0 :
-		Type. "d" indique qu'il s'agit d'un dossier. "-" indique qu'il s'agit d'un fichier.
+		Type. "d" indique qu'il s'agit d'un dossier. "-" indique qu'il ne s'agit pas d'un dossier. "l" indique qu'il s'agit d'un 
+		raccourci
 
 
 	1 :
