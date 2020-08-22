@@ -173,7 +173,7 @@ _GENERAL________________________________________________________________________
 			- whoami :
 				Affiche le nom d'utilisateur de la session courante
 
-			- id NomUtilisateur :
+			- id nomUtilisateur :
 				Affiche les informations spécifiques à l'utilisateur "NomUtilisateur"
 
 			- sudo :
@@ -560,19 +560,72 @@ _NANO___________________________________________________________________________
 
 
 
+	>> CHEMINS
+
+		- /home/nomUtilisateur/.nanorc :
+			Fichier de configuration pour l'utilisateur "nomUtilisateur". N'existe pas par défaut, il faut le créer
+
+		- /etc/nanorc :
+			Fichier de configuration général pour tous les utilisateurs (necessite les droits superuser/root)
+
+		- /usr/share/nano/ :
+			Dossier contenant les fichiers de coloration intelligente pour la configuration de "nanorc" ou ".nanorc"
+
+
+	>> CONFIGURATION
+
+		- set mouse :
+			Autorise l'utilisation de la souris
+
+		- set autoindent :
+			Indentation automatique
+
+		- include "/usr/share/nano/c.nanorc" :
+			Active la coloration intelligente pour les fichiers en ".c" (C/C++)
+
+		- include "/usr/share/nano/python.nanorc" :
+			Active la coloration intelligente pour les fichiers en ".py" (Python)
+
+
 	>> RACCOURCIS
 
-		- Ctrl + x :
-			Quitter
+		- Ctrl + g :
+			Affichage de l'écran d'aide
+
+		- Ctrl + k :
+			Couper la ligne de texte (et la mettre dans le presse-papier)
+
+		- Ctrl + u :
+			Coller la ligne de texte que l'on vient de couper
+
+		- Ctrl + c :
+			Afficher à quel endroit du fichier le curseur est positionné (ligne, colonne…)
+
+		- Ctrl + w :
+			Rechercher dans le fichier. "Ctrl + c" pour annuler. Pour continuer la recherche (passer au terme suivant), il faut
+			refaire "Ctrl + w" puis directement taper sur "Entrée"
 
 		- Ctrl + o :
 			Sauvegarder
+
+		- Ctrl + x :
+			Quitter
 
 
 	>> COMMANDES
 
 		- nano nomDuFichier.txt :
 			Ouvre "nomDuFichier.txt" dans nano
+
+		- nano -m nomDuFichier.txt :
+			Ouvre "nomDuFichier.txt" dans nano et autorise l'utilisation de la souris
+
+		- nano -i nomDuFichier.txt :
+			Ouvre "nomDuFichier.txt" dans nano avec indentation automatique. L'alinéa (tabulations) de la ligne précédente est 
+			respecté lorsqu'on passe à la ligne suivante
+
+		- nano -mi nomDuFichier.txt :
+			Ouvre "nomDuFichier.txt" dans nano avec autorisation d'utilisation de la souris et indentation automatique
 
 
 
