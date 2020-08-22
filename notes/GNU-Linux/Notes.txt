@@ -172,4 +172,8 @@ _/ETC/APT/SOURCES.LIST__________________________________________________________
 
 
 	3 :
-		Section du dépôt
+		Section du dépôt. Les sections "main" (paquets tout à fait libres) et "restricted" (paquets non-libres) contiennent des 
+		paquets maintenus par les développeurs d'Ubuntu. Les sections "universe" et "multiverse" contiennent des paquets 
+		maintenus par la communauté. La section "universe" contient uniquement des paquets libres et la section "multiverse", 
+		des paquets non-libres. La Fondation Ubuntu ne contrôle pas ces paquets ; ils sont analysés par un comité 
+		d'utilisateurs.
