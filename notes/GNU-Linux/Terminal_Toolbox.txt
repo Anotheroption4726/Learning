@@ -14,6 +14,9 @@ _GENERAL________________________________________________________________________
 	>> CHEMINS
 
 
+		- ~/.bashrc :
+			Fichier de configuration de la console
+
 		- /bin :
 			Contient des programmes (exécutables) susceptibles d'être utilisés par tous les utilisateurs de la machine
 
@@ -41,13 +44,23 @@ _GENERAL________________________________________________________________________
 			C'est un des plus gros dossiers, dans lequel vont s'installer la plupart des programmes demandés par l'utilisateur
 
 		- /var :
-			Ce dossier contient des données « variables », souvent des logs (traces écrites de ce qui s'est passé récemment sur l'ordinateur)
+			Ce dossier contient des données « variables », souvent des logs (traces écrites de ce qui s'est passé récemment sur 
+			l'ordinateur)
 
 		- /lib :
 			Dossier contenant les bibliothèques partagées (généralement des fichiers.so) utilisées par les programmes. C'est en 
 			fait là qu'on trouve l'équivalent des.dll de Windows
 
 
+
+
+	>> .BASHRC CONFIG
+
+		alias ll='ls -l' :
+			Fait un "ls -l" si jamais l'on entre la commande "ll"
+
+		alias brave='cd /usr/bin && ./brave-browser' :
+			Alias personnalisé. Lance le navigateur "Brave Browser" si jamais l'on entre la commande "brave-browser"
 
 
 	>> RACCOURCIS
@@ -562,7 +575,7 @@ _NANO___________________________________________________________________________
 
 	>> CHEMINS
 
-		- /home/nomUtilisateur/.nanorc :
+		- ~/.nanorc :
 			Fichier de configuration pour l'utilisateur "nomUtilisateur". N'existe pas par défaut, il faut le créer
 
 		- /etc/nanorc :
@@ -572,7 +585,7 @@ _NANO___________________________________________________________________________
 			Dossier contenant les fichiers de coloration intelligente pour la configuration de "nanorc" ou ".nanorc"
 
 
-	>> CONFIGURATION
+	>> .NANORC CONFIG
 
 		- set mouse :
 			Autorise l'utilisation de la souris
