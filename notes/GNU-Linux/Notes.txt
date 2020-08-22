@@ -146,40 +146,30 @@ _LS -L__________________________________________________________________________
 
 
 
-_ROOT FOLDERS__________________________________________________________________________________________________________________
+_/ETC/APT/SOURCES.LIST_________________________________________________________________________________________________________
 
 
 
 
-	- bin :
-		Contient des programmes (exécutables) susceptibles d'être utilisés par tous les utilisateurs de la machine
+	0		1								  2				 3
+	deb 	http://security.ubuntu.com/ubuntu hardy-security main restricted
+	deb-src http://security.ubuntu.com/ubuntu hardy-security main restricted
 
-	- sbin :
-		Contient des programmes système importants. Uniquement utilisables en mode 'superutilisateur'
 
-	- boot :
-		Fichiers permettant le démarrage de Linux
 
-	- dev :
-		Fichiers contenant les périphériques. Ce dossier contient des sous-dossiers qui « représentent » chacun un 
-		périphérique. On y retrouve ainsi par exemple le fichier qui représente le lecteur CD
 
-	- home : 
-		Répertoires personnels des utilisateurs
+	0 :
+		"deb" indique que l'adresse sert à télécharger la version compilée (binaire) des programmes. "deb-src" permet de 
+		récupérer leur code source
 
-	- media :
-		Lorsqu'un périphérique amovible (comme une carte mémoire SD ou une clé USB) est inséré dans votre ordinateur, Linux 
-		vous permet d'y accéder à partir d'un sous-dossier de media
 
-	- tmp :
-		Dossier temporaire utilisé par les programmes pour stocker des fichiers
+	1 :
+		Adresse du dépôt
 
-	- usr :
-		C'est un des plus gros dossiers, dans lequel vont s'installer la plupart des programmes demandés par l'utilisateur
 
-	- var :
-		Ce dossier contient des données « variables », souvent des logs (traces écrites de ce qui s'est passé récemment sur l'ordinateur)
+	2 :
+		Nom de la version de la distribution utilisée (ici Ubuntu)
 
-	- lib :
-		Dossier contenant les bibliothèques partagées (généralement des fichiers.so) utilisées par les programmes. C'est en 
-		fait là qu'on trouve l'équivalent des.dll de Windows
+
+	3 :
+		Section du dépôt
