@@ -61,13 +61,21 @@ _GENERAL________________________________________________________________________
 
 
 
-	>> .BASHRC CONFIG
+	>> ~/.BASHRC CONFIG
+
+		export PATH=$PATH:/usr/bin/ :
+			Rajoute le chemin "/usr/bin/" à la variable "$PATH" (à chaque fois que l'on démarre un nouveau shell "Bash"). Il 
+			s'agit ici d'un exemple, ce chemin fait déjà partie de la variable "$PATH" par défaut
+
+		alias brave='/usr/bin/brave-browser'
+			Alias personnalisé. Lance le navigateur "Brave Browser" si jamais l'on entre la commande "brave"
 
 		alias ll='ls -l' :
 			Fait un "ls -l" si jamais l'on entre la commande "ll"
 
 		alias brave='cd /usr/bin && ./brave-browser' :
-			Alias personnalisé. Lance le navigateur "Brave Browser" si jamais l'on entre la commande "brave-browser"
+			Alias personnalisé. Si jamais l'on entre la commande "brave", déplace l'utilisateur dans le dossier "/usr/bin" et 
+			lance le navigateur "Brave Browser"
 
 
 	>> RACCOURCIS
@@ -171,10 +179,6 @@ _GENERAL________________________________________________________________________
 			- lsb_release -d :
 				Affiche la version courante de Linux utilisée
 
-			- which nomDeCommande :
-				Affiche le chemin de localisation d'un programme, binaire ou d'une autre commande. Ainsi, 'which python' 
-				devrait afficher '/usr/bin/python' et 'which pwd' devrait afficher '/bin/pwd'
-
 			- history :
 				Affiche l'historique des commandes entrées dans la console dans l'ordre chronologique
 
@@ -183,6 +187,20 @@ _GENERAL________________________________________________________________________
 
 			- clear :
 				Efface le contenu de la console
+
+			- which nomDeCommande :
+				Affiche le chemin de localisation d'un programme, binaire ou d'une autre commande. Ainsi, 'which python' 
+				devrait afficher '/usr/bin/python' et 'which pwd' devrait afficher '/bin/pwd'
+
+			- echo $0 :
+				Affiche le type de shell que l'on est en train d'utiliser (Bash, Dash, Zsh, Tcsh, Ksh, Fish...). $0 représente
+				l'élément "0" d'une commande, càd le type de shell qui la fait fonctionner
+
+			- echo $PATH :
+				Affiche la liste des dossiers contenus dans la variable "$PATH"
+
+			- export PATH=$PATH:/usr/bin/ :
+				Rajoute le chemin "/usr/bin/" à la variable "$PATH" (temporairement)
 
 			- exit :
 				Déconnexion/quitter la console mais aussi le mode 'superuser' permanent
@@ -592,7 +610,7 @@ _NANO___________________________________________________________________________
 			Dossier contenant les fichiers de coloration intelligente pour la configuration de "nanorc" ou ".nanorc"
 
 
-	>> .NANORC CONFIG
+	>> ~/.NANORC CONFIG
 
 		- set mouse :
 			Autorise l'utilisation de la souris
