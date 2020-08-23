@@ -56,6 +56,56 @@ Règle importante : il ne peut y avoir qu'un seul système de fichiers par parti
 
 
 
+_SHELL, TERMINAL & CONSOLE_____________________________________________________________________________________________________
+
+
+
+
+	>> SHELL
+
+		In Unix system administration, a user's shell is the program which actually processes commands and returns output. Most 
+		shells also manage foreground and background processes, command history and command line editing. These features (and 
+		many more) are standard in Bash, the most common shell in modern Linux systems. There are many different unix shells. 
+		Ubuntu's default shell is Bash (like most other Linux distributions). Popular alternatives include zsh (which 
+		emphasizes power and customizability) and fish (which emphasizes simplicity)
+
+
+
+
+	>> TERMINAL
+
+		A terminal refers to a wrapper program which runs a shell. Decades ago, this was a physical device consisting of little 
+		more than a monitor and keyboard. As Unix/Linux systems added better multiprocessing and windowing systems, this 
+		terminal concept was abstracted into software. Some terminals are provided by the kernel but other terminals, sometimes 
+		called pseudo-terminals or pseudo-ttys, are provided by programs called terminal emulators. These include:
+
+			- GUI applications running in the X Window System :
+				Xterm, Gnome Terminal, Konsole, Terminator, etc.
+
+			- Ssh :
+				Which connects a terminal on one machine with programs on another machine
+
+			- Expect :
+				For scripting terminal interactions
+
+
+
+
+	>> CONSOLE
+
+		A console is generally a terminal in the physical sense that is by some definition the primary terminal directly 
+		connected to a machine. The console appears to the operating system as a kernel-implemented terminal. On some systems, 
+		such as Linux and FreeBSD, the console appears as several terminals (ttys, with special key combinations to switch 
+		between them: "Ctrl + Alt + F1", "Ctrl + Alt + F2"...). Just to confuse matters, the name given to each particular 
+		terminal can be “console”, ”virtual console”, ”virtual terminal”, and other variations
+
+
+
+
+
+
+
+
 _CHMOD_________________________________________________________________________________________________________________________
 
 
