@@ -179,6 +179,9 @@ _GENERAL________________________________________________________________________
 			- lsb_release -d :
 				Affiche la version courante de Linux utilisée
 
+			- hostnamectl :
+				Affiche les informations du système (nom de l'ordinnateur, OS, Kernel, Architecture...)
+
 			- history :
 				Affiche l'historique des commandes entrées dans la console dans l'ordre chronologique
 
