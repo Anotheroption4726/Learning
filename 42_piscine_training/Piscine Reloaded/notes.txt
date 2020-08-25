@@ -1,0 +1,3 @@
+- Exercice 00
+
+	test6 est un lien symbolique. Apparament, sur Linux, changer les droits des liens symboliques ne sert à rien/ne fonctionne pas. Si l'on essaye, les droits changeront pour le fichier ciblé et non pour le lien.
