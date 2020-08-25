@@ -182,6 +182,9 @@ _GENERAL________________________________________________________________________
 			- hostnamectl :
 				Affiche les informations du système (nom de l'ordinnateur, OS, Kernel, Architecture...)
 
+			- shutdown :
+				Eteint le système
+
 			- history :
 				Affiche l'historique des commandes entrées dans la console dans l'ordre chronologique
 
@@ -194,6 +197,15 @@ _GENERAL________________________________________________________________________
 			- which nomDeCommande :
 				Affiche le chemin de localisation d'un programme, binaire ou d'une autre commande. Ainsi, 'which python' 
 				devrait afficher '/usr/bin/python' et 'which pwd' devrait afficher '/bin/pwd'
+
+			- man nomDeCommande :
+				Affiche la page du manuel de "nomDeCommande"
+
+			- nomDeCommande -h :
+				Affiche une version simplifiée du man concernant la commande "nomDeCommande". Parfois plus clair que le man
+
+			- apropos rechercheDeCommande :
+				Fait une recherche dans les descriptions des commandes en utilisant le terme "rechercheDeCommande"
 
 			- echo $0 :
 				Affiche le type de shell que l'on est en train d'utiliser (Bash, Dash, Zsh, Tcsh, Ksh, Fish...). $0 représente
