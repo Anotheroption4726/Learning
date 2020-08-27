@@ -1,0 +1,12 @@
+- keep on learning python/django
+- practice Unix terminal/System admin stuff
+- learn TCP/IP (one day I'll get the motivation for this...)
+- Finally get into Unreal
+- Godot. Godot is the future. But I'll need to get into Blender too
+- Finish that goddam C tutorial and get into C++
+- continue learning PHP and get into Symfony? (I need a job smh)
+- nah learn JavaScript and some hybrid dev stuff like View or Angular, that's where the money is at
+- Flutter looks cool
+- learn Docker ffs
+- learn p2p/blockchain stuff
+- bonus points (will never happen): get into machine learning (ugh)
