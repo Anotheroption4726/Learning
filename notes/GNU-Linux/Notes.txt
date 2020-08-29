@@ -196,6 +196,42 @@ _LS -L__________________________________________________________________________
 
 
 
+_REGULAR EXPRESSIONS/REGEX_____________________________________________________________________________________________________
+
+
+
+
+	>> OPERATEURS
+
+
+		^ :
+			Indique le début d'une chaîne
+
+
+		$ :
+			Indique la fin d'une chaîne
+
+
+
+
+	>> EXEMPLES
+
+
+		^Bonjour :
+			Si l'on souhaite qu'une chaîne commence par « Bonjour ». Attention, « Bonjour » devra obligatoirement se trouver au
+			début de la chaîne
+
+
+		zéro$ :
+			Si l'on souhaite que la chaîne se termine par « zéro »
+
+
+
+
+
+
+
+
 _/ETC/APT/SOURCES.LIST_________________________________________________________________________________________________________
 
 
