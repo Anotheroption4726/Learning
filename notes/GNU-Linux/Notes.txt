@@ -201,6 +201,17 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 
 
 
+	>> TYPES
+
+
+		POSIX
+
+
+		PCRE
+
+
+
+
 	>> OPERATEURS
 
 
@@ -210,6 +221,10 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 
 		$ :
 			Indique la fin d'une chaîne
+
+
+		[] :
+			Classe de caractères. N'importe laquelle des lettres (contenues à l'intérieur de la classe) peut convenir
 
 
 
@@ -224,6 +239,18 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 
 		zéro$ :
 			Si l'on souhaite que la chaîne se termine par « zéro »
+
+
+		gr[ioa]s :
+			Regex qui reconnaît trois mots : « gris », « gros » et « gras »
+
+
+		gr[aoi]s$ :
+			 La chaîne de caractères doit se terminer par « gris », « gras » ou « gros »
+
+
+		^[aeiouy] :
+			La chaîne de caractères doit commencer par une voyelle minuscule
 
 
 
