@@ -92,7 +92,7 @@ _BINARY TO DECIMAL______________________________________________________________
 
 
 
-_MEMORY________________________________________________________________________________________________________________________
+_VOCABULARY____________________________________________________________________________________________________________________
 
 
 
@@ -101,3 +101,10 @@ _MEMORY_________________________________________________________________________
 
 
 	Disque dur ou Mémoire Morte (ROM = Read Only Memory)
+
+
+	Stack/LIFO data structure (Last In, First Out):
+		La dernière donnée enregistrée est ainsi la première à être retirée (sauf commande particulière)
+
+			push (adds an element to the collection)
+			pop (removes the most recently added element)

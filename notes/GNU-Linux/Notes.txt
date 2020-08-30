@@ -227,6 +227,14 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 			Classe de caractères. N'importe laquelle des lettres (contenues à l'intérieur de la classe) peut convenir
 
 
+		[-] :
+			Fait une recherche à l'intérieur toute une plage/intervalle de caractères ([a-t], [F-M], [3-8]...)
+
+
+		[^-] :
+			Fait une recherche à l'extérieur d'une plage/intervalle de caractères (l'inverse de [-])
+
+
 
 
 	>> EXEMPLES
@@ -251,6 +259,38 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 
 		^[aeiouy] :
 			La chaîne de caractères doit commencer par une voyelle minuscule
+
+
+		[a-z] :
+			La chaîne de caractères doit contenir une lettre
+
+
+		[A-Z0-9] :
+			La chaîne de caractères doit contenir une lettre majuscule et un chiffre compris entre 0 et 9
+
+
+		^[0-9] :
+			La chaîne de caractères doit commencer avec un chiffre compris entre 0 et 9
+
+
+		<h[1-6]> :
+			La chaîne de caractères doit contenir une balise de titre HTML
+
+
+		[^0-9] :
+			La chaîne de caractères doit contenir autre chose que des chiffres
+
+
+		[^A-Z0-9] :
+			La chaîne de caractères doit contenir autre chose que des majuscules et des chiffres
+
+
+		^[^a-z] :
+			La chaîne de caractères ne doit pas commencer pas par une lettre minuscule
+
+
+		[^aeiouy]$ :
+			La chaîne de caractères ne doit pas se terminer pas par une voyelle
 
 
 
