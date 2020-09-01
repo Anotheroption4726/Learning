@@ -235,26 +235,30 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 			Fait une recherche à l'extérieur d'une plage/intervalle de caractères (l'inverse de [-])
 
 
+		? :
+			Indique que la lettre ou la suite de lettres est facultative. Elle peut y être 0 ou 1 fois
+
+
 
 
 	>> EXEMPLES
 
 
 		^Bonjour :
-			Si l'on souhaite qu'une chaîne commence par « Bonjour ». Attention, « Bonjour » devra obligatoirement se trouver au
+			Si l'on souhaite qu'une chaîne commence par "Bonjour". Attention, "Bonjour" devra obligatoirement se trouver au
 			début de la chaîne
 
 
 		zéro$ :
-			Si l'on souhaite que la chaîne se termine par « zéro »
+			Si l'on souhaite que la chaîne se termine par "zéro"
 
 
 		gr[ioa]s :
-			Regex qui reconnaît trois mots : « gris », « gros » et « gras »
+			Regex qui reconnaît trois mots : "gris", "gros" et "gras"
 
 
 		gr[aoi]s$ :
-			 La chaîne de caractères doit se terminer par « gris », « gras » ou « gros »
+			 La chaîne de caractères doit se terminer par "gris", "gras" ou "gros"
 
 
 		^[aeiouy] :
@@ -291,6 +295,18 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 
 		[^aeiouy]$ :
 			La chaîne de caractères ne doit pas se terminer pas par une voyelle
+
+
+		a? :
+			La chaîne de caractères doit contenir 0 ou 1 "a"
+
+
+		chiens? :
+			La chaîne de caractères peut contenir "chien", "chiens" ou encore toute lettre contenue dans la regex
+
+
+		bor?is :
+			La chaîne de caractères peut contenir "boris", "bois" ou encore toute lettre contenue dans la regex avant "is"
 
 
 
