@@ -218,25 +218,33 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 		^ :
 			Indique le début d'une chaîne
 
-
 		$ :
 			Indique la fin d'une chaîne
-
 
 		[] :
 			Classe de caractères. N'importe laquelle des lettres (contenues à l'intérieur de la classe) peut convenir
 
-
 		[-] :
 			Fait une recherche à l'intérieur toute une plage/intervalle de caractères ([a-t], [F-M], [3-8]...)
-
 
 		[^-] :
 			Fait une recherche à l'extérieur d'une plage/intervalle de caractères (l'inverse de [-])
 
-
 		? :
-			Indique que la lettre ou la suite de lettres est facultative. Elle peut y être 0 ou 1 fois
+			Indique que le caractère ou tout caractère présent dans la suite de caractères précédant l'opérateur peut y être 0 
+			ou 1 fois
+
+		+ :
+			Indique que le caractère ou tout caractère présent dans la suite de caractères précédant l'opérateur doit y être 1 
+			ou plusieures fois
+
+		* :
+			Indique que le caractère ou tout caractère présent dans la suite de caractères précédant l'opérateur peut y être 0,
+			1 ou plusieures fois
+
+		() :
+			Permet de grouper des caractères en motifs lorsqu'on utilise un opérateur de type "?", "+" ou "*". L'opérateur agit
+			donc sur la suite de caractères situés entre parenthèses et non sur chaque caractère individuellement
 
 
 
@@ -248,65 +256,63 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 			Si l'on souhaite qu'une chaîne commence par "Bonjour". Attention, "Bonjour" devra obligatoirement se trouver au
 			début de la chaîne
 
-
 		zéro$ :
 			Si l'on souhaite que la chaîne se termine par "zéro"
-
 
 		gr[ioa]s :
 			Regex qui reconnaît trois mots : "gris", "gros" et "gras"
 
-
 		gr[aoi]s$ :
 			 La chaîne de caractères doit se terminer par "gris", "gras" ou "gros"
-
 
 		^[aeiouy] :
 			La chaîne de caractères doit commencer par une voyelle minuscule
 
-
 		[a-z] :
 			La chaîne de caractères doit contenir une lettre
-
 
 		[A-Z0-9] :
 			La chaîne de caractères doit contenir une lettre majuscule et un chiffre compris entre 0 et 9
 
-
 		^[0-9] :
 			La chaîne de caractères doit commencer avec un chiffre compris entre 0 et 9
-
 
 		<h[1-6]> :
 			La chaîne de caractères doit contenir une balise de titre HTML
 
-
 		[^0-9] :
 			La chaîne de caractères doit contenir autre chose que des chiffres
-
 
 		[^A-Z0-9] :
 			La chaîne de caractères doit contenir autre chose que des majuscules et des chiffres
 
-
 		^[^a-z] :
 			La chaîne de caractères ne doit pas commencer pas par une lettre minuscule
-
 
 		[^aeiouy]$ :
 			La chaîne de caractères ne doit pas se terminer pas par une voyelle
 
-
 		a? :
 			La chaîne de caractères doit contenir 0 ou 1 "a"
 
+		a+ :
+			La chaîne de caractères doit contenir 1 ou plusieurs fois "a"
+
+		a* :
+			La chaîne de caractères peut contenir 0, 1 ou plusieurs fois "a"
 
 		chiens? :
-			La chaîne de caractères peut contenir "chien", "chiens" ou encore toute lettre contenue dans la regex
-
+			La chaîne de caractères peut contenir "chien", "chiens" ou encore toute lettre contenue dans la regex (mais la ou 
+			les lettres ne peuvent pas être présentes plus d'une fois)
 
 		bor?is :
 			La chaîne de caractères peut contenir "boris", "bois" ou encore toute lettre contenue dans la regex avant "is"
+
+		Ay(ay)* :
+			La regex reconnaîtra "Ay", "Ayay", "Ayayay", "Ayayayay" par exemple
+
+		Ay(ay|oy)* :
+			La regex reconnaîtra Ayayayoyayayayoyoyoyoyayoy par exemple
 
 
 
