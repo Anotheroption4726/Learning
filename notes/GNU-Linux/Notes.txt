@@ -243,8 +243,8 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 			1 ou plusieures fois
 
 		() :
-			Permet de grouper des caractères en motifs lorsqu'on utilise un opérateur de type "?", "+" ou "*". L'opérateur agit
-			donc sur la suite de caractères situés entre parenthèses et non sur chaque caractère individuellement
+			Permet de grouper des caractères en groupes lorsqu'on utilise un opérateur de type "?", "+" ou "*". L'opérateur 
+			agit donc sur la suite de caractères situés entre parenthèses et non sur chaque caractère individuellement
 
 
 
@@ -309,10 +309,16 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 			La chaîne de caractères peut contenir "boris", "bois" ou encore toute lettre contenue dans la regex avant "is"
 
 		Ay(ay)* :
-			La regex reconnaîtra "Ay", "Ayay", "Ayayay", "Ayayayay" par exemple
+			La regex reconnaîtra "Ay", "Ayay", "Ayayay" ou "Ayayayay" par exemple
 
 		Ay(ay|oy)* :
-			La regex reconnaîtra Ayayayoyayayayoyoyoyoyayoy par exemple
+			La regex reconnaîtra "Ay", "Ayay", "Ayayay", "Ayayayay" ou Ayayayoyayayayoyoyoyoyayoy par exemple
+
+		^Yaho+$ :
+			La regex reconnaitra "Yahoooooo" mais pas "Yahoooooo c'est génial !" par exemple
+
+		^Bla(bla)* :
+			La regex reconnaitra "Bla", "Blabla", "Blablabla", etc...
 
 
 
