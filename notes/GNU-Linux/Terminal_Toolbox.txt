@@ -185,6 +185,9 @@ _GENERAL________________________________________________________________________
 			- shutdown :
 				Eteint le système
 
+			- sudo reboot :
+				Redémarre le système
+
 			- history :
 				Affiche l'historique des commandes entrées dans la console dans l'ordre chronologique
 
