@@ -246,6 +246,16 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 			Permet de grouper des caractères en groupes lorsqu'on utilise un opérateur de type "?", "+" ou "*". L'opérateur 
 			agit donc sur la suite de caractères situés entre parenthèses et non sur chaque caractère individuellement
 
+		{} :
+			Fonctionne comme "+" sauf qu'on détermine entre les accolades la quantité de fois qu'on veut que le ou les 
+			caractères soient respectés
+
+		{,}
+			Fonctionne comme "{}" sauf qu'on peut choisir plusieures options de quantité séparées par un ","
+				"?" revient à écrire {0,1}
+				"+" revient à écrire {1,}
+				"*" revient à écrire {0,}
+
 
 
 
@@ -319,6 +329,21 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 
 		^Bla(bla)* :
 			La regex reconnaitra "Bla", "Blabla", "Blablabla", etc...
+
+		a{3} :
+			La regex doit contenir "aaa"
+
+		a{3,5} :
+			La regex doit contenir "aaa", "aaaa" ou "aaaaa"
+
+		a{3,} :
+			La regex doit contenir "aaa", "aaaa", "aaaaa", "aaaaaa", etc...
+
+		^Bla(bla){4}$ :
+			La regex doit commencer par "Bla" puis finir avec une suite de 4 "bla"
+
+		^[0-9]{6}$ :
+			La regex doit commencer et finir par une suite de 6 chiffres allant de 0 à 9
 
 
 
