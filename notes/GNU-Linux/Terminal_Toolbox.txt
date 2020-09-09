@@ -593,7 +593,7 @@ _GENERAL________________________________________________________________________
 				( https://unix.stackexchange.com/questions/50612/how-to-combine-2-name-conditions-in-find )
 
 
-		> GREP
+		> RECHERCHE DANS FICHIER
 
 			- grep terme nomDuFichier :
 				Recherche le mot "terme" dans le fichier "nomDuFichier" et affiche toutes les lignes dans lesquelles le mot a 
@@ -610,6 +610,26 @@ _GENERAL________________________________________________________________________
 			- grep -r terme nomDuDossier :
 				Recherche le mot "terme" dans le dossier "nomDuDossier" (ainsi que dans tous les sous-répertoires) et affiche 
 				toutes les lignes des fichiers dans lesquelles le mot a été trouvé
+
+			- grep -E expression :
+				Permet d'utiliser la commande "grep" avec une expression régulière (ou regex, voir "Notes.txt")
+
+			- sort nomDuFichier :
+				Le contenu du fichier "nomDuFichier" est trié alphabétiquement et le résultat est affiché dans la console. Le 
+				fichier n'est pas modifié
+
+			- sort -n nomDuFichier :
+				Le contenu du fichier "nomDuFichier" est trié numériquement et le résultat est affiché dans la console. Le 
+				fichier n'est pas modifié
+
+			- sort -o nomDuFichier1 nomDuFichier2 :
+				Le contenu du fichier "nomDuFichier2" est trié alphabétiquement et le résultat est stocké dans "nomDuFichier1"
+
+			- wc nomDuFichier :
+				Affiche le nombre de lignes, le nombre de mots et le nombre d'octets contenus dans le fichier "nomDuFichier"
+
+			- wc -m nomDuFichier :
+				Affiche le nombre de caractères contenus dans le fichier "nomDuFichier"
 
 
 
