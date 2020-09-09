@@ -537,52 +537,59 @@ _GENERAL________________________________________________________________________
 				Met à jour la base de données de fichiers pour la commande "locate"
 
 			- find -name nomDuFichier.txt :
-				Recherche et affiche, à partir du répertoire courant, le ou les fichier(s) "nomDuFichier.txt" si il(s) éxiste(nt). Le nom du 
-				fichier doit exactement être "nomDuFichier.txt"
+				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, le ou les fichier(s) 
+				"nomDuFichier.txt". Le nom du fichier doit exactement être "nomDuFichier.txt"
 
 			- find ~/Documents/nomDuDossier -name nomDuFichier.txt :
-				Recherche et affiche, depuis "nomDuDossier", le ou les fichier(s) "nomDuFichier.txt" si il(s) éxiste(nt)
+				Recherche et affiche, depuis "nomDuDossier" et dans tous les sous-répertoires, le ou les fichier(s) 
+				"nomDuFichier.txt"
 
-			- find -name *nomDuFichier :
-				Recherche et affiche, à partir du répertoire courant, tout fichier se terminant par le terme "nomDuFichier" si 
-				il(s) éxiste(nt)
+			- find -name '*terme' :
+				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier se 
+				terminant par le terme "terme"
 
-			- find -name *nomDuFichier* :
-				Recherche et affiche, à partir du répertoire courant, tout fichier commençant ou se terminant par le terme 
-				"nomDuFichier" si il(s) éxiste(nt)
+			- find -name 'terme*'' :
+				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier commençant 
+				par le terme "terme"
 
 			- find -size +10M :
-				Recherche et affiche, à partir du répertoire courant, tout fichier dont la taille est supèrieure à 10 Mo. On 
-				utilise aussi "k" pour "Ko" et "g" pour "Go"
+				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier dont la 
+				taille est supèrieure à 10 Mo. On utilise aussi "k" pour "Ko" et "g" pour "Go"
 
 			- find -size -10M :
-				Recherche et affiche, à partir du répertoire courant, tout fichier dont la taille est inférieure à 10 Mo
+				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier dont la 
+				taille est inférieure à 10 Mo
 
 			- find -atime 6 :
-				Recherche et affiche, à partir du répertoire courant, tout fichier dont la modification a été faite il y a 
-				moins de 7 jours
+				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier dont la 
+				modification a été faite il y a moins de 7 jours
 
 			- find -type d :
-				Recherche et affiche tous les dossiers et sous-dossiers contenus à partir du répertoire courant
+				Recherche et affiche tous les dossiers contenus à partir du répertoire courant et dans tous les sous-répertoires
 
 			- find -type f :
-				Recherche et affiche tous les fichiers contenus à partir du répertoire courant
+				Recherche et affiche tous les fichiers contenus à partir du répertoire courant et dans tous les sous-répertoires
 
 			- find -name nomDuFichier -delete :
-				Recherche et supprime, à partir du répertoire courant, tous les fichiers "nomDuFichier" si ils éxistent
+				Recherche et supprime, à partir du répertoire courant et dans tous les sous-répertoires, tous les fichiers 
+				"nomDuFichier"
 
-			- find -name *.txt -delete :
-				Recherche et supprime, à partir du répertoire courant, tous les fichiers se terminant par l'extension ".txt" si 
-				ils éxistent
+			- find -name '*.txt' -delete :
+				Recherche et supprime, à partir du répertoire courant et dans tous les sous-répertoires, tous les fichiers se 
+				terminant par l'extension ".txt"
 
-			- find -name nomDuFichier -exec chmod 000 {} \;
-				Recherche et retire tous les droits, à partir du répertoire courant, de tous les fichiers "nomDuFichier" si ils 
-				éxistent. Les accolades "{}" sont remplacées par "nomDuFichier". La commande doit finir par "\;" 
-				obligatoirement
+			- find -name nomDuFichier -exec chmod 000 {} \; :
+				Recherche et retire tous les droits, à partir du répertoire courant et dans tous les sous-répertoires, de tous 
+				les fichiers "nomDuFichier". Les accolades "{}" sont remplacées par "nomDuFichier". La commande doit finir par 
+				"\;" obligatoirement
 
-			- find -name *txt -exec mv {} nomDuDossier \;
-				Recherche et déplace dans le dossier "nomDuDossier", à partir du répertoire courant, tous les fichiers se 
-				terminant avec l'extension ".txt"
+			- find -name '*txt' -exec mv {} nomDuDossier \; :
+				Recherche et déplace dans le dossier "nomDuDossier", à partir du répertoire courant et dans tous les 
+				sous-répertoires, tous les fichiers se terminant avec l'extension ".txt"
+
+			- find -name '*~' -o \( -name '#*' -o -name '*#' \) :
+				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier dont le 
+				nom se termine par ~, ou commence et se termine par #
 
 
 
