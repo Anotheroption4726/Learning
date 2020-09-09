@@ -201,6 +201,25 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 
 
 
+	>> LIENS
+
+
+		https://www.regexpal.com/
+
+		Tutos :
+			https://www.guru99.com/linux-regular-expressions.html
+			https://www.geeksforgeeks.org/grep-command-in-unixlinux/
+			https://www.cyberciti.biz/faq/grep-regular-expressions/
+			https://www.cyberciti.biz/faq/howto-use-grep-command-in-linux-unix/
+
+		Exemples :
+			https://digitalfortress.tech/tricks/top-15-commonly-used-regex/
+			https://doc.laserfiche.com/laserfiche.documentation/english/docs/Subsystems/ProcessAutomation/Content/Resources/Regular%20Expressions/Common-Regular-Expressions.htm
+			https://gist.github.com/jacksonfdam/3000275
+
+
+
+
 	>> TYPES
 
 
@@ -349,6 +368,53 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 
 
 	>> COMMON USES
+
+
+		^\d+$ :
+			Nombres entiers
+
+		^\d*\.\d+$ :
+			Nombres décimaux
+
+		^\d*(\.\d+)?$ :
+			Nombres entiers et décimaux
+
+		^-?\d*(\.\d+)?$ :
+			Nombres négatifs, positifs, entiers et décimaux
+
+		^[a-zA-Z0-9]*$ :
+			Caractères alphanumériques
+
+		^[a-zA-Z0-9 ]*$ :
+			Caractères alphanumériques avec espaces
+
+		^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$ :
+			Emails
+
+		^([a-z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$ :
+			Emails (version moins commune)
+
+		(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$ :
+			Mot de passe (1 lettre minuscule, 1 lettre majuscule, 1 nombre et doit avoir au moins 8 caractères au total)
+
+		(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,} :
+			Mot de passe complexe (1 lettre minuscule, 1 lettre majuscule, 1 nombre, 1 caractère spécial et doit avoir au 
+			moins 8 caractères au total)
+
+		https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*) :
+			URL http(s)
+
+		([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])) :
+			Date au format 'YYYY-MM-dd'
+
+		^(0?[1-9]|1[0-2]):[0-5][0-9]$ :
+			Heure au format HH:MM (12)
+
+		^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$ :
+			Heure au format HH:MM (24)
+
+		^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$ :
+			Numéro de téléphone international (avec country code en option)
 
 
 

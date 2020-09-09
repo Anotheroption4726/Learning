@@ -589,93 +589,27 @@ _GENERAL________________________________________________________________________
 
 			- find -name '*~' -o \( -name '#*' -a -name '*#' \) :
 				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier dont le 
-				nom se termine par ~, ou commence et se termine par #
+				nom se termine par ~, ou commence et se termine par # 
+				( https://unix.stackexchange.com/questions/50612/how-to-combine-2-name-conditions-in-find )
 
 
+		> GREP
 
+			- grep terme nomDuFichier :
+				Recherche le mot "terme" dans le fichier "nomDuFichier" et affiche toutes les lignes dans lesquelles le mot a 
+				été trouvé
 
+			- grep -n "suite de termes" nomDuFichier :
+				Recherche la suite de mots "suite de termes" dans le fichier "nomDuFichier" et affiche toutes les lignes dans 
+				lesquelles la suite de mots a été trouvé (avec le numéro de chaque ligne)
 
+			- grep -v terme nomDuFichier :
+				Recherche le mot "terme" dans le fichier "nomDuFichier" et affiche toutes les lignes dans lesquelles le mot 
+				n'est pas présent
 
-
-
-_APT___________________________________________________________________________________________________________________________
-
-
-
-
-	>> LIENS
-
-		https://doc.ubuntu-fr.org/depots
-		https://doc.ubuntu-fr.org/sources.list (ac liens pour les listes d'url de depots)
-		https://doc.ubuntu-fr.org/ppa
-
-		https://community.linuxmint.com/tutorial/view/588
-
-
-
-
-	>> CHEMINS
-
-
-		- /etc/apt/sources.list :
-			Fichier source contenant la liste des dépôts et leurs urls
-
-		- /etc/apt/sources.list.d/ :
-			Dossier des dépôts PPA (Personal Package Archives) présents sur le système
-
-		- /etc/apt/sources.list.d/official-package-repositories.list :
-			Fichier source contenant la liste des dépôts et leurs urls sur Linux Mint. Ne pas modifier manuellement, pour cela
-			il vaut mieux utiliser l'interface graphique "Software Sources"
-
-
-
-
-	>> /ETC/APT/SOURCES.LIST CONFIG
-
-
-		Voir section "/ETC/APT/SOURCES.LIST" dans le fichier "Notes.txt"
-
-
-
-
-	>> COMMANDES
-
-
-		- grep -Rn --include=\*.list ^[^\#] /etc/apt/ :
-			Liste le détail de tous les dépôts (PPA ou non) en une seule fois
-
-		- ls -l /etc/apt/sources.list.d/ :
-			Liste les dépôts PPA
-
-		- apt-get update :
-			Met à jour le cache (necessite les droits superuser/root)
-
-		- apt-get upgrade :
-			Installe les dernières versions de tous les paquets présents sur le système (necessite les droits superuser/root).
-			Faire un "apt-get update" avant
-
-		- apt-cache search nomDuPaquet :
-			Effectue une recherche de paquet par nom dans le cache
-
-		- apt-cache show nomDuPaquet :
-			Affiche la description et les détails du paquet
-
-		- apt-get install nomDuPaquet :
-			Installe le paquet "nomDuPaquet" ainsi que toutes ses dépendances sur le système (necessite les droits 
-			superuser/root)
-
-		- dpkg -L nomDuPaquet :
-			Liste tous les fichiers, dossiers et chemins présents sur le système correspondant au paquet "nomDuPaquet" installé
-
-		- apt-get remove nomDuPaquet :
-			Désinstalle/supprime le paquet "nomDuPaquet" (necessite les droits superuser/root)
-
-		- apt-get purge nomDuPaquet :
-			Désinstalle/supprime le paquet "nomDuPaquet" ainsi que toutes ses dépendances non utilisées (necessite les droits
-			 superuser/root)
-
-		- sudo apt-get autoclean && sudo apt-get autoremove :
-			Nettoie le cache et supprime tous les paquets installés par d'autres paquets qui ne sont plus necessaires
+			- grep -r terme nomDuDossier :
+				Recherche le mot "terme" dans le dossier "nomDuDossier" (ainsi que dans tous les sous-répertoires) et affiche 
+				toutes les lignes des fichiers dans lesquelles le mot a été trouvé
 
 
 
@@ -790,6 +724,92 @@ _GIT____________________________________________________________________________
 
 		- git push :
 			Envoyer les commits vers le dépôt distant
+
+
+
+
+
+
+
+
+_APT___________________________________________________________________________________________________________________________
+
+
+
+
+	>> LIENS
+
+		https://doc.ubuntu-fr.org/depots
+		https://doc.ubuntu-fr.org/sources.list (ac liens pour les listes d'url de depots)
+		https://doc.ubuntu-fr.org/ppa
+
+		https://community.linuxmint.com/tutorial/view/588
+
+
+
+
+	>> CHEMINS
+
+
+		- /etc/apt/sources.list :
+			Fichier source contenant la liste des dépôts et leurs urls
+
+		- /etc/apt/sources.list.d/ :
+			Dossier des dépôts PPA (Personal Package Archives) présents sur le système
+
+		- /etc/apt/sources.list.d/official-package-repositories.list :
+			Fichier source contenant la liste des dépôts et leurs urls sur Linux Mint. Ne pas modifier manuellement, pour cela
+			il vaut mieux utiliser l'interface graphique "Software Sources"
+
+
+
+
+	>> /ETC/APT/SOURCES.LIST CONFIG
+
+
+		Voir section "/ETC/APT/SOURCES.LIST" dans le fichier "Notes.txt"
+
+
+
+
+	>> COMMANDES
+
+
+		- grep -Rn --include=\*.list ^[^\#] /etc/apt/ :
+			Liste le détail de tous les dépôts (PPA ou non) en une seule fois
+
+		- ls -l /etc/apt/sources.list.d/ :
+			Liste les dépôts PPA
+
+		- apt-get update :
+			Met à jour le cache (necessite les droits superuser/root)
+
+		- apt-get upgrade :
+			Installe les dernières versions de tous les paquets présents sur le système (necessite les droits superuser/root).
+			Faire un "apt-get update" avant
+
+		- apt-cache search nomDuPaquet :
+			Effectue une recherche de paquet par nom dans le cache
+
+		- apt-cache show nomDuPaquet :
+			Affiche la description et les détails du paquet
+
+		- apt-get install nomDuPaquet :
+			Installe le paquet "nomDuPaquet" ainsi que toutes ses dépendances sur le système (necessite les droits 
+			superuser/root)
+
+		- dpkg -L nomDuPaquet :
+			Liste tous les fichiers, dossiers et chemins présents sur le système correspondant au paquet "nomDuPaquet" installé
+
+		- apt-get remove nomDuPaquet :
+			Désinstalle/supprime le paquet "nomDuPaquet" (necessite les droits superuser/root)
+
+		- apt-get purge nomDuPaquet :
+			Désinstalle/supprime le paquet "nomDuPaquet" ainsi que toutes ses dépendances non utilisées (necessite les droits
+			 superuser/root)
+
+		- sudo apt-get autoclean && sudo apt-get autoremove :
+			Nettoie le cache et supprime tous les paquets installés par d'autres paquets qui ne sont plus necessaires
 
 
 
