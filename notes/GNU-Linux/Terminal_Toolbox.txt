@@ -587,7 +587,7 @@ _GENERAL________________________________________________________________________
 				Recherche et déplace dans le dossier "nomDuDossier", à partir du répertoire courant et dans tous les 
 				sous-répertoires, tous les fichiers se terminant avec l'extension ".txt"
 
-			- find -name '*~' -o \( -name '#*' -o -name '*#' \) :
+			- find -name '*~' -o \( -name '#*' -a -name '*#' \) :
 				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier dont le 
 				nom se termine par ~, ou commence et se termine par #
 
