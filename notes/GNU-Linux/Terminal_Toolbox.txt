@@ -660,11 +660,11 @@ _GENERAL________________________________________________________________________
 				Envoie le contenu du fichier "nomDuFichier" dans l'entrée de la commande "cat". Affiche ensuite le contenu du 
 				fichier "nomDuFichier" en texte dans la console
 
-			- sort  << termeFinal :
+			- sort << termeFinal :
 				Entre manuellement le contenu envoyé dans l'entrée de la commande "sort" (tant que le terme "termeFinal" n'a 
 				pas été entré). Le contenu est ensuite trié alphabétiquement et le résultat est affiché dans la console
 
-			- ???????? sort -n << termeFinal > nomDuFichier 2>&1
+			- sort -n << termeFinal 2>&1 nomDuFichier :
 				
 
 
