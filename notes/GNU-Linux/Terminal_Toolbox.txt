@@ -81,29 +81,29 @@ _GENERAL________________________________________________________________________
 	>> RACCOURCIS
 
 
-		- Option + maj + L :
-			pipe. uniquement sur clavier Apple (à droite du clavier)
+		- Alt Gr + 6 :
+			Pipe sur clavier AZERTY
 
+		- Alt + Shift + L :
+			Pipe sur clavier Apple
 
-		> GUI
+		- Ctrl + Alt + F1 :
+			Ouvre le terminal tty1 (le GUI devient inaccessible, necessite un login et un mot de passe utilisateur)
 
-			- Ctrl + Alt + F1 :
-				Ouvre le terminal tty1 (le GUI devient inaccessible, necessite un login et un mot de passe utilisateur)
+		- Ctrl + Alt + F2 :
+			Ouvre le terminal tty2 sans passer par l'interface graphique
 
-			- Ctrl + Alt + F2 :
-				Ouvre le terminal tty2 sans passer par l'interface graphique
+		- Ctrl + Alt + F3 :
+			Ouvre le terminal tty3 sans passer par l'interface graphique
 
-			- Ctrl + Alt + F3 :
-				Ouvre le terminal tty3 sans passer par l'interface graphique
+		- Ctrl + Alt + F4 :
+			Ouvre le terminal tty4 sans passer par l'interface graphique
 
-			- Ctrl + Alt + F4 :
-				Ouvre le terminal tty4 sans passer par l'interface graphique
+		- Ctrl + Alt + F5 :
+			Ouvre le terminal tty5 sans passer par l'interface graphique
 
-			- Ctrl + Alt + F5 :
-				Ouvre le terminal tty5 sans passer par l'interface graphique
-
-			- Ctrl + Alt + F6 :
-				Ouvre le terminal tty6 sans passer par l'interface graphique
+		- Ctrl + Alt + F6 :
+			Ouvre le terminal tty6 sans passer par l'interface graphique
 
 
 		> TERMINAL
@@ -283,20 +283,21 @@ _GENERAL________________________________________________________________________
 		> NAVIGATION
 
 			- pwd :
-				Affiche le nom et le chemin du dossier courant dans lequel l'utilisateur se trouve
+				Affiche le nom et le chemin du répertoire courant dans lequel l'utilisateur se trouve
 
 			- ls :
-				Énumérer (lister) les fichiers "ordinaires" (ne commençant pas par ".") dans le répertoire courant
+				Affiche la liste des fichiers et dossiers non-cachés (ne commençant pas par ".") contenus dans le répertoire 
+				courant
 
 			- ls nomDuDossier :
-				Énumérer (lister) les fichiers situés dans le répertoire "nomDuDossier"
+				Affiche la liste des fichiers et dossiers contenus dans le répertoire "nomDuDossier"
 
 			- ls -a :
-				Comme "ls" mais affiche aussi tous les fichiers et dossiers cachés
+				Comme la commande "ls" mais affiche aussi tous les fichiers et dossiers cachés (commençant par ".")
 
 			- ls -l :
-				Comme "ls" mais affiche aussi des informations supplémentaires comme les droits (Voir section "LS -L"
-				dans le fichier "Notes.txt")
+				Comme la commande "ls" mais affiche aussi des informations supplémentaires comme les droits (Voir section 
+				"LS -L" dans le fichier "Notes.txt")
 
 			- ls -la :
 				Comme "ls" mais affiche aussi les fichiers et dossiers cachés ainsi que leurs informations
@@ -667,6 +668,21 @@ _GENERAL________________________________________________________________________
 			- sort -n << termeFinal > nomDuFichier 2>&1 :
 				Entre manuellement le contenu envoyé dans l'entrée de la commande "sort" (tant que le terme "termeFinal" n'a 
 				pas été entré). Le contenu est ensuite trié numériquement puis stocké dans le fichier "nomDuFichier"
+
+			- ls | sort -n :
+				Récupère la liste des fichiers et dossiers non-cachés (ne commençant pas par ".") contenus dans le répertoire 
+				courant. Le contenu est ensuite envoyé à l'entrée de la commande "sort -n" puis trié numériquement et affiché 
+				dans le terminal
+
+			- ls | sort -n > nomDuFichier :
+				Récupère la liste des fichiers et dossiers non-cachés (ne commençant pas par ".") contenus dans le répertoire 
+				courant. Le résultat est ensuite envoyé à l'entrée de la commande "sort -n" puis trié numériquement et stocké 
+				dans le fichier "nomDuFichier"
+
+			- du | sort -nr | less :
+				Récupère la taille totale que font les dossiers contenus dans le répertoire courant. Le résultat est ensuite 
+				envoyé à l'entrée de la commande "sort -nr" puis trié numériquement du plus grand au plus petit et affiché 
+				progressivement, page par page, dans le terminal
 
 
 
