@@ -632,6 +632,42 @@ _GENERAL________________________________________________________________________
 				Affiche le nombre de caractères contenus dans le fichier "nomDuFichier"
 
 
+		> FLUX DE REDIRECTION
+
+			- ls > nomDuFichier :
+				Crée un nouveau fichier "nomDuFichier" contenant les informations de la sortie standard de la commande "ls"
+
+			- ls >> nomDuFichier :
+				Rajoute à la fin du fichier "nomDuFichier" les informations de la sortie standard de la commande "ls". Crée un 
+				nouveau fichier si jamais "nomDuFichier" n'éxiste pas
+
+			- sort nomDuFichier1 2> nomDuFichier2 :
+				Crée un nouveau fichier "nomDuFichier2" contenant les informations de la sortie d'erreurs de la commande "sort"
+
+			- sort nomDuFichier1 2>> nomDuFichier2 :
+				Rajoute à la fin du fichier "nomDuFichier2" les informations de la sortie d'erreurs de la commande "sort". Crée 
+				un nouveau fichier si jamais "nomDuFichier2" n'éxiste pas
+
+			- sort nomDuFichier1 > nomDuFichier2 2> nomDuFichier3 :
+				Crée un nouveau fichier "nomDuFichier2" contenant les informations de la sortie standard de la commande "sort" 
+				et un nouveau fichier "nomDuFichier3" contenant les informations de la sortie d'erreurs
+
+			- sort nomDuFichier1 2>&1 nomDuFichier2 :
+				Crée un nouveau fichier "nomDuFichier2" contenant les informations de la sortie standard et de la sortie 
+				d'erreurs de la commande "sort"
+
+			- cat < nomDuFichier :
+				Envoie le contenu du fichier "nomDuFichier" dans l'entrée de la commande "cat". Affiche ensuite le contenu du 
+				fichier "nomDuFichier" en texte dans la console
+
+			- sort  << termeFinal :
+				Entre manuellement le contenu envoyé dans l'entrée de la commande "sort" (tant que le terme "termeFinal" n'a 
+				pas été entré). Le contenu est ensuite trié alphabétiquement et le résultat est affiché dans la console
+
+			- ???????? sort -n << termeFinal > nomDuFichier 2>&1
+				
+
+
 
 
 
