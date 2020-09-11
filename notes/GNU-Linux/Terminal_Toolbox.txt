@@ -226,24 +226,6 @@ _GENERAL________________________________________________________________________
 			- exit :
 				Déconnexion/quitter la console mais aussi le mode 'superuser' permanent
 
-			- w :
-				Affiche la liste des utilisateurs connectés au système (voir "W" dans "Notes.txt")
-
-			- who :
-				Version allégée de la commande "w" 
-
-			- tload :
-				Lance un processus qui affiche une évolution graphique de la charge du processeur à travers le temps
-
-			- mount /dev/sda3 /media/nomDuDossier :
-				Monte la partition sda3 dans le dossier "/media/nomDuDossier"
-
-			- umount /dev/sda3 :
-				Ejecte la partition sda3
-
-			- umount /media/nomDuDossier :
-				Ejecte la partition montée dans le répertoire "/media/nomDuDossier"
-
 
 		> UTILISATEUR, GROUPES & SESSION
 
@@ -305,6 +287,15 @@ _GENERAL________________________________________________________________________
 
 			- pwd :
 				Affiche le nom et le chemin du répertoire courant dans lequel l'utilisateur se trouve
+
+			- mount /dev/sda3 /media/nomDuDossier :
+				Monte la partition sda3 dans le dossier "/media/nomDuDossier"
+
+			- umount /dev/sda3 :
+				Ejecte la partition sda3
+
+			- umount /media/nomDuDossier :
+				Ejecte la partition montée dans le répertoire "/media/nomDuDossier"
 
 			- ls :
 				Affiche la liste des fichiers et dossiers non-cachés (ne commençant pas par ".") contenus dans le répertoire 
@@ -709,6 +700,26 @@ _GENERAL________________________________________________________________________
 				Récupère la taille totale que font les dossiers contenus dans le répertoire courant dont le nom contient le 
 				terme "terme". Le résultat est ensuite envoyé à l'entrée de la commande "sort -nr" puis trié numériquement du 
 				plus grand au plus petit et affiché progressivement, page par page, dans le terminal
+
+
+		> PROCESSUS
+
+			- w :
+				Affiche la liste des utilisateurs connectés au système (voir "W" dans "Notes.txt")
+
+			- who :
+				Version allégée de la commande "w" 
+
+			- tload :
+				Lance un processus qui affiche une évolution graphique de la charge du processeur à travers le temps
+
+			- ps -ef :
+
+			- ps :
+
+			- ps -ejH :
+
+			- ps -u nomUtilisateur :
 
 
 

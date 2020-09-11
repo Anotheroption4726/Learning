@@ -150,7 +150,7 @@ _W______________________________________________________________________________
 		Nom de l'utilisateur (son login)
 
 	b1 - TTY :
-		Le nom de la console dans laquelle se trouve l'utilisateur
+		Nom de la console dans laquelle se trouve l'utilisateur
 
 	b2 - FROM :
 		L'adresse IP (ou nom d'hôte) depuis laquelle l'utilisateur se connecte
@@ -208,6 +208,35 @@ _PS -EF_________________________________________________________________________
 	klog        4419      1  0  01:02 ?        00:00:00 /sbin/klogd  -P /var/run/klogd/km
 	103         4440      1  0  01:02 ?        00:00:00 /usr/bin/dbus-daemon --system
 	107         4456      1  0  01:02 ?        00:00:03 /usr/sbin/hald
+
+
+
+
+	0 - UID :
+		Nom de l'utilisateur (son login) qui a lancé la commande (ou programme)
+
+	1 - PID :
+		Numéro d'identification du processus. Chaque processus a un numéro unique qui permet de l'identifier
+
+	2 - PPID :
+		.
+
+	3 - C :
+		.
+
+	4 - STIME :
+		.
+
+	5 - TTY :
+		Nom de la console depuis laquelle a été lancé le processus
+
+	6 - TIME :
+		Durée d'exécution du processus. Correspond à la durée pendant laquelle le processus a occupé le processeur depuis son 
+		lancement
+
+	7 - CMD :
+		La commande (ou programme) qui a généré le processus. Si il y a plusieurs fois le même programme, c'est que celui-ci 
+		s'est dupliqué en plusieurs processus
 
 
 
