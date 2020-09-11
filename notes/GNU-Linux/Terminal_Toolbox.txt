@@ -721,6 +721,12 @@ _GENERAL________________________________________________________________________
 
 			- ps -u nomUtilisateur :
 
+			- pstree :
+
+			- htop :
+				sudo apt-get update
+				sudo apt-get install htop
+
 
 
 

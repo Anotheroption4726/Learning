@@ -216,16 +216,18 @@ _PS -EF_________________________________________________________________________
 		Nom de l'utilisateur (son login) qui a lancé la commande (ou programme)
 
 	1 - PID :
-		Numéro d'identification du processus. Chaque processus a un numéro unique qui permet de l'identifier
+		Numéro d'identification du processus. Chaque processus (programme lancé) a un numéro unique qui permet de l'identifier. 
+		Un daemon est un processus système qui tourne en arrière-plan
 
 	2 - PPID :
-		.
+		PID du processus parent. En plus d'un PID unique, chaque processus se voit attribuer un PID de processus parent (PPID) 
+		qui indique quel processus l'a démarré
 
 	3 - C :
-		.
+		Utilisation (en pourcentage) du processeur
 
 	4 - STIME :
-		.
+		"Start Time". Date ou heure à laquelle le processus a démarré
 
 	5 - TTY :
 		Nom de la console depuis laquelle a été lancé le processus
@@ -237,6 +239,16 @@ _PS -EF_________________________________________________________________________
 	7 - CMD :
 		La commande (ou programme) qui a généré le processus. Si il y a plusieurs fois le même programme, c'est que celui-ci 
 		s'est dupliqué en plusieurs processus
+
+
+
+
+	>> INIT
+
+
+		"init" est un processus très important. C'est le grand-père de tous les processus car tous les processus s'exécutent 
+		sous celui-ci. Chaque processus peut être retracé jusqu'à "init", et son PID sera toujours égal à 1. Le kernel a 
+		lui-même a un PID de 0.
 
 
 
