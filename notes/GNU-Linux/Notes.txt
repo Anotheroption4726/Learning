@@ -182,6 +182,16 @@ _PS -EF_________________________________________________________________________
 
 
 
+	>> LIENS
+
+
+		http://linuxcommand.org/lc3_man_pages/ps1.html
+		https://shapeshed.com/unix-ps/
+		https://www.win.tue.nl/~aeb/linux/lk/lk-10.html
+
+
+
+
 	0			 1	   2	 3	4	  5		   6		7
 
 	UID			 PID   PPID  C  STIME TTY 		   TIME CMD
