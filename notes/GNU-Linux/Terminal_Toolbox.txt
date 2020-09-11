@@ -123,7 +123,7 @@ _GENERAL________________________________________________________________________
 				Retour en mode interface graphique (si l'on était en train d'utiliser tty1, tty2...)
 
 			- Ctrl + c :
-				Arrêter un processus en cours dans ce même terminal
+				Arrêter un processus en cours dans le terminal courant
 
 			- Ctrl + d :
 				Envoyer l'entrée en attente à l'application. Si aucune saisie n'a été faite, la valeur envoyée est alors égale 
@@ -182,8 +182,13 @@ _GENERAL________________________________________________________________________
 			- hostnamectl :
 				Affiche les informations du système (nom de l'ordinnateur, OS, Kernel, Architecture...)
 
-			- shutdown :
-				Eteint le système
+			- sudo halt :
+				Eteint le système mais la machine reste allumée. Le système est ramené à son état le plus bas tout en laissant 
+				la machine sous tension
+
+			- shutdown -r now :
+				(Redémarre?) Eteint le système ainsi que la machine. La commande demandera automatiquement à l'Advanced 
+				Configuration and Power Interface (ACPI) d'envoyer un signal à l'unité d'alimentation pour éteindre le système
 
 			- sudo reboot :
 				Redémarre le système
@@ -740,6 +745,18 @@ _GENERAL________________________________________________________________________
 					sudo apt-get update
 					sudo apt-get install htop
 				Voir aussi: https://delightlylinux.wordpress.com/2014/03/24/htop-a-better-process-viewer-then-top/
+
+			- sudo kill processusPID :
+				Arrête le processus en cours possédant le PID "processusPID"
+
+			- sudo kill processusPID1 processPID2 :
+				Arrête les processus en cours possédant les PIDs "processusPID1" et "processusPID2"
+
+			- sudo kill -9 processusPID :
+				Force l'arrêt du processus en cours possédant le PID "processusPID"
+
+			- sudo killall nomDuProcessus :
+				Arrête l'ensemble des processus liés à "nomDuProcessus"
 
 
 
