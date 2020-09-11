@@ -714,14 +714,22 @@ _GENERAL________________________________________________________________________
 				Lance un processus qui affiche une évolution graphique de la charge du processeur à travers le temps
 
 			- ps -ef :
+				Affiche la liste de tous les processus qui tournent sur le système au moment où la commande est lancée. Cette 
+				liste n'est pas actualisée en temps réel (voir "PS -EF" dans "Notes.txt")
 
 			- ps :
+				Version allégée de la commande "ps -ef". N'affiche que les processus lancés par l'utilisateur courant dans la 
+				même console
 
 			- ps -ejH :
 
 			- ps -u nomUtilisateur :
 
-			- pstree :
+			- top :
+
+			- pstree -pn :
+				Répertorie le PID de chaque processus et les organise avec leurs parents. Affiche la relation de tous les 
+				processus dans une structure arborescente
 
 			- htop :
 				sudo apt-get update
