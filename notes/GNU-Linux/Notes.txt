@@ -106,6 +106,76 @@ _SHELL, TERMINAL & CONSOLE______________________________________________________
 
 
 
+_W_____________________________________________________________________________________________________________________________
+
+
+
+	a0		 a1		   a2		 			   a3	 a4    a5
+	23:24:12 up 5 min, 2 users,  load average: 0,19, 0,63, 0,46
+
+
+	b0		b1		b2			b3		 b4	    b5      b6	   b7
+	USER 	TTY 	FROM  		LOGIN@	 IDLE   JCPU	PCPU   WHAT
+	user 	tty1	-			23:30	 2:22   0.08s   0.04s  -bash
+	user_2	tty7	:0			23:27	 10:47  5.55s	0.35s  cinnamon-session --session cinnamon2d
+
+
+
+
+	a0 :
+		L'heure courante
+
+	a1 :
+		Durée de fonctionnement total de l'ordinateur depuis qu'il a été mis en marche
+
+	a2 :
+		Nombre de sessions utilisateur connectées à l'ordinnateur sur le moment présent
+
+	a3 :
+		Charge moyenne du processeur depuis 1 minute (valeur entre 0 et 1 pour single-core, 0 et 2 pour dual-core, 0 et 4 pour 
+		quad-core, etc...)
+
+	a4 :
+		Charge moyenne du processeur depuis 5 minutes (valeur entre 0 et 1 pour single-core, 0 et 2 pour dual-core, 0 et 4 pour 
+		quad-core, etc...)
+
+	a5 :
+		Charge moyenne du processeur depuis 15 minutes (valeur entre 0 et 1 pour single-core, 0 et 2 pour dual-core, 0 et 4 
+		pour quad-core, etc...)
+
+
+	b0 - USER :
+		Nom de l'utilisateur (son login)
+
+	b1 - TTY :
+		Le nom de la console dans laquelle se trouve l'utilisateur
+
+	b2 - FROM :
+		L'adresse IP (ou nom d'hôte) depuis laquelle l'utilisateur se connecte
+
+	b3 - LOGIN@ :
+		L'heure à laquelle l'utilisateur s'est connecté
+
+	b4 - IDLE :
+		Depuis combien de temps cet utilisateur est inactif
+
+	b5 - JCPU :
+		Charge moyenne de tous les processus attachés au tty de l'utilisateur
+
+	b6 - PCPU :
+		Charge du processus courant affiché dans la section "WHAT"
+
+	b7 - WHAT :
+		La commande que l'utilisateur est en train d'exécuter en ce moment
+
+
+
+
+
+
+
+
+
 _CHMOD_________________________________________________________________________________________________________________________
 
 
