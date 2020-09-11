@@ -111,10 +111,12 @@ _W______________________________________________________________________________
 
 
 	a0		 a1		   a2		 			   a3	 a4    a5
+
 	23:24:12 up 5 min, 2 users,  load average: 0,19, 0,63, 0,46
 
 
 	b0		b1		b2			b3		 b4	    b5      b6	   b7
+
 	USER 	TTY 	FROM  		LOGIN@	 IDLE   JCPU	PCPU   WHAT
 	user 	tty1	-			23:30	 2:22   0.08s   0.04s  -bash
 	user_2	tty7	:0			23:27	 10:47  5.55s	0.35s  cinnamon-session --session cinnamon2d
@@ -168,6 +170,44 @@ _W______________________________________________________________________________
 	b7 - WHAT :
 		La commande que l'utilisateur est en train d'exécuter en ce moment
 
+
+
+
+
+
+
+
+_PS -EF________________________________________________________________________________________________________________________
+
+
+
+
+	0			 1	   2	 3	4	  5		   6		7
+
+	UID			 PID   PPID  C  STIME TTY 		   TIME CMD
+	root           1      0  0  01:01 ?        00:00:01 /sbin/init
+	root           2      1  0  01:01 ?        00:00:00 [migration/0]
+	root           3      1  0  01:01 ?        00:00:00 [ksoftirqd/0]
+	root           4      1	 0  01:01 ?        00:00:00 [watchdog/0]
+	root           5      1  0  01:01 ?        00:00:00 [events/0]
+	root           6      1  0  01:01 ?        00:00:00 [khelper]
+	root           7      1  0  01:01 ?        00:00:00 [kthread]
+	root          30      7  0  01:01 ?        00:00:00 [kblockd/0]
+	root        2462      1  0  01:01 ?        00:00:00 /sbin/udevd --daemon
+	root        3292      7  0  01:01 ?        00:00:00 [kpsmoused]
+	root        3448      7  0  01:01 ?        00:00:00 [kgameportd]
+	root        4021      1  0  01:02 tty4     00:00:00 /sbin/getty 38400 tty4
+	root        4022      1  0  01:02 tty5     00:00:00 /sbin/getty 38400 tty5
+	root        4024      1  0  01:02 tty2     00:00:00 /sbin/getty 38400 tty2
+	root        4027      1  0  01:02 tty3     00:00:00 /sbin/getty 38400 tty3
+	root        4030      1  0  01:02 tty1     00:00:00 /sbin/getty 38400 tty1
+	root        4040      1  0  01:02 tty6     00:00:00 /sbin/getty 38400 tty6
+	root        4266      1  0  01:02 ?        00:00:00 /usr/sbin/acpid -c /etc/acpi/eve 
+	root        4363      1  0  01:02 ?        00:00:00 /sbin/syslogd
+	root        4417      1  0  01:02 ?        00:00:00 /bin/dd bs 1 if /proc/kmsg of /v
+	klog        4419      1  0  01:02 ?        00:00:00 /sbin/klogd  -P /var/run/klogd/km
+	103         4440      1  0  01:02 ?        00:00:00 /usr/bin/dbus-daemon --system
+	107         4456      1  0  01:02 ?        00:00:03 /usr/sbin/hald
 
 
 
