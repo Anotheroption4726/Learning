@@ -727,8 +727,8 @@ _GENERAL________________________________________________________________________
 
 			- top :
 				Liste interactive et régulièrement mise à jour de tous les processus de tous les utilisateurs (même les 
-				daemons) qui tournent sur le système. Taper "h" pour l'aide, voir aussi: 
-				https://www.unixtutorial.org/commands/top
+				daemons) qui tournent sur le système. Taper "h" pour l'aide et "k" pour tuer un processus (PID est alors 
+				demandé), voir aussi: https://www.unixtutorial.org/commands/top
 
 			- pstree -pn :
 				Répertorie le PID de chaque processus et les organise avec leurs parents. Affiche la relation de tous les 
