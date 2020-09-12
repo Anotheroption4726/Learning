@@ -670,7 +670,7 @@ _GENERAL________________________________________________________________________
 				Crée un nouveau fichier "nomDuFichier2" contenant les informations de la sortie standard de la commande "sort" 
 				et un nouveau fichier "nomDuFichier3" contenant les informations de la sortie d'erreurs
 
-			- sort nomDuFichier1 2>&1 nomDuFichier2 :
+			- sort nomDuFichier1 > nomDuFichier2 2>&1 :
 				Crée un nouveau fichier "nomDuFichier2" contenant les informations de la sortie standard et de la sortie 
 				d'erreurs de la commande "sort"
 
@@ -682,9 +682,9 @@ _GENERAL________________________________________________________________________
 				Entre manuellement le contenu envoyé dans l'entrée de la commande "sort" (tant que le terme "termeFinal" n'a 
 				pas été entré). Le contenu est ensuite trié alphabétiquement et le résultat est affiché dans la console
 
-			- sort -n << termeFinal > nomDuFichier 2>&1 :
+			- sort -n << termeFinal >> nomDuFichier 2>&1 :
 				Entre manuellement le contenu envoyé dans l'entrée de la commande "sort" (tant que le terme "termeFinal" n'a 
-				pas été entré). Le contenu est ensuite trié numériquement puis stocké dans le fichier "nomDuFichier"
+				pas été entré). Le contenu est ensuite trié numériquement puis stocké à la fin du fichier "nomDuFichier"
 
 			- ls | sort -n :
 				Récupère la liste des fichiers et dossiers non-cachés (ne commençant pas par ".") contenus dans le répertoire 
@@ -757,6 +757,20 @@ _GENERAL________________________________________________________________________
 
 			- sudo killall nomDuProcessus :
 				Arrête l'ensemble des processus liés à "nomDuProcessus"
+
+			- cp nomDuFichier nomDuFichierCopie & :
+				Fait une copie du fichier spécifié dans le répertoire courant. Le processus d'éxecution se déroule en 
+				arrière-plan mais la sortie standard de la commande continue à s'afficher dans la console courante
+
+			- sudo find -name 'nomDuFichier1' > nomDuFichier2 & :
+				Recherche, à partir du répertoire courant et dans tous les sous-répertoires, le ou les fichier(s) 
+				"nomDuFichier1". Le processus d'éxecution se déroule en arrière-plan mais la sortie standard de la commande et 
+				les résultats sont stockés dans le fichier "nomDuFichier2"
+
+			- sudo find -name 'nomDuFichier1' > nomDuFichier2 2>&1 & :
+				Recherche, à partir du répertoire courant et dans tous les sous-répertoires, le ou les fichier(s) 
+				"nomDuFichier1". Le processus d'éxecution se déroule en arrière-plan mais les sorties standard et d'erreurs de 
+				la commande sont stockées dans le fichier "nomDuFichier2"
 
 
 
