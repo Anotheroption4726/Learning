@@ -760,18 +760,24 @@ _GENERAL________________________________________________________________________
 
 			- cp nomDuFichier nomDuFichierCopie & :
 				Fait une copie du fichier spécifié dans le répertoire courant. Le processus d'éxecution se déroule en 
-				arrière-plan mais la sortie standard de la commande continue à s'afficher dans la console courante
+				arrière-plan et s'arrête si jamais on ferme la console courante. La sortie standard de la commande continue 
+				aussi à s'afficher dans la console courante
 
 			- sudo find -name 'nomDuFichier1' > nomDuFichier2 & :
 				Recherche, à partir du répertoire courant et dans tous les sous-répertoires, le ou les fichier(s) 
-				"nomDuFichier1". Le processus d'éxecution se déroule en arrière-plan mais la sortie standard de la commande et 
-				les résultats sont stockés dans le fichier "nomDuFichier2"
+				"nomDuFichier1". Le processus d'éxecution se déroule en arrière-plan et s'arrête si jamais on ferme la console 
+				courante. La sortie standard de la commande et les résultats sont stockés dans le fichier "nomDuFichier2"
 
 			- sudo find -name 'nomDuFichier1' > nomDuFichier2 2>&1 & :
 				Recherche, à partir du répertoire courant et dans tous les sous-répertoires, le ou les fichier(s) 
-				"nomDuFichier1". Le processus d'éxecution se déroule en arrière-plan mais les sorties standard et d'erreurs de 
-				la commande sont stockées dans le fichier "nomDuFichier2"
+				"nomDuFichier1". Le processus d'éxecution se déroule en arrière-plan et s'arrête si jamais on ferme la console 
+				courante. Les sorties standard et d'erreurs de la commande sont stockées dans le fichier "nomDuFichier2"
 
+			- nohup cp nomDuFichier nomDuFichierCopie
+				Fait une copie du fichier spécifié dans le répertoire courant (le processus d'éxecution se déroule en 
+				arrière-plan). La sortie standard de la commande est par défaut redirigée vers un fichier "nohup.out" et 
+				continuera de s'exécuter même après la fermeture de la console. "nohup" est très utile lorsqu'on lance un 
+				programme sur un serveur et qu'on veut qu'il continue de fonctionner après s'être déconnecté
 
 
 
