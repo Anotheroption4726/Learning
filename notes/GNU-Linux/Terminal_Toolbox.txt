@@ -130,7 +130,7 @@ _GENERAL________________________________________________________________________
 				à 0. Permet aussi de quitter le mode 'superuser' permanent
 
 			- Ctrl + z :
-				Suspendre un processus en cours et récupérer l'invité de commandes
+				Suspendre un processus en cours, le mettre en arrière-plan et récupérer l'invité de commandes
 
 			- Ctrl + r :
 				Permet de rechercher et d'executer une commande que l'on a déjà entré dans la console
@@ -780,8 +780,19 @@ _GENERAL________________________________________________________________________
 				un serveur et qu'on veut qu'il continue de fonctionner même après s'être déconnecté
 
 			- bg :
-				Fait passer en arrière-plan un processus d'éxecution que l'on a mis en pause dans la console courante avec le 
-				raccourci "Ctrl + z"
+				Execute un processus en arrière plan qui a été suspendu avec le raccourci "Ctrl + z" 
+
+			- jobs :
+				Affiche les processus qui sont en arrière-plan (en cours d'éxecution ou suspendus) et qui ont été lancés depuis 
+				la console courante (ceux lancés avec la commande "nohup" ne s'affichent pas)
+
+			- fg :
+				Fait passer dans la console courante un processus en arrière-plan listé avec la commande "jobs"
+
+			- fg %2 :
+				Fait passer dans la console courante le processus en arrière-plan numéro [2] si il éxiste. Le numéro de chaque 
+				processus est visible avec la commande "jobs"
+
 
 
 
