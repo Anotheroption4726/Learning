@@ -774,10 +774,10 @@ _GENERAL________________________________________________________________________
 				courante. Les sorties standard et d'erreurs de la commande sont stockées dans le fichier "nomDuFichier2"
 
 			- nohup cp nomDuFichier nomDuFichierCopie
-				Fait une copie du fichier spécifié dans le répertoire courant (le processus d'éxecution se déroule en 
-				arrière-plan). La sortie standard de la commande est par défaut redirigée vers un fichier "nohup.out" et 
-				continuera de s'exécuter même après la fermeture de la console. "nohup" est très utile lorsqu'on lance un 
-				programme sur un serveur et qu'on veut qu'il continue de fonctionner après s'être déconnecté
+				Fait une copie du fichier spécifié dans le répertoire courant. Le processus d'éxecution se déroule en 
+				arrière-plan et continue de s'exécuter même après la fermeture de la console. La sortie standard de la commande 
+				est par défaut redirigée vers un fichier "nohup.out". "nohup" est très utile lorsqu'on lance un programme sur 
+				un serveur et qu'on veut qu'il continue de fonctionner même après s'être déconnecté
 
 
 
