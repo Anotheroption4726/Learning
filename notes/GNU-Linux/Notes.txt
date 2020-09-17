@@ -304,50 +304,50 @@ _LS -L__________________________________________________________________________
 	
 
 
-	0 :
+	- 0 :
 		Type. "d" indique qu'il s'agit d'un dossier. "-" indique qu'il ne s'agit pas d'un dossier. "l" indique qu'il s'agit d'un 
 		raccourci
 
 
-	1 :
+	- 1 :
 		Droits de lecture (r), d'écriture (w) et d'execution (x) pour le propriétaire (u) du fichier/dossier (aka 
 		l'utilisateur qui l'a créé). Ici il s'agit de "nomUtilisateur"
 
 
-	2 :
+	- 2 :
 		Droits de lecture (r), d'écriture (w) et d'execution (x) pour le groupe (g) associé au fichier/dossier
 		Ici il s'agit de "nomDuGroupe"
 
 
-	3 :
+	- 3 :
 		Droits de lecture (r), d'écriture (w) et d'execution (x) pour n'importe qui d'autre (o)
 
 
-	4 :
+	- 4 :
 		Nombre de liens physiques (dans le cas d'un fichier). Sinon nombre de liens physiques contenus dans le dossier?
 
 
-	5 :
+	- 5 :
 		Nom de l'utilisateur propriétaire du fichier (celui qui l'a créé)
 
 
-	6 :
+	- 6 :
 		Groupe auquel appartient le fichier. Il se peut que le nom du groupe soit le même que celui du propriétaire
 
 
-	7 :
+	- 7 :
 		Taille du fichier en octets
 
 
-	8 :
+	- 8 :
 		Date et heure de la dernière modification
 
 
-	9 :
+	- 9 :
 		Nom du fichier ou du dossier
 
 
-	10 :
+	- 10 :
 		Dans le cas d'un raccourci (lien symbolique), cette partie précise vers où le fichier pointe
 
 
@@ -421,13 +421,13 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 
 		https://www.regexpal.com/
 
-		Tutos :
+		- Tutos :
 			https://www.guru99.com/linux-regular-expressions.html
 			https://www.geeksforgeeks.org/grep-command-in-unixlinux/
 			https://www.cyberciti.biz/faq/grep-regular-expressions/
 			https://www.cyberciti.biz/faq/howto-use-grep-command-in-linux-unix/
 
-		Exemples :
+		- Exemples :
 			https://digitalfortress.tech/tricks/top-15-commonly-used-regex/
 			https://doc.laserfiche.com/laserfiche.documentation/english/docs/Subsystems/ProcessAutomation/Content/Resources/Regular%20Expressions/Common-Regular-Expressions.htm
 			https://gist.github.com/jacksonfdam/3000275
@@ -630,6 +630,32 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 
 		^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$ :
 			Numéro de téléphone international (avec country code en option)
+
+
+
+
+
+
+
+
+_SSH___________________________________________________________________________________________________________________________
+
+
+
+
+	>> TELNET
+
+
+
+
+	>> CHIFFREMENTS
+
+
+		- Symétrique :
+
+		- Asymétrique :
+			RSA
+			DSA
 
 
 

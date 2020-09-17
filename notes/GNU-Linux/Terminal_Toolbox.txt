@@ -931,6 +931,8 @@ _SSH____________________________________________________________________________
 		- sudo apt-get install openssh-server :
 			Installation du paquet "openssh-server"
 
+		- ssh nomUtilisateur@86.172.120.28 :
+
 
 	>> GESTION DU PROCESS
 
