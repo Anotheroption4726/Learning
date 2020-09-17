@@ -357,6 +357,60 @@ _LS -L__________________________________________________________________________
 
 
 
+_IFCONFIG_________________________________________________________________________________________________________________________
+
+
+
+
+	eth0	Link encap:Ethernet  HWaddr 00:90:f5:56:44:5a  
+        	UP BROADCAST MULTICAST  MTU:1500  Metric:1
+        	Packets reçus:0 erreurs:0 :0 overruns:0 frame:0
+        	TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+        	collisions:0 lg file transmission:1000 
+        	Octets reçus:0 (0.0 B) Octets transmis:0 (0.0 B)
+        	Interruption:220 Adresse de base:0xe000 
+
+	lo		Link encap:Boucle locale  
+          	inet adr:127.0.0.1  Masque:255.0.0.0
+          	adr inet6: ::1/128 Scope:Hôte
+          	UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          	Packets reçus:10 erreurs:0 :0 overruns:0 frame:0
+          	TX packets:10 errors:0 dropped:0 overruns:0 carrier:0
+          	collisions:0 lg file transmission:0 
+          	Octets reçus:500 (500.0 B) Octets transmis:500 (500.0 B)
+
+	wlan0	Link encap:Ethernet  HWaddr 00:19:d2:61:90:0a  
+        	inet adr:192.168.1.2  Bcast:192.168.1.255  Masque:255.255.255.0
+        	adr inet6: fe80::219:d2ff:fe61:900a/64 Scope:Lien
+        	UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+        	Packets reçus:5238 erreurs:0 :0 overruns:0 frame:0
+        	TX packets:4899 errors:0 dropped:0 overruns:0 carrier:0
+        	collisions:0 lg file transmission:1000 
+        	Octets reçus:5069449 (5.0 MB) Octets transmis:1202459 (1.2 MB)
+
+
+
+
+    >> eth0 :
+    	Correspond à la connexion par câble réseau (en général appellé câble RJ45). Certains ordinateurs (notamment les 
+    	serveurs) ont plusieurs sorties réseau filaires. Dans ce cas, il devrait y avoir aussi des interfaces eth1, eth2, etc.
+
+
+    >> lo :
+    	Boucle locale. Interface présente sur tous les systèmes. Correspond à une connexion à soi-même.
+
+
+    >> wlan0 :
+    	Connexion sans-fil type Wi-Fi. Là encore, s'il y a plusieures cartes réseau sans fil, il devrait y avoir aussi un 
+    	wlan1, wlan2, etc.
+
+
+
+
+
+
+
+
 _REGULAR EXPRESSIONS/REGEX_____________________________________________________________________________________________________
 
 

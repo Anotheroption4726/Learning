@@ -794,6 +794,41 @@ _GENERAL________________________________________________________________________
 				processus est visible avec la commande "jobs"
 
 
+		> RESEAU
+
+			https://www.whatismyip.com/ :
+			https://www.cyberciti.biz/faq/how-to-find-my-public-ip-address-from-command-line-on-a-linux
+			https://shapeshed.com/unix-ping/
+
+			- ifconfig :
+				Affiche la liste des interfaces réseaux disponibles sur le système avec leurs détails (notament l'addresse ip 
+				"locale" pour un ordinnateur mais aussi l'addresse broadcast du réseau, voir "ifconfig" dans "Notes.txt")
+
+			- ifconfig eth0 down :
+				Désactive l'interface "eth0" (filaire). Plus aucun trafic ne peut alors circuler par l'interface "eth0"
+
+			- ifconfig eth0 up :
+				Réactive l'interface "eth0" (filaire). Le trafic peut circuler par l'interface "eth0"
+
+			- ping 86.172.120.28 :
+				Vérifie la connectivité réseau d'un hôte/serveur possédant l'addresse IP "86.172.120.28" (suite de quatre 
+				nombres séparés par des points). Cette commande envoie un paquet de données à l'adresse spécifiée avec le 
+				message "PING" et obtient une réponse appelée latence. Un ping rapide à faible latence (généralement mesuré en 
+				millisecondes) signifie une connexion plus rapide. Chaque système d'exploitation moderne possède un ping 
+				pré-installé. L'échange se fait en protocole ICMP (Internet Control Message Protocol)
+
+			- ping nomDeDomaine :
+				Vérifie la connectivité réseau d'un hôte/serveur possédant l'URL "nomDeDomaine" 
+
+			- ping -b broadcastIp :
+				Vérifie la connectivité réseau d'un hôte/serveur avec tous les appareils connectés sur ce même réseau. 
+				L'addresse de broadcast "broadcastIp" est une adresse de diffusion retrouvable grace à la comande "ifconfig", 
+				elle est utilisée pour transmettre à tous les appareils
+
+			- arp -a :
+				Pas trop compris, affiche des infos sur des trucs connectés (la box, l'Ipad...) mais ça à l'air cool
+
+
 
 
 
@@ -871,6 +906,43 @@ _NANO___________________________________________________________________________
 
 		- nano -mi nomDuFichier.txt :
 			Ouvre "nomDuFichier.txt" dans nano avec autorisation d'utilisation de la souris et indentation automatique
+
+
+
+
+
+
+
+
+_SSH___________________________________________________________________________________________________________________________
+
+
+
+
+	>> LIENS
+
+		https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+
+
+
+
+	>> COMMANDES
+
+		- sudo apt-get install openssh-server :
+			Installation du paquet "openssh-server"
+
+
+	>> GESTION DU PROCESS
+
+		- ps -ef | grep ssh :
+			Affiche le process ssh qui s'est lancé automatiquement au démarrage du système. Dans mon cas le process affiché 
+			ressemblait à "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+		- sudo /etc/init.d/ssh start :
+			Démarre le serveur ssh
+
+		- sudo /etc/init.d/ssh stop :
+			Arrête le serveur ssh
 
 
 
