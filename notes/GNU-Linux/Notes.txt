@@ -426,6 +426,7 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 			https://www.geeksforgeeks.org/grep-command-in-unixlinux/
 			https://www.cyberciti.biz/faq/grep-regular-expressions/
 			https://www.cyberciti.biz/faq/howto-use-grep-command-in-linux-unix/
+			https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql/917386-les-expressions-regulieres-partie-2-2
 
 		- Exemples :
 			https://digitalfortress.tech/tricks/top-15-commonly-used-regex/
@@ -494,6 +495,45 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 
 		\ :
 			Insertion de métacaractère # ! ^ $ ( ) [ ] { } ? + * . \ | dans la regex
+
+
+
+
+	>> RACCOURCIS
+
+
+		Il s'agit de lettres normales, mais quand on place un antislash "\" devant, signification spéciale leur est donnée
+
+
+		\d :
+			Indique un chiffre. Revient exactement à taper [0-9]
+
+		\D :
+			Indique ce qui n'est PAS un chiffre. Revient à taper [^0-9]
+
+		\w :
+			Indique un caractère alphanumérique ou un tiret de soulignement. Correspond à [a-zA-Z0-9_]
+
+		\W :
+			Indique ce qui n'est PAS un mot. Revient à taper [^a-zA-Z0-9_]
+
+		\t :
+			Indique une tabulation
+
+		\n :
+			Indique une nouvelle ligne
+
+		\r :
+			Indique un retour chariot
+
+		\s :
+			Indique un espace blanc
+
+		\S :
+			Indique ce qui n'est PAS un espace blanc ( \t \n \r )
+
+		. :
+			Indique n'importe quel caractère. Autorise tout	sauf les entrées ( \n )	
 
 
 
@@ -647,6 +687,12 @@ _REGULAR EXPRESSIONS/REGEX______________________________________________________
 
 		^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$ :
 			Numéro de téléphone international (avec country code en option)
+
+		^0[1-9][0-9]{8} :
+			Numéro de téléphone français
+
+		0[1-9]([-. ]?[0-9]{2}){4} :
+			Numéro de téléphone français mais la regex est plus permissible (accepte les espaces, tirets, etc...)
 
 
 
