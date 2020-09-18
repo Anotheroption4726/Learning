@@ -649,6 +649,16 @@ _GENERAL________________________________________________________________________
 			- wc -m nomDuFichier :
 				Affiche le nombre de caractères contenus dans le fichier "nomDuFichier"
 
+			- uniq nomDuFichier :
+				Affiche le contenu du fichier "nomDuFichier" mais sans les lignes qui sont présentes en double
+
+			- cut -c 2-5 nomDuFichier :
+				Affiche le contenu du fichier "nomDuFichier" mais en conservant uniquement les caractères 2 à 5 de chaque 
+				ligne. Malheuresement, dû à l'encodage des caractères, la commande "cut" se base sur le nombre d'octets et 
+				ce dernier n'est pas forcément égal au nombre de caractères
+
+			- cut -c -3 noms.txt :
+
 
 		> FLUX DE REDIRECTION
 
