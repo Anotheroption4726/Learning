@@ -658,6 +658,8 @@ _GENERAL________________________________________________________________________
 				ce dernier n'est pas forcément égal au nombre de caractères
 
 			- cut -c -3 noms.txt :
+				Affiche le contenu du fichier "nomDuFichier" mais en conservant uniquement les 3 premiers caractères de chaque 
+				ligne
 
 
 		> FLUX DE REDIRECTION
