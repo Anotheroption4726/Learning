@@ -784,9 +784,56 @@ _CRONTAB________________________________________________________________________
 
 	- Exemple 6 :
 		Toutes les heures les 4 décembre
-		
+
 	- Exemple 7 :
 		Toutes les minutes
+
+
+
+
+	>> NOTATIONS
+
+
+		- 5 (un seul nombre) :
+			Exécuté lorsque le champ prend la valeur 5
+
+		- * :
+			Exécuté tout le temps (toutes les valeurs sont bonnes) ;
+
+		- 3,5,10 :
+			Exécuté lorsque le champ prend la valeur 3, 5 ou 10. Ne pas mettre d'espace après la virgule ;
+
+		- 3-7 :
+			Exécuté pour les valeurs 3 à 7 ;
+
+		- */3 :
+			Exécuté tous les multiples de 3 (par exemple à 0 h, 3 h, 6 h, 9 h…)
+
+
+
+
+	>> EXEMPLES DE NOTATIONS
+
+
+		- 30 5 1-15 * * commande :
+			Exécuté à 5 h 30 du matin du 1er au 15 de chaque mois
+
+		- 0 0 * * 1,3,4 commande :
+			Exécuté à minuit le lundi, le mercredi et le jeudi
+
+		- 0 */2 * * * commande :
+			Exécuté toutes les 2 heures (00 h 00, 02 h 00, 04 h 00…)
+
+		- */10 * * * 1-5 commande :
+			Exécuté toutes les 10 minutes du lundi au vendredi
+
+
+
+
+	ATTENTION: Si la commande programmée renvoie une information ou une erreur, elle n'apparaîtra pas dans la console. Le 
+	résultat de la commande est envoyé par e-mail à l'utilisateur qui a programmé la crontab. Chaque utilisateur possède sa 
+	propre boîte e-mail sur les machines de type Unix. Il est toutefois toujours possible de rediriger les sorties d'erreurs 
+	des commandes vers un fichier grace à un flux de redirection classique ("/home/mateo21/cron.log 2>&1" par exemple)
 
 
 
