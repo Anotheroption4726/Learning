@@ -228,6 +228,9 @@ _GENERAL________________________________________________________________________
 			- apropos rechercheDeCommande :
 				Fait une recherche dans les descriptions des commandes en utilisant le terme "rechercheDeCommande"
 
+			- echo terme :
+				Affiche le terme "terme" dans le terminal
+
 			- echo $0 :
 				Affiche le type de shell que l'on est en train d'utiliser (Bash, Dash, Zsh, Tcsh, Ksh, Fish...). $0 représente
 				l'élément "0" d'une commande, càd le type de shell qui la fait fonctionner
