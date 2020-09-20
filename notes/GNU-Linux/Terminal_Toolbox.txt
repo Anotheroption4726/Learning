@@ -731,6 +731,11 @@ _GENERAL________________________________________________________________________
 				terme "terme". Le résultat est ensuite envoyé à l'entrée de la commande "sort -nr" puis trié numériquement du 
 				plus grand au plus petit et affiché progressivement, page par page, dans le terminal
 
+			- sudo grep log -Ir /var/log  | cut -d : -f 1  | sort | uniq :
+				Affiche et liste tous les noms de fichier contenant le mot "log" dans le répertoire "/var/log" (-I permet 
+				d'exclure les fichiers binaires). Les résultats sont triés et les doublons supprimés
+
+
 
 		> PROCESSUS
 
