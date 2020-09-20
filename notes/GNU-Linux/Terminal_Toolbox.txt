@@ -704,6 +704,9 @@ _GENERAL________________________________________________________________________
 				Rajoute à la fin du fichier "nomDuFichier2" les informations de la sortie d'erreurs de la commande "sort". Crée 
 				un nouveau fichier si jamais "nomDuFichier2" n'éxiste pas
 
+			- echo "export EDITOR=nano" >>  ~/.bashrc :
+				Etablir l'éditeur de texte "Nano" comme éditeur de texte par défaut pour l'utilisateur courant
+
 			- sort nomDuFichier1 > nomDuFichier2 2> nomDuFichier3 :
 				Crée un nouveau fichier "nomDuFichier2" contenant les informations de la sortie standard de la commande "sort" 
 				et un nouveau fichier "nomDuFichier3" contenant les informations de la sortie d'erreurs
@@ -995,13 +998,16 @@ _SSH____________________________________________________________________________
 
 
 
-_AT____________________________________________________________________________________________________________________________
+_AT & CONTRAB__________________________________________________________________________________________________________________
 
 
 
 
-	- apt-get install at :
+	- sudo apt-get install at :
 		Installation du paquet "at"
+
+	- sudo apt-get install cron :
+		Installation du paquet "cron" (pour utiliser crontab)
 
 	- at 14:17 :
 		Les commandes entrées par l'utilisateur s'exécuteront à 14:17. Utiliser le raccourci "Ctrl + D" pour sortir de l'arrêté 
@@ -1028,6 +1034,19 @@ _AT_____________________________________________________________________________
 
 	- atrm 12 :	
 		Arrête la commande en attente possédant le job numéro 12
+
+	- crontab -l :
+		Affiche la contrab actuelle de l'utilisateur courant
+
+	- sudo crontab -l :
+		Affiche la contrab actuelle de l'utilisateur "root"
+
+	- contrab -e :
+		Ouvre un éditeur de texte pour modifier la contrab de l'utilisateur courant. La crontab exige de passer par cette 
+		commande pour modifier le fichier de configuration, c'est comme ça
+
+	- contrab -r :
+		Supprime la contrab de l'utilisateur courant
 
 
 

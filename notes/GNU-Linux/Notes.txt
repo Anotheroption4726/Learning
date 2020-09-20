@@ -727,6 +727,74 @@ _SSH____________________________________________________________________________
 
 
 
+_CRONTAB_______________________________________________________________________________________________________________________
+
+
+
+
+					0 1  2	 3	 4	   5
+
+					m h  dom mon dow   command
+	Exemple 1		5 15 * 	 * 	 * 	   touch /home/mateo21/fichier.txt
+	Exemple 2		4 *  *   *   * 	   commande
+	Exemple 3		0 0  *   *   1 	   commande
+	Exemple 4		0 4  1   *   * 	   commande
+	Exemple 5		0 4  *   12  * 	   commande
+	Exemple 6		0 *  4   12  * 	   commande
+	Exemple 7		* *  *   *   * 	   commande
+
+
+
+
+	- 0 :
+		Minutes (0 - 59)
+
+	- 1 :
+		Heures (0 - 23)
+
+	- 2 :
+		Day of month/jour du mois (1 - 31)
+
+	- 3 :
+		Mois (1 - 12)
+
+	- 4 :
+		Day of week/jour de la semaine (0 - 6, 0 étant le dimanche)
+
+	- 5 :
+		Commande à exécuter
+
+
+
+
+	- Exemple 1 :
+		Un fichier "fichier.txt" est créé tous les jours à 15 h 05 dans le répertoire "/home/mateo21/"
+
+	- Exemple 2 :
+		Toutes les heures à 4 minutes (00 h 04, 01 h 04, 02 h 04, etc.)
+
+	- Exemple 3 :
+		Tous les lundis à minuit (dans la nuit de dimanche à lundi)
+
+	- Exemple 4 :
+		Tous les premiers du mois à 4 h du matin
+
+	- Exemple 5 :
+		Tous les jours du mois de décembre à 4 h du matin
+
+	- Exemple 6 :
+		Toutes les heures les 4 décembre
+		
+	- Exemple 7 :
+		Toutes les minutes
+
+
+
+
+
+
+
+
 _/ETC/APT/SOURCES.LIST_________________________________________________________________________________________________________
 
 
