@@ -173,6 +173,16 @@ _GENERAL________________________________________________________________________
 				commande -p 14
 				commande --parametre=14
 
+			- touch fichier.txt; rm fichier.txt :
+				Crée un fichier portant le nom "nomDuFichier" dans le répertoire courant puis le supprime
+
+			- touch fichier.txt; sleep 10; rm fichier.txt :
+				Crée un fichier portant le nom "nomDuFichier" dans le répertoire courant, attend 10 secondes, puis le supprime
+
+			- touch fichier.txt && sleep 10 && rm fichier.txt :
+				Crée un fichier portant le nom "nomDuFichier" dans le répertoire courant, attend 10 secondes, puis le supprime. 
+				Cependant, les instructions ne s'enchaîneront que si elles se sont correctement exécutées
+
 
 		> SYSTEME
 
@@ -380,13 +390,13 @@ _GENERAL________________________________________________________________________
 				sous-dossier nomDuDossier3
 
 			- touch nomDuFichier :
-				Crée un fichier portant le nom "nomDuFichier"
+				Crée un fichier portant le nom "nomDuFichier" dans le répertoire courant
 
 			- touch "nom du fichier" :
-				Crée un fichier portant le nom "nom du fichier"
+				Crée un fichier portant le nom "nom du fichier" dans le répertoire courant
 
 			- touch nomDuFichier.txt :
-				Crée un fichier portant le nom spécifié avec l'extention ".txt"
+				Crée un fichier portant le nom spécifié avec l'extention ".txt" dans le répertoire courant
 
 			- mv nomDuFichier nomDuDossier :
 				Change l'emplacement/déplace le fichier "nomDuFichier" (initialement situé dans le dossier courant) dans le 
@@ -974,6 +984,47 @@ _SSH____________________________________________________________________________
 
 		- sudo /etc/init.d/ssh stop :
 			Arrête le serveur ssh
+
+
+
+
+
+
+
+
+_AT____________________________________________________________________________________________________________________________
+
+
+
+
+	- apt-get install at :
+		Installation du paquet "at"
+
+	- at 14:17 :
+		Les commandes entrées par l'utilisateur s'exécuteront à 14:17. Utiliser le raccourci "Ctrl + D" pour sortir de l'arrêté 
+		de commande
+
+	- at 14:17 tomorrow :
+		Les commandes entrées par l'utilisateur s'exécuteront à 14:17 le lendemain. Utiliser le raccourci "Ctrl + D" pour 
+		sortir de l'arrêté de commande
+
+	- at 14:17 11/15/10 :
+		Les commandes entrées par l'utilisateur s'exécuteront à 14:17 le 11/15/10. Utiliser le raccourci "Ctrl + D" pour sortir 
+		de l'arrêté de commande
+
+	- at now + 1 minute :
+		Les commandes entrées par l'utilisateur s'exécuteront dans 1 minute. Utiliser le raccourci "Ctrl + D" pour sortir 
+		de l'arrêté de commande
+
+	- at 4pm + 3 days :
+		Les commandes entrées par l'utilisateur s'exécuteront à 16:00 dans 3 jours. Utiliser le raccourci "Ctrl + D" pour 
+		sortir de l'arrêté de commande
+
+	- atq :
+		Affiche la liste commandes qui sont en attente d'éxécution. Chaque job possède un nnuméro attribué
+
+	- atrm 12 :	
+		Arrête la commande en attente possédant le job numéro 12
 
 
 
