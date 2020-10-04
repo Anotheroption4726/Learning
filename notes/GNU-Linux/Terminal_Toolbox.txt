@@ -183,6 +183,11 @@ _GENERAL________________________________________________________________________
 				Crée un fichier portant le nom "nomDuFichier" dans le répertoire courant, attend 10 secondes, puis le supprime. 
 				Cependant, les instructions ne s'enchaîneront que si elles se sont correctement exécutées
 
+			- ./nomDuFichier :
+				Exécute le fichier "nomDuFichier" (uniquement si l'utilisateur courant possède les droits d'exécution). Si il y 
+				a des instructions/commandes écrites à l'intérieur du fichier (attention: une instruction par ligne), ces 
+				dernières s'exécutent dans l'ordre
+
 
 		> SYSTEME
 
