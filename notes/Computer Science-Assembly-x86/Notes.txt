@@ -1,0 +1,184 @@
+_HISTOIRE______________________________________________________________________________________________________________________
+
+
+
+
+	>> MACHINES
+
+		- Outils anciens :
+			Boulier (Mésopotamie - 2500 BC), Astrolabe (Calcul de latitude en mer), Règle à calcul (Inventée vers 1625, peu 
+			après la publication de John Napier sur le concept de Logarithme), etc...
+
+		- Calculatrice mécanique :
+			Invention de Gottfried Wilhelm Leibniz (1694). Fonctionnait comme un compteur kilométrique de voiture où chaque 
+			rouage à dents correspondait à une puissance de 10). Si un engrenage était tourné plus de 9 fois (grâce à une 
+			manivelle), il revenait alors à 0 et l'engrenage adjacent avançait d'un cran. Marchait aussi avec les 
+			soustractions, les multiplications et les divisions
+
+		- Machine à différences & Machine analytique :
+			Inventées (mais non terminées) par Charles Babbage (début du 19e siècle). La machine à différences était capable de 
+			tabuler des fonctions polynôme. La machine analytique était quand à elle plus complexe est avancée. Elle 
+			incorporait une unité arithmétique et logique (UAL ou ALU en anglais), une structure de contrôle sous forme de 
+			branchements conditionnels et de boucles, et une mémoire intégrée. Cela en faisait la première conception 
+			d'ordinateur polyvalent pouvant être considérée comme étant "Turing-complete". En d'autres termes, sa structure 
+			logique était essentiellement la même que celle des ordinnateurs de l'ère électronique. Ada Lovelace fut la 
+			première personne à proposer des programmes hypothétiques pour cette machine
+
+		- Tabulatrice :
+			Machine electro-méchanique inventée par Herman Hollerith et utilisée pour recenser la population des Etats-Unis à 
+			la fin du 19e siècle. Pour compter, elle utilisait les systèmes méchaniques traditionnels de Leibniz mais ces 
+			derniers étaient couplés de composants électriques. L'utilisation de cartes perforées et de mercure permettait de 
+			faire passer ou non du courant, chaque perforation sur une carte correspondant à une certaine donnée (âge, statut 
+			marital, etc...). Une fois la carte passée dans la tabulatrice, une donnée perforée incrémentait ainsi l'engrenage 
+			correspondant au total de cette dernière. Hollerith fut aussi le fondateur de la "Tabulating Machine Company" qui 
+			devint en 1924 IBM (l'"International Business Machines Corporation")
+
+		- Harvard Mark I :
+			L'un des plus grands ordinnateurs électro-méchaniques jamais construits, utilisé pour faire des test de simulation 
+			pour le "Manhattan Project". Fonctionnait à base de relais électromécaniques qui s'ouvraient ou se fermaient grâce 
+			à des aimants. Dans les années 1940, un bon relai était capable de changer d'état (ouvert/fermé) 50 
+			fois par seconde environ. Cela permettait de faire 3 additions ou substractions par seconde, une multiplication 
+			toutes les 6 secondes et une division toutes les 15 secondes. Une fonction trigonométrique quand à elle pouvait 
+			prendre jusqu'à plus d'une minute. Les composants se dégradaient aussi relativement vite et devaient être changés 
+			fréquement. A cause de leur taille et de la chaleur qu'elles émettaient, ces grandes machines électro-méchaniques 
+			attiraient les insectes, d'où le terme "bug" utilisé à chaque fois que l'on rencontre un problème en informatique 
+			aujourd'hui
+
+		- Colossus MK 1 :
+			Conçu par Tommy Flowers, il s'agit du premier ordinnateur électronique programmable numérique. Au lieu d'utiliser 
+			des relais électromécaniques, cette machine était équipée de tubes électroniques (ou tubes à vide) qui permettaient 
+			de changer d'état (ouvert/fermé) 1000 fois par secondes environ. Ces tubes étaient plus fiables et solides mais 
+			aussi beaucoup plus coûteux
+
+		- ENIAC :
+			Premier ordinateur électronique programmable, numérique et polyvalent. Pouvant faire jusqu'à 5000 additions ou 
+			soustractions par seconde. Opérationnelle pendant environ 10 ans, on estime que cette machine a fait plus 
+			d'arithmétique au cours de son éxistence que la totalité de l'humanité avant ça
+
+		- IBM 608 :
+			En 1947 vu l'apparition d'une nouvelle invention toujours utilisée aujourd'hui: le transistor. Tel un relai ou tube 
+			à vide, un transistor est capable de changer d'état (ouvert/fermé) 10000 fois par secondes environ. Ce procédé est 
+			accompli grâce à une impulsion électrique qui change la charge électrique du matériel laissant passer ou non le 
+			courant. On appelle ce type de matériel un semi-conducteur. Les transistors sont aussi des composants beaucoup plus 
+			petits, solides et moins coûteux que les tubes à vide. L'IBM 608 (1957) est le premier ordinnateur complètement 
+			transistorisé de l'histoire. Petit en taille comparé à ses prédecesseurs, il était capable de faire 4500 additions 
+			(80 multiplications) par seconde. Le matériel le plus utilisé pour fabriquer des transistors est le Silicium, d'où 
+			le nom "Silicon Valley" porté par la region où la majorité de ces développements technologiques ont été fait
+
+
+
+
+
+
+
+
+_LOGIC GATES___________________________________________________________________________________________________________________
+
+
+
+
+	https://en.wikipedia.org/wiki/Logic_gate
+	https://www.kosbie.net/cmu/spring-19/15-110/notes/notes-gates-and-circuits.html
+
+
+
+
+				INPUT		OUTPUT
+
+				A 	B 		Q
+
+
+	AND			0	0		0
+
+				0	1		0
+
+				1	0		0
+
+				1	1		1	
+
+
+
+	OR			0	0		0
+
+				0	1		1
+
+				1	0		1
+
+				1	1		1
+
+
+	NOT/INV		0			1
+
+				1			0
+
+
+	XOR			0	0		0
+
+				0	1		1
+
+				1	0		1
+
+				1	1		0
+
+
+	NAND		0	0		1
+
+				0	1		1
+
+				1	0		1
+
+				1	1		0	
+
+
+
+
+
+
+
+
+_BINARY TO DECIMAL_____________________________________________________________________________________________________________
+
+
+
+
+	2^0 = 1
+	2^1 = 2
+	2^2 = 4
+	2^3 = 8
+	2^4 = 16
+	2^5 = 32
+	2^6 = 64
+	2^7 = 128
+
+
+	00000000 = 0
+
+	00001101 = (2^3) + (2^2) + (2^0) = 8 + 4 + 1 = 13
+
+	10011010 = (2^7) + (2^4) + (2^3) + (2^1) = 128 + 16 + 8 + 2 = 154
+
+	11111111 = (2^7) + (2^6) + (2^5) + (2^4) + (2^3) + (2^2) + (2^1) + (2^0) = 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255
+
+
+
+
+
+
+
+
+_VOCABULARY____________________________________________________________________________________________________________________
+
+
+
+
+	Mémoire Vive (RAM = Random Access Memory)
+
+
+	Disque dur ou Mémoire Morte (ROM = Read Only Memory)
+
+
+	Stack/LIFO data structure (Last In, First Out):
+		La dernière donnée enregistrée est ainsi la première à être retirée (sauf commande particulière)
+
+			push (adds an element to the collection)
+			pop (removes the most recently added element)
