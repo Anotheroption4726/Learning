@@ -925,15 +925,15 @@ _ARCHIVAGE & COMPRESSION________________________________________________________
 			Décompresse le fichier "archive.tar.bz2" dans le dossier courant
 
 		- tar -zcvf archive.tar.gz nomDuDossier/ :
-			Archive et compresse en une fois le dossier "nomDuDossier" en fichier ".tar.gz"
+			Archive et compresse en une fois le dossier "nomDuDossier" ainsi que son contenu en fichier "archive.tar.gz"
 
 		- tar -zxvf archive.tar.gz :
 			Décompresse et extrait en une fois le contenu du fichier "archive.tar.gz" dans le dossier courant
 
 		- tar -jcvf archive.tar.bz2 nomDuDossier/ :
-			Archive et compresse en une fois le dossier "nomDuDossier" en fichier ".tar.bz2"
+			Archive et compresse en une fois le dossier "nomDuDossier" ainsi que son contenu en fichier "archive.tar.bz2"
 
-		- tar -jxvf archive.tar.bz2 nomDuDossier/ :
+		- tar -jxvf archive.tar.bz2 :
 			Décompresse et extrait en une fois le contenu du fichier "archive.tar.bz2" dans le dossier courant
 
 		- tar -ztf archive.tar.gz :
@@ -941,6 +941,40 @@ _ARCHIVAGE & COMPRESSION________________________________________________________
 
 		- tar -jtf archive.tar.bz2 :
 			Affiche la liste des fichiers contenus dans l'archive compressé "archive.tar.bz2"
+
+		- zcat archive.tar.gz :
+			Equivalent de la commande "cat", capable de lire un fichier compressé en ".gz"
+
+		- zmore archive.tar.gz :
+			Equivalent de la commande "more", capable de lire un fichier compressé en ".gz"
+
+		- zless archive.tar.gz :
+			Equivalent de la commande "less", capable de lire un fichier compressé en ".gz"
+
+		- sudo apt-get install unzip :
+			Installation du paquet "unzip"
+
+		- unzip archive.zip :
+			Décompresse et extrait le contenu du fichier "archive.zip" dans le dossier courant
+
+		- unzip -l archive.zip :
+			Affiche la liste des fichiers contenus dans l'archive compressé "archive.zip"
+
+		- sudo apt-get install zip :
+			Installation du paquet "zip"
+
+		- zip -r archive.zip nomDuDossier/ :
+			Archive et compresse le dossier "nomDuDossier" ainsi que son contenu en fichier "archive.zip"
+
+		- sudo apt-get install unrar :
+			Installation du paquet "unrar"
+
+		- unrar e archive.rar :
+			Décompresse et extrait le contenu du fichier "archive.rar" dans le dossier courant. Le format ".rar" est 
+			propriétaire. La méthode de décompression a été publiée mais pour compresser il faut avoir une license
+
+		- unrar l archive.rar :
+			Affiche la liste des fichiers contenus dans l'archive compressé "archive.rar"
 
 
 
