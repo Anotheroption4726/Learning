@@ -1,0 +1,147 @@
+- docker -v :
+Affiche la version courante installée de Docker
+
+
+
+
+- docker run hello-world :
+Docker Cherche si l'on possède déjà l'image "hello-world" en local. Si ce n'est pas le cas, il va la chercher en ligne avant de la lancer. Permet d'afficher un message qui nous dit que l'installation s'est bien déroulée.
+
+
+
+
+- docker run -d -p 8080:80 alexwhen/docker-2048 :
+Docker Cherche si l'on possède déjà l'image "alexwhen/docker-2048" en local. Si ce n'est pas le cas, il va la chercher en ligne avant de la lancer. Permet de jouer au jeu "2048" à l'adresse "http://localhost:8080/" d'un browser internet.
+
+	-d: détache le conteneur du processus actuel (permet de lancer plusieurs conteneurs en parallèle). Permet de continuer à utiliser la console pendant que l'ordinateur tourne sur un autre processus.
+
+	-p: permet d'ouvrir un port réseau sur la machine vers le conteneur Docker. Dans ce cas, on lui a demandé de transférer le trafic du port 8080 vers le port 80 du conteneur (portMachine:portConteneur).
+
+
+
+
+- docker run -d -p 8080:80 nginx :
+Lance le conteneur officiel nginx accessible au port local 8080 de la machine.
+
+
+
+
+- docker image build -t tagdelimage . :
+Création d'une image Docker à partir d'un Dockerfile situé dans le repertoire courant. On lui attribue le tag "tagdelimage" (! toujours en lettres minuscules !) avec l'argument "-t" afin de la retrouver plus facilement plus tard.
+
+
+
+
+- docker run -d -p 8080:80 tagdelimage :
+Démarre l'image portant le tag "tagdelimage". Le conteneur sera accessible au port local 8080 de la machine si l'on a bien attribué le port 80 au conteneur (instruction "EXPOSE" dans le Dockerfile)
+
+
+
+
+- docker exec -ti containerid bash :
+Permet de "rentrer" dans le conteneur possédant l'identifiant "containerid" (et de naviguer à l'intérieur de celui-ci en ligne de commande). L'argument -ti permet d'avoir un shell bash pleinement opérationnel. ctrl + d pour quitter l'execution.
+
+
+
+_____________________________________________________________________
+
+
+
+
+- docker ps :
+Affiche l'ensemble des conteneurs en cours de fonctionnement, ainsi que leurs identifiants (CONTAINER ID), leurs statuts et d'autres informations.
+
+
+
+
+- docker ps -a :
+Affiche l'ensemble des conteneurs (même ceux qui ne sont pas en cours de fonctionnement).
+
+
+
+
+- docker stop containerid :
+Arrête le conteneur possèdant l'identifiant "containerid". Son état peut être sauvegardé dans une nouvelle image.
+
+
+
+
+- docker rm containerid :
+Supprime le conteneur possèdant l'identifiant "containerid" (une fois arrêté). Son état est perdu.
+
+
+
+
+- docker system prune -a :
+Supprime l'ensemble des conteneurs arrêtés, les images non utilisées, les réseaux créés par Docker et l'ensemble des caches utilisés pour la création d'images.
+
+
+
+
+- docker image ls :
+Voir l'ensemble des images présentes en local sur l'ordinnateur.
+
+
+
+
+- docker images -a :
+Voir l'ensemble des images présentes en local sur l'ordinnateur (ainsi que tous les états intermédiaires de chaque image???).
+
+
+
+
+- docker rmi imageid :
+Supprime l'image possèdant l'IMAGE ID "imageid"
+
+
+
+
+- docker rmi imageid1 imageid2 :
+Supprime les images possèdant les IMAGE ID "imageid1" "imageid2"
+
+
+
+
+- docker rmi -f imageid :
+Force la suppression de l'image possèdant l'IMAGE ID "imageid"
+
+
+
+
+- docker stop $(docker ps -a -q) :
+
+
+
+
+- docker rm $(docker ps -a -q) :
+
+
+
+_____________________________________________________________________
+
+
+
+
+- docker pull hello-world :
+Récupère l'image "hello-world" depuis Docker Hub et la stocke en local sur l'ordinnateur.
+
+
+
+
+- docker image tag tagdelimage iddockerhub/tagdelimage:1.0 :
+
+
+
+
+- docker image push iddockerhub/tagdelimage:1.0 :
+
+
+
+
+- docker pull iddockerhub/tagdelimage:1.0 :
+
+
+
+
+- Installer Portainer :
+https://www.portainer.io/installation/

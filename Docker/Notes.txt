@@ -1,0 +1,88 @@
+https://openclassrooms.com/fr/courses/2035766-optimisez-votre-deploiement-en-creant-des-conteneurs-avec-docker/6211677-creez-un-fichier-docker-compose-pour-orchestrer-vos-conteneurs
+
+
+
+
+
+-Machine Virtuelle:
+
+Lorsque vous utilisez une machine virtuelle (VM), vous faites ce qu’on appelle de la virtualisation lourde. En effet, vous recréez un système complet dans le système hôte, pour qu’il ait ses propres ressources. L'isolation avec le système hôte est donc totale ; cependant, cela apporte plusieurs contraintes :
+
+- une machine virtuelle prend du temps à démarrer;
+- une machine virtuelle réserve les ressources (CPU/RAM) sur le système hôte.
+
+
+Mais cette solution présente aussi de nombreux avantages:
+
+- une machine virtuelle est totalement isolée du système hôte;
+- les ressources attribuées à une machine virtuelle lui sont totalement réservées;
+- vous pouvez installer différents OS (Linux, Windows, BSD, etc.).
+
+Mais il arrive très souvent que l'application qu'elle fait tourner ne consomme pas l'ensemble des ressources disponibles sur la machine virtuelle. Ainsi est né un nouveau système de virtualisation plus léger: les conteneurs.
+
+
+
+
+-Conteneur:
+
+Les conteneurs permettent de réduire les coûts, d'augmenter la densité de l'infrastructure, tout en améliorant le cycle de déploiement.
+
+Un conteneur Linux est un processus ou un ensemble de processus isolés du reste du système, tout en étant légers. Le conteneur permet de faire de la virtualisation légère, c'est-à-dire qu'il ne virtualise pas les ressources, il ne crée qu'une isolation des processus. Le conteneur partage donc les ressources avec le système hôte. Les conteneurs existent depuis plus longtemps que Docker. OpenVZ ou LXC sont des technologies de conteneur qui existent depuis de nombreuses années.
+
+Les conteneurs, au sens d'OpenVZ et LXC, apportent une isolation importante des processus systèmes ; cependant, les ressources CPU, RAM et disque sont totalement partagées avec l'ensemble du système. Les conteneurs partagent entre eux le kernel Linux ; ainsi, il n'est pas possible de faire fonctionner un système Windows ou BSD dans celui-ci.
+
+Une autre différence importante avec les machines virtuelles est qu'un conteneur ne réserve pas la quantité de CPU, RAM et disque attribuée auprès du système hôte. Ainsi, nous pouvons allouer 16 Go de RAM à notre conteneur, mais si celui-ci n'utilise que 2 Go, le reste ne sera pas verrouillé.
+
+Les conteneurs n'ayant pas besoin d'une virtualisation des ressources mais seulement d'une isolation, ils peuvent démarrer beaucoup plus rapidement et plus fréquemment qu'une machine virtuelle.
+
+En dehors de la question pécuniaire, il y a aussi la possibilité de faire tourner des conteneurs sur le poste des développeurs, et ainsi de réduire les différences entre la production, et l'environnement local sur le poste des développeurs.
+
+
+
+
+-Docker:
+
+Docker apporte une notion importante dans le monde du conteneur. Dans la vision Docker, un conteneur ne doit faire tourner qu'un seul processus. Ainsi, dans le cas d'une stack LAMP (Linux, Apache, MySQL, PHP), nous devons créer 3 conteneurs différents, un pour Apache, un pour MySQL et un dernier pour PHP. Alors que dans un conteneur LXC ou OpenVZ, nous aurions fait tourner l'ensemble des 3 services dans un seul et unique conteneur.
+
+Avec Docker, vous pouvez faire tourner des images équivalent à des systèmes d'exploitation Linux (Debian et Ubuntu par exemple), mais pas Windows ou macOS.
+
+
+
+
+-Stateful vs Stateless:
+
+Si nous prenons le cas d'une base de donnée MySQL, celle-ci est stateful car elle stocke un état. Ainsi, si vous éteignez et rallumez votre base de données, vous la retrouverez dans le même état de fonctionnement.
+
+Stateless est donc l'inverse : l'application ne stocke pas d'état. Vous pouvez prendre le cas du protocole HTTP, celui-ci est stateless. À chaque nouvelle requête HTTP, les mêmes séries d'actions seront réalisées.
+
+Les conteneurs de bases de données (MySQL, PostgreSQL, etc.) sont des conteneurs stateful, c'est-à-dire que leur bon fonctionnement dépend d'un état. Il faudra donc pérenniser leurs données afin qu'ils fonctionnent correctement.
+
+Un serveur comme Nginx, à l'inverse, est stateless. Son fonctionnement ne dépend pas d'autre chose que du conteneur lui-même.
+
+
+
+
+-Immutabilité:
+
+Dans une machine virtuelle classique, si vous souhaitez mettre à jour la configuration de votre serveur Apache, il vous suffit de vous connecter à la machine virtuelle puis de faire le changement. Mais c'est totalement inconcevable dans le monde des conteneurs Docker. Si vous devez faire la moindre modification Docker vous devez créer une nouvelle image puis la déployer. On ne modifie pas un conteneur en cours de route.
+
+Un conteneur ne doit pas stocker de données qui doivent être pérennes, car il les perdra (à moins que vous les ayez pérennisées). Mais si vous souhaitez en local mettre une base de données dans un conteneur Docker, vous devez créer un volume pour que celui-ci puisse stocker les données de façon pérenne.
+
+
+
+
+-Dockerfile:
+
+FROM: permet de définir l'image source
+
+RUN: permet d'exécuter des commandes dans le conteneur
+
+ADD: permet d'ajouter des fichiers dans le conteneur
+
+WORKDIR: permet de définir le répertoire courant dans lequel on va éxecuter des lignes de commandes
+
+EXPOSE: permet de définir les ports d'écoute par défaut
+
+VOLUME: permet de définir les volumes utilisables
+
+CMD: permet de définir la commande par défaut lors de l'execution des conteneurs Docker
