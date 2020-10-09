@@ -1,0 +1,77 @@
+_LA TENSION_
+
+L'électricité est un déplacement de particules chargées dans un conducteur, c'est-à-dire que c'est le mouvement de toutes petites choses (invisibles) dans la matière, qui créé le courant électrique. La charge électrique est une propriété de la matière. Parmi les charges qui créent le courant électrique, il existe des charges positives notées + et des charges négatives notées - . Deux charges identiques se repoussent et deux charges contraires s'attirent.
+
+Imaginez une rivière qui coule de sa source à son embouchure, puis à l'embouchure, on met une pompe qui ramène toute l'eau à la source. Nous aurions un circuit fermé, avec d'un côté un écoulement, de l'autre un pompage. La première notion électrique à comprendre est la différence de potentiel qu'on appelle aussi la tension électrique (ce qui n'est pas toujours juste). C'est cette différence de potentiel qui crée le courant électrique. Pour la rivière, elle représente la hauteur de la source par rapport à l'embouchure. Donc la pente ou le dénivelé. On comprend facilement que si la source est plus haute que l'embouchure, l'eau va se mettre à couler et va créer un courant. 
+
+C'est pareil en électricité, si la différence de potentiel électrique existe (c'est à dire la différence entre charges + et -), le courant électrique va circuler (les particules vont être attirées vers la charge inverse). La tension, ou potentiel électrique se mesure en Volts (symbole V).
+
+
+Exemples: 
+
+-Pile: 1,5 V ; 4,5 V ; 9 V
+
+-Batterie voiture: 12 V ; 24 V
+
+-Prise de courant: 110 V ; 220 V
+
+-Ligne à haute tension: 10 000 V ; 500 000 V
+
+-Foudre: 1 000 000 V
+
+
+
+
+L'Arduino UNO propose à ses bornes (pin 0 à 13) une tension de +5 V. Il utilise un courant continu, c'est-à-dire que c'est toujours du +5 V qui sort. Il existe des courants alternatifs qui fournissent une succession de courant positif puis de courant négatif à une fréquence donnée. Par exemple, vos prises de courant fournissent du 220V alternatif à 50Hz. C'est-à-dire que 50 fois par seconde le courant passe de +220V à -220V. (Je dis courant pour simplifier, mais il s'agit bien de tensions).
+
+Brancher une sortie ou une entrée de l'Arduino directement sur une prise de courant, non seulement grillera votre carte, mais risque de créer un court-circuit ou bien plus. On peut fournir à l'Arduino son alimentation électrique de plusieurs façons, en voici trois principales :
+
+-Le connecter avec le câble USB à l'ordinateur. C'est sans danger car l'ordinateur fournit un courant de +5 V par ce câble.
+
+-Connecter une pile 9 V (entre 7 V et 12 V en fait) à la prise prévue à cet effet (prise ronde). Attention car il faut vérifier comment brancher le + et le - de la prise sur la pile 9V. Arduino transforme ensuite les 9V en 5V.
+
+-Connecter un transformateur à la prise prévue à cet effet (prise ronde). Attention, il faut être sûr que la connectique du transformateur soit correcte  et qu'il fournisse bien la tension demandée (9 V). Une mauvaise connexion peut endommager définitivement votre Arduino. C'est vrai que le transformateur se branche au 220V, mais à l'intérieur du boîtier, il y a deux bobines qui permettent de transformer ces 220V en 9V. Puis un redresseur de courant qui permet de transformer l'alternatif en courant continu.
+
+
+Courant continu et courant alternatif (youtube): https://www.youtube.com/watch?v=sEqnacR6ISM
+
+
+
+
+_L'INTENSITE_
+
+L'intensité est la quantité de courant qui passe dans un endroit donné du circuit. Elle se mesure en Ampères (symbole A). C'est, pour simplifier, le nombre de particules qui passe par seconde. Pour reprendre notre rivière, ce serait le débit de la rivière à un endroit donné. Lorsqu’un circuit électrique se sépare en deux parties, la quantité de courant se répartit dans chaque partie de ce circuit (comme la rivière lorsqu'elle est coupée par une île). On comprend bien pour la rivière, que la quantité d'eau se sépare. Et bien c'est pareil en électricité. De même lorsque les deux parties de la rivière se rejoignent, on retrouve la même quantité.
+
+
+
+
+_LA RESISTANCE_
+
+La résistance, pour reprendre l'analogie avec la rivière, c'est la taille de la rivière à un endroit. Ça va donc influencer le débit. En électricité c'est un peu la même chose. La résistance est la capacité d'un matériau à s'opposer au passage du courant. Et il existe des dipôles conçus pour cela : les résistances. Un dipôle est un composant électrique qui a deux bornes pour connecter des fils. Il existe beaucoup de dipôles (ampoules, moteurs, piles, interrupteurs...). Un générateur est un dipôle actif, une ampoule un dipôle passif.
+
+Cette résistance au passage du courant se mesure en Ohms (symbole Ω). Il faut savoir qu'en électricité, il y a une loi qui relie intensité, résistance et tension: La loi d'Ohm.
+
+Tension = Résistance x Intensité, ou en plus court :
+
+U = R x I
+
+avec U en Volts (V), R en Ohms (Ω) et I en Ampères (A).
+
+Donc, si rien n'est nul, R = U/I et I = U/R
+
+
+
+
+_LA LED_
+
+Une LED est une diode qui produit de la lumière (Light Emitting Diode). Une diode est un dipôle (c’est-à-dire un composant électrique qui se branche avec 2 bornes) qui ne laisse passer le courant que dans un seul sens. On appelle ça un semi-conducteur. La diode et la LED sont des semi-conducteurs. Il faut donc comprendre que si on ne branche pas correctement une LED, et bien non seulement elle ne s'allumera pas, mais elle bloquera le courant dans tout le circuit qui la suit. Donc la LED a un sens de branchement. La LED est soumise à la même règle. La seule différence qu'il y a entre une diode simple et une LED, c'est que la LED, lorsqu'elle est parcourue par un courant, elle produit une lumière. On dit ainsi que la diode est électroluminescente, d'où son nom.
+
+Vous remarquez une patte plus longue que l'autre, et un bord un peu coupé sur la base. Si l'on veut qu'une LED s'allume, on connecte la patte la plus longue (anode ou +) du côté du 5 V et la patte la plus courte, qui part du côté coupé de la bague (cathode ou -) du côté du 0 V ou ground. L'Arduino n'est pas seulement un générateur de courant électrique, même s’il peut distribuer des courants de tensions données à certaines de ses bornes. Par convention,  le  + est la borne qui distribue un courant de 5 V de tension (ou 3.3 V dans certains cas) et le - est appelé le ground, c'est à dire la terre (un peu comme la prise de terre dans la prise électrique). Le + fournit une tension et le ground l'absorbe. Tout ce qui va au - est relié au ground.
+
+Sur votre Arduino, si vous l'observez, vous devriez voir:
+
+3 pins Gnd
+1 pin 3.3 V
+1 pin 5 V
+
+Il y a 3 bornes gnd, mais en fait elles sont reliées ensemble. Le gnd, ou ground ou terre ou masse, représente le niveau 0 V. Vous vous dites, si je veux brancher ma LED, je mets la grande patte sur le +5V, la petite patte sur le Gnd à côté et ça devrait marcher. Oui, mais si vous faites cette expérience, branchez plutôt la grande patte sur le +3.3V, sinon vous allez griller votre diode assez rapidement. Connecter directement une LED du 3.3V ou du 5V vers le ground sans résistance reste un risque pour la LED. Cet exemple n'est donc pas du tout une habitude à prendre.
