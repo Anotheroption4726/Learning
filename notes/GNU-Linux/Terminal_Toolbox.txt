@@ -911,7 +911,36 @@ _ARCHIVAGE & COMPRESSION________________________________________________________
 		- tar -xvf archive.tar :
 			Extrait le contenu de l'archive "archive.tar" dans le dossier courant
 
+		- gzip archive.tar :
+			Compresse l'archive "archive.tar" en fichier ".gz"
 
+		- gunzip archive.tar.gz :
+			Décompresse le fichier "archive.tar.gz" dans le dossier courant
+
+		- bzip2 archive.tar :
+			Compresse l'archive "archive.tar" en fichier ".bz2". "bzip2" compresse mieux que "gzip" mais est plus lent et moins 
+			utilisé que ce dernier
+
+		- bunzip2 archive.tar.bz2 :
+			Décompresse le fichier "archive.tar.bz2" dans le dossier courant
+
+		- tar -zcvf archive.tar.gz nomDuDossier/ :
+			Archive et compresse en une fois le dossier "nomDuDossier" en fichier ".tar.gz"
+
+		- tar -zxvf archive.tar.gz :
+			Décompresse et extrait en une fois le contenu du fichier "archive.tar.gz" dans le dossier courant
+
+		- tar -jcvf archive.tar.bz2 nomDuDossier/ :
+			Archive et compresse en une fois le dossier "nomDuDossier" en fichier ".tar.bz2"
+
+		- tar -jxvf archive.tar.bz2 nomDuDossier/ :
+			Décompresse et extrait en une fois le contenu du fichier "archive.tar.bz2" dans le dossier courant
+
+		- tar -ztf archive.tar.gz :
+			Affiche la liste des fichiers contenus dans l'archive compressé "archive.tar.gz"
+
+		- tar -jtf archive.tar.bz2 :
+			Affiche la liste des fichiers contenus dans l'archive compressé "archive.tar.bz2"
 
 
 
