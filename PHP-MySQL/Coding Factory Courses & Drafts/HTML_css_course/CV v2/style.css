@@ -1,0 +1,52 @@
+#intro
+{
+
+  width: 100%;
+
+}
+
+
+#titre
+{
+  float: left;
+	padding: 10px;
+
+  height: 250px;
+  width: 250px;
+
+}
+
+
+
+#photo
+{
+
+  float: left;
+  height: 250px;
+  width: 150px;
+
+}
+
+
+#contenu
+{
+
+  clear: both;
+
+}
+
+.addresse
+{
+
+  float: left;
+  border-style: inset;
+  border-color: grey;
+
+  padding: 10px;
+
+  height: 100px;
+  width: 350px;
+
+}
+
+

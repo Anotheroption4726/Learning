@@ -1,0 +1,332 @@
+#calendrierPage
+{
+	position: absolute;
+	flex-wrap: wrap;
+
+	width: 100%;
+	height: 100%;
+
+	top: 0px;
+	left: 0px;
+}
+
+
+.button
+{
+	color: red;
+	text-decoration: none;
+}
+
+
+.button:hover
+{
+	color: grey;
+}
+
+
+#calendrierNav
+{
+	position: absolute;
+
+	width: 100%;
+	height: 10%;
+
+	top: 0%;
+	left: 0%;
+	
+	border-bottom: solid grey 1px;
+
+	text-align: center;
+	font-size:24px;
+	color: red;
+	line-height: 250%;
+}
+
+
+#previousButton
+{
+	float: left;
+	padding-left: 50px;
+}
+
+
+#nextButton
+{
+	float: right;
+	padding-right: 50px;
+}
+
+
+#calendrierNav::after
+{
+	clear: both;
+}
+
+
+#calendrierPicker
+{
+	position: absolute;
+	
+	width: 20%;
+	height: 70%;
+
+	top: 10%;
+	left: 0%;
+
+	border-bottom: solid grey 1px;
+	border-right: solid grey 1px;
+
+	text-align: center;
+	line-height: 250%;
+}
+
+
+#logoCoding
+{
+	position: absolute;
+	top: 25%;
+}
+
+
+#calendrierDisplay
+{
+	position: absolute;
+
+	width: 80%;
+	height: 70%;
+
+	top: 10%;
+	left: 20%;
+
+	border-bottom: solid grey 1px;
+}
+
+
+#weekdaysDisplay
+{
+	position: absolute;
+
+	width: 100%;
+	height: 5%;
+}
+
+
+#daysDisplay
+{
+	position: absolute;
+
+	width: 100%;
+	height: 95%;
+
+	top: 5%;
+}
+
+
+.weekdays li
+{
+	display: inline-block;
+
+	width: 13.5%;
+
+	text-align: center;
+	color: white;
+	background-color: grey;
+}
+
+
+.days li
+{
+	display: inline-block;
+
+	width: 13.5%;
+	height: 67.5px;
+	
+	border-right: solid grey 1px;
+	border-bottom: solid grey 1px;
+
+	text-align: left;
+	color: red;
+	font-size: 13px;
+}
+
+
+.outMonth
+{
+	background-color: rgba(100, 100, 100, 0.1);
+}
+
+
+@media only screen and (max-height:768px) {
+  .days li {
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width:683px) {
+  .days li {
+    width: 50%;
+  }
+}
+
+
+.evenementBlock
+{
+	position: absolute;
+
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+
+.evenementLink
+{
+	color: black;
+	text-decoration: none;
+}
+
+
+.evenementLink:hover
+{
+	color: red;
+}
+
+
+
+
+.pied_page{
+    background-color: #282A2B;
+    border:1px solid: #2a2b2d;
+    height: 20%;
+    width: 100%;
+    position : absolute;
+    right : 0px;
+    bottom : 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+#div8{
+    background-color: #f2f5f7;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #f2f5f7;
+    height: 20%;
+    width: 100%;
+    top: 0px;
+}
+
+#div9{
+    background-color: #f2f5f7;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #f2f5f7;
+    height: 20%;
+    width: 100%;
+    top:20%;
+    left:0%;
+    color: #8D8989;
+}
+
+.lien_itescia{
+    text-decoration: none;
+    color: red;
+}
+
+#div10{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #2a2b2d;
+    height: 20%;
+    width: 100%;
+    top:40%;
+    left:0%;
+    color:#97a0a0;
+}
+.lien_mention{
+    text-decoration: none;
+    color:#BFBFBF;
+}
+.lien_mention:hover{
+    color:red;
+}
+#fullthree{
+    text-decoration: none;
+    color:#878383;
+}
+#fullthree:hover{
+    color: red;
+}
+
+#div11{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #2a2b2d;
+    height: 20%;
+    width: 100%;
+    top:60%;
+    left:0%;
+    color: #878383;
+}
+
+#div12{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    border:1px solid #2a2b2d;
+    height: 20%;
+    width: 100%;
+    top:80%;
+    left:0%;
+}
+
+#face{
+    color:#3B5997;
+}
+#face:hover{
+    color: red;
+}
+#twitter{
+    color:#78dde2;
+    padding-left: 1%;
+}
+#twit{
+    color: #55ACEE;
+}
+#twit:hover{
+    color: red;
+}
+#linkedin{
+    padding-left: 1%;
+}
+#linke{
+    color: #0077B5;
+}
+#linke:hover{
+    color: red;
+}
+#instagram{
+    padding-left: 1%;
+}
+#insta{
+    color: #3F729A;
+}
+#insta:hover{
+    color: red;
+}
+img{
+    max-width: 100%;
+     height: auto;
+}

@@ -1,0 +1,31 @@
+https://calendar.google.com/calendar/r
+
+
+
+Calendrier
+
+
+Mini-Site
+Brandé Coding
+
+Page d'Acceuil
+Menu: Liens randoms + Calendrier
+1é mois = 12 pages
+fleches pour passer de mois en mois
+FontAwesome (pseudo elements kss)
+Google Font
+Responsive (desktop, tablette, Mobile)
+Flex/Float
+Burger Menu
+pas de Bootstrap
+une page evenement par evenement (3, 4 evenements)
+
+une page creation nouvel évenement: formulaire, date picker
+
+
+architecture propre
+bon balisage
+code identé
+back log
+
+git hub (gitkraken)
