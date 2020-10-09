@@ -1,0 +1,539 @@
+https://doc.ubuntu-fr.org/tutoriel/script_shell
+
+
+
+
+Voici les noms de quelques-uns des principaux shells qui existent.
+
+sh : Bourne Shell. L'ancêtre de tous les shells.
+
+bash : Bourne Again Shell. Une amélioration du Bourne Shell, disponible par défaut sous Linux et Mac OS X.
+
+ksh : Korn Shell. Un shell puissant assez présent sur les Unix propriétaires, mais aussi disponible en version libre, compatible avec bash.
+
+csh : C Shell. Un shell utilisant une syntaxe proche du langage C.
+
+tcsh : Tenex C Shell. Amélioration du C Shell.
+
+zsh : Z Shell. Shell assez récent reprenant les meilleures idées de bash, ksh et tcsh.
+
+
+
+
+
+
+
+
+apt-get install ksh :
+Installe le mode shell ksh sur la machine.
+
+
+chsh/bin/ksh :
+Passer en mode shell ksh (pour l'utilisateur courant).
+
+
+chsh/bin/sh :
+Passer en mode shell sh (pour l'utilisateur courant).
+
+
+chsh/bin/bash :
+Passer en mode shell bash (pour l'utilisateur courant).
+
+
+./nomduprogramme.sh :
+Execution du programme "nomduprogramme.sh" (si on se situe dans le même dossier que celui-ci et que l'on possède les droits).
+
+
+/home/mateo21/scripts/essai.sh :
+Execution du programme "essai.sh" (si l'on ne se situe pas dans le même dossier que celui-ci). Uniquement s'il est dans un répertoire $PATH??? "echo $PATH" affiche la liste des répertoires de type $PATH présents sur la machine (les utiliser nécessite les droits d'administrateurs)
+
+
+bash -x essai.sh :
+Lancer en mode débugage le programme "essai.sh".
+
+
+
+L'extension .sh n'est pas essentielle. On le fait souvent par convention pour indiquer que c'est un script shell mais ce n'est pas une obligation. Certains scripts shell n'ont d'ailleurs pas d'extension du tout.
+
+
+
+
+# Commentaires :
+Commentaires.
+
+
+#!/bin/bash :
+Indication du shell à utiliser (bash). Le #! est appelé le sha-bang. Bien que non indispensable, cette ligne permet de s'assurer que le script est bien exécuté avec le bon shell.
+
+
+message='Bonjour tout le monde' :
+Nouvelle variable s'appellant "message" contenant la valeur "Bonjour tout le monde". Ne pas mettre d'espaces autour du symbole égal "=".
+
+
+echo $message :
+Affiche le contenu de la variable "message".
+
+
+echo 'Le message est : $message' :
+Affiche "Le message est : $message".
+
+
+echo "Le message est : $message" :
+Affiche "Le message est : Bonjour tout le monde".
+
+
+message=`pwd`
+echo "Vous êtes dans le dossier $message" :
+Affiche "Vous êtes dans le dossier /home/mateo21/bin". La commande pwd a été exécutée et son contenu inséré dans la variable message. Le contenu de la variable est ensuite affiché.
+
+
+read nomvariable :
+Demande à l'utilisateur de saisir du texte avec la commande read. Ce texte sera immédiatement stocké dans la variable "nomvariable".
+
+
+read nom prenom :
+Stocke deux valeurs lues en ligne de commande ("nom" et "prenom") dans deux variables différentes.
+
+
+read -p 'Entrez votre nom : ' nom :
+Affiche un texte tout en demandant à l'utilisateur de taper du texte.
+
+
+read -p 'Entrez votre login (5 caractères max) : ' -n 5 nom :
+Le texte saisi par l'utilisateur ne peut pas dépasser 5 caractères.
+
+
+echo -e "\nBonjour $nom !" :
+Permet d'aller à la ligne.
+
+
+read -p 'Entrez le code de désamorçage de la bombe (vous avez 5 secondes) : '  -t 5 code :
+L'utilisateur a 5 secondes pour faire sa saisie.
+
+
+read -p 'Entrez votre mot de passe : ' -s pass :
+Les caractères saisis par l'utilisateur sont invisibles (utile pour les mots de passe par exemple).
+
+
+let "a = 5"
+let "b = 2"
+let "c = a + b"
+echo $c :
+Affiche "7".
+
+
+addition : +
+soustraction : -
+multiplication : *
+division : /
+puissance : **
+modulo (renvoie le reste de la division entière) : %
+
+
+let "a = 5 * 3" # $a = 15
+let "a = 4 ** 2" # $a = 16 (4 au carré)
+let "a = 8 / 2" # $a = 4
+let "a = 10 / 3" # $a = 3 (la commande ne renvoie pas de nombres décimaux)
+let "a = 10 % 3" # $a = 1
+
+
+let "a *= 3" :
+Correspond à "let "a = a * 3""
+
+
+
+
+
+
+
+
+LES VARIABLES D'ENVIRONNEMENT:
+
+Actuellement, les variables que vous créez dans vos scripts bash n'existent que dans ces scripts. En clair, une variable définie dans un programme A ne sera pas utilisable dans un programme B.
+Les variables d'environnement sont des variables que l'on peut utiliser dans n'importe quel programme. On parle aussi parfois de variables globales. Vous pouvez afficher toutes celles que vous avez actuellement en mémoire avec la commande env :
+
+$ env
+ORBIT_SOCKETDIR=/tmp/orbit-mateo21
+GLADE_PIXMAP_PATH=:/usr/share/glade3/pixmaps
+TERM=xterm
+SHELL=/bin/bash
+GTK_MODULES=canberra-gtk-module
+USER=mateo21
+PATH=/home/mateo21/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin: /usr/bin:/sbin:/bin:/usr/games
+GDM_XSERVER_LOCATION=local
+PWD=/home/mateo21/bin
+EDITOR=nano
+SHLVL=1
+HOME=/home/mateo21
+OLDPWD=/home/mateo21
+
+Il y en a beaucoup. Certaines sont très utiles, d'autres moins. Parmi celles que je peux vous commenter et qui peuvent s'avérer utiles, on trouve :
+
+SHELL : indique quel type de shell est en cours d'utilisation (sh, bash, ksh…)
+
+PATH : une liste des répertoires qui contiennent des exécutables que vous souhaitez pouvoir lancer sans indiquer leur répertoire. Nous en avons parlé un peu plus tôt. Si un programme se trouve dans un de ces dossiers, vous pourrez l'invoquer quel que soit le dossier dans lequel vous vous trouvez
+
+EDITOR : l'éditeur de texte par défaut qui s'ouvre lorsque cela est nécessaire
+
+HOME : la position de votre dossier home
+
+PWD : le dossier dans lequel vous vous trouvez
+
+OLDPWD : le dossier dans lequel vous vous trouviez auparavant
+
+
+
+
+LES VARIABLES DES PARAMETRES:
+
+Comme toutes les commandes, vos scripts bash peuvent eux aussi accepter des paramètres. Ainsi, on pourrait appeler notre script comme ceci :
+
+./variables.sh param1 param2 param3
+Le problème, c'est que nous n'avons toujours pas vu comment récupérer ces paramètres dans notre script. Pourtant, c'est très simple à réaliser ! En effet, des variables sont automatiquement créées :
+
+$# : contient le nombre de paramètres
+
+$0 : contient le nom du script exécuté (ici ./variables.sh)
+
+$1 : contient le premier paramètre
+
+$2 : contient le second paramètre
+
+$* : correspond à tous les paramètres passés au programme
+
+$? : contient le code de retour de la dernière opération
+
+…
+
+
+
+
+LES TABLEAUX:
+
+Le bash gère également les variables « tableaux ». Ce sont des variables qui contiennent plusieurs cases, comme un tableau. Pour définir un tableau, on peut faire comme ceci :
+
+tableau=('valeur0' 'valeur1' 'valeur2')
+Cela crée une variable tableau qui contient trois valeurs (valeur0, valeur1, valeur2).
+
+Pour accéder à une case du tableau, il faut utiliser la syntaxe suivante :
+
+${tableau[2]}
+… ceci affichera le contenu de la troisième case (donc valeur2).
+
+
+tableau[2]='valeur2' :
+Assigne "valeur2" à la troisième case du tableau.
+
+
+echo ${tableau[2]} :
+Affiche le contenu de la troisième case.
+
+
+echo ${tableau[*]} :
+Affiche l'ensemble du contenu d'un tableau.
+
+
+
+
+LES CONDITIONS:
+
+if [ test ]
+then
+        echo "C'est vrai"
+fi
+
+if [ test ]; then
+        echo "C'est vrai"
+fi
+
+Les deux formes sont valables. Vous noterez — c'est très important — qu'il y a des espaces à l'intérieur des crochets. On ne doit pas écrire [test] mais [ test ]
+
+
+
+
+nom="Bruno"
+
+if [ $nom = "Bruno" ]
+then
+        echo "Salut Bruno !"
+fi
+
+# Affiche "Salut Bruno !".
+
+
+
+
+nom1="Bruno"
+nom2="Bruno"
+
+if [ $nom1 = $nom2 ]
+then
+        echo "Salut les jumeaux !"
+fi
+
+# Affiche "Salut les jumeaux !".
+
+
+
+
+if [ $1 = "Bruno" ]
+then
+        echo "Salut Bruno !"
+else
+        echo "J'te connais pas, ouste !"
+fi
+
+# Compare le premier parametre passé au programme. Affiche "J'te connais pas, ouste !" si jamais ce dernier ne correspond pas à "Bruno".
+
+
+
+
+#!/bin/bash
+
+if [ $1 = "Bruno" ]
+then
+        echo "Salut Bruno !"
+elif [ $1 = "Michel" ]
+then
+        echo "Bien le bonjour Michel"
+elif [ $1 = "Jean" ]
+then
+        echo "Hé Jean, ça va ?"
+else
+        echo "J'te connais pas, ouste !"
+fi
+
+# Affiche "J'te connais pas, ouste !" si jamais le premier paramêtre n'est pas "Bruno", "Michel" ou "Jean".
+
+
+
+
+if [ $1 != $2 ]
+then
+        echo "Les 2 paramètres sont différents !"
+else
+        echo "Les 2 paramètres sont identiques !"
+fi
+
+# Affiche "Les 2 paramètres sont différents !" si jamais le premier et deuxième paramêtre sont différents.
+
+
+
+
+-z $chaine :
+Vérifie si la chaîne est vide.
+
+
+-n $chaine :
+Vérifie si la chaîne est non vide.
+
+
+
+
+if [ -z $1 ]
+then
+        echo "Pas de paramètre"
+else
+        echo "Paramètre présent"
+fi
+
+# Affiche "Pas de paramètre" si jamais la chaine passée en premier paramêtre est vide.
+
+
+
+
+TESTS SUR DES NOMBRES:
+
+$num1 -eq $num2 :
+Vérifie si les nombres sont égaux (equal). À ne pas confondre avec le « = » qui, lui, compare deux chaînes de caractères.
+
+$num1 -ne $num2 :
+Vérifie si les nombres sont différents (nonequal).
+Encore une fois, ne confondez pas avec « != » qui est censé être utilisé sur des chaînes de caractères.
+
+$num1 -lt $num2 :
+Vérifie si num1 est inférieur ( < ) ànum2(lowerthan).
+
+$num1 -le $num2 :
+Vérifie si num1 est inférieur ou égal ( <= ) ànum2(lowerorequal).
+
+$num1 -gt $num2 :
+Vérifie si num1 est supérieur ( > ) ànum2(greaterthan).
+
+$num1 -ge $num2 :
+Vérifie si num1 est supérieur ou égal ( >= ) ànum2(greaterorequal).
+
+
+
+
+TESTS SUR DES FICHIERS:
+
+-e $nomfichier :
+Vérifie si le fichier existe.
+
+-d $nomfichier :
+Vérifie si le fichier est un répertoire. N'oubliez pas que sous Linux, tout est considéré comme un fichier, même un répertoire
+
+-f $nomfichier :
+Vérifie si le fichier est un… fichier. Un vrai fichier cette fois, pas un dossier.
+
+-L $nomfichier :
+Vérifie si le fichier est un lien symbolique (raccourci).
+
+-r $nomfichier :
+Vérifie si le fichier est lisible (r).
+
+-w $nomfichier :
+Vérifie si le fichier est modifiable (w).
+
+-x $nomfichier :
+Vérifie si le fichier est exécutable (x).
+
+$fichier1 -nt $fichier2 :
+Vérifie si fichier1 est plus récent que fichier2 (newer than).
+
+$fichier1 -ot $fichier2 :
+Vérifie si fichier1 est plus vieux que fichier 2 (older than).
+
+
+
+
+read -p 'Entrez un répertoire : ' repertoire
+
+if [ -d $repertoire ]
+then
+        echo "Bien, vous avez compris ce que j'ai dit !"
+else
+        echo "Vous n'avez rien compris..."
+fi
+
+# Console:
+
+# Entrez un répertoire : /home
+# Bien, vous avez compris ce que j'ai dit !
+
+# Entrez un répertoire : rienavoir.txt
+# Vous n'avez rien compris...
+
+
+
+
+if [ $# -ge 1 ] && [ $1 = 'koala' ]
+then
+        echo "Bravo !"
+        echo "Vous connaissez le mot de passe"
+else
+        echo "Vous n'avez pas le bon mot de passe"
+fi
+
+# Le test vérifie deux choses :
+# qu'il y a au moins un paramètre (« si $# est supérieur ou égal à 1 »)
+# que le premier paramètre est bien koala (« si $1 est égal à koala »).
+# Si ces deux conditions sont remplies, alors le message indiquant que l'on a trouvé le bon mot de passe s'affichera.
+
+# Console:
+
+# $ ./conditions.sh koala
+# Bravo !
+# Vous connaissez le mot de passe
+
+
+
+
+INVERSER UN TEST
+
+if [ ! -e fichier ]
+then
+        echo "Le fichier n'existe pas"
+fi
+
+
+
+
+CASE : TESTER PLUSIEURES CONDITIONS A LA FOIS
+
+case $1 in
+        "Bruno")
+                echo "Salut Bruno !"
+                ;;
+        "Michel")
+                echo "Bien le bonjour Michel"
+                ;;
+        "Jean")
+                echo "Hé Jean, ça va ?"
+                ;;
+        *)
+                echo "J'te connais pas, ouste !"
+                ;;
+esac
+
+
+
+
+BOUCLES WHILE
+
+while [ -z $reponse ] || [ $reponse != 'oui' ]
+do
+        read -p 'Dites oui : ' reponse
+done
+
+
+
+
+BOUCLES FOR
+
+liste_fichiers=`ls`
+
+for fichier in $liste_fichiers
+  do
+    echo "Fichier trouvé : $fichier"
+done
+
+# Liste tous les fichiers trouvés dans le répertoire actuel.
+
+
+
+
+for fichier in `ls`
+do
+        echo "Fichier trouvé : $fichier"
+done
+
+# Simplification du script précédent.
+
+
+
+
+for fichier in `ls`
+do
+        mv $fichier $fichier-old
+done
+
+# Renomme tous les fichiers présents dans le dossier.
+
+
+
+
+for i in `seq 1 10`;
+do
+        echo $i
+done
+
+# Génère tous les nombres allant du premier paramètre au dernier paramètre, donc 1 2 3 4 5 6 7 8 9 10.
+
+
+
+
+for i in *
+do
+  if [ -d $i ]
+    then
+      echo $i
+  fi
+done
+
+# Affiche tout les sous-répertoires du répertoire courant.
+
+
+
+https://openclassrooms.com/fr/courses/43538-reprenez-le-controle-a-laide-de-linux/4472621-les-fonctions
