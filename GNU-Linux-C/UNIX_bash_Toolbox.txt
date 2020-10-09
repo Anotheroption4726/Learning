@@ -770,8 +770,8 @@ _GENERAL________________________________________________________________________
 
 			- ps -ef :
 				Affiche la liste de tous les processus de tous les utilisateurs (même les daemons) qui tournent sur le système 
-				au moment où la commande est lancée. Cette liste n'est pas actualisée en temps réel (voir "PS -EF" dans 
-				"Notes.txt")
+				au moment où la commande est lancée (similaire à la commande "ps -ax"...?). Cette liste n'est pas actualisée en 
+				temps réel (voir "PS -EF" dans "Notes.txt")
 
 			- ps :
 				Version allégée de la commande "ps -ef". N'affiche que les processus lancés par l'utilisateur courant dans la 
