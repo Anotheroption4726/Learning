@@ -885,6 +885,41 @@ _GENERAL________________________________________________________________________
 
 
 
+_ARCHIVAGE & COMPRESSION_______________________________________________________________________________________________________
+
+
+
+
+	>> COMMANDES
+
+		- tar -cvf archive.tar nomDuDossier/ :
+			Assemble et crée un archive "archive.tar" à partir des fichiers contenus dans le dossier "nomDuDossier" 
+				c : crée une archive tar
+				v : affiche le détail des opérations
+				f : assemble l'archive dans un fichier
+
+		- tar -cvf archive.tar nomDuFichier1 nomDuFichier2 nomDuFichier3 :
+			Assemble et crée un archive "archive.tar" à partir des fichiers "nomDuFichier1", "nomDuFichier2" et "nomDuFichier3" 
+			contenus dans le dossier courant
+
+		- tar -tf archive.tar :
+			Affiche la liste des fichiers contenus dans l'archive "archive.tar"
+
+		- tar -rvf archive.tar nomDuFichier :
+			Ajoute le fichier "nomDuFichier" contenu dans le dossier courant à l'archive "archive.tar"
+
+		- tar -xvf archive.tar :
+			Extrait le contenu de l'archive "archive.tar" dans le dossier courant
+
+
+
+
+
+
+
+
+
+
 _NANO__________________________________________________________________________________________________________________________
 
 
