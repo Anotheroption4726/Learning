@@ -63,11 +63,33 @@ _SHELL, TERMINAL & CONSOLE______________________________________________________
 
 	>> SHELL
 
+		https://doc.ubuntu-fr.org/tutoriel/script_shell
+
 		In Unix system administration, a user's shell is the program which actually processes commands and returns output. Most 
 		shells also manage foreground and background processes, command history and command line editing. These features (and 
 		many more) are standard in Bash, the most common shell in modern Linux systems. There are many different unix shells. 
 		Ubuntu's default shell is Bash (like most other Linux distributions). Popular alternatives include zsh (which 
 		emphasizes power and customizability) and fish (which emphasizes simplicity)
+
+		Voici les noms de quelques-uns des principaux shells qui existent:
+
+			- sh :
+				Bourne Shell. L'ancêtre de tous les shells
+
+			- bash :
+				Bourne Again Shell. Une amélioration du Bourne Shell, disponible par défaut sous Linux et Mac OS X
+
+			- ksh :
+				Korn Shell. Un shell puissant assez présent sur les Unix propriétaires, mais aussi disponible en version libre, compatible avec bash
+
+			- csh :
+				C Shell. Un shell utilisant une syntaxe proche du langage C
+
+			- tcsh :
+				Tenex C Shell. Amélioration du C Shell
+
+			- zsh :
+				Z Shell. Shell assez récent reprenant les meilleures idées de bash, ksh et tcsh
 
 
 

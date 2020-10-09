@@ -1,56 +1,9 @@
-https://doc.ubuntu-fr.org/tutoriel/script_shell
+- sudo apt-get install ksh :
+Installe le mode shell ksh sur la machine
 
 
-
-
-Voici les noms de quelques-uns des principaux shells qui existent.
-
-sh : Bourne Shell. L'ancêtre de tous les shells.
-
-bash : Bourne Again Shell. Une amélioration du Bourne Shell, disponible par défaut sous Linux et Mac OS X.
-
-ksh : Korn Shell. Un shell puissant assez présent sur les Unix propriétaires, mais aussi disponible en version libre, compatible avec bash.
-
-csh : C Shell. Un shell utilisant une syntaxe proche du langage C.
-
-tcsh : Tenex C Shell. Amélioration du C Shell.
-
-zsh : Z Shell. Shell assez récent reprenant les meilleures idées de bash, ksh et tcsh.
-
-
-
-
-
-
-
-
-apt-get install ksh :
-Installe le mode shell ksh sur la machine.
-
-
-chsh/bin/ksh :
-Passer en mode shell ksh (pour l'utilisateur courant).
-
-
-chsh/bin/sh :
-Passer en mode shell sh (pour l'utilisateur courant).
-
-
-chsh/bin/bash :
-Passer en mode shell bash (pour l'utilisateur courant).
-
-
-./nomduprogramme.sh :
-Execution du programme "nomduprogramme.sh" (si on se situe dans le même dossier que celui-ci et que l'on possède les droits).
-
-
-/home/mateo21/scripts/essai.sh :
-Execution du programme "essai.sh" (si l'on ne se situe pas dans le même dossier que celui-ci). Uniquement s'il est dans un répertoire $PATH??? "echo $PATH" affiche la liste des répertoires de type $PATH présents sur la machine (les utiliser nécessite les droits d'administrateurs)
-
-
-bash -x essai.sh :
-Lancer en mode débugage le programme "essai.sh".
-
+- bash -x essai.sh :
+Lancer en mode débugage le programme "essai.sh"
 
 
 L'extension .sh n'est pas essentielle. On le fait souvent par convention pour indiquer que c'est un script shell mais ce n'est pas une obligation. Certains scripts shell n'ont d'ailleurs pas d'extension du tout.
