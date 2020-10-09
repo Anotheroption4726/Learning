@@ -1,0 +1,84 @@
+Un reseau met en relation des équipements terminaux
+
+
+2 Types d'équipements:
+-Equipements Terminaux (source, destination)
+-Equipements Intermédiaires (commutateurs/switch, routeurs)
+
+
+Protocole: règles mises en places pour que tout le monde soit d'accord sur la manière de communiquer
+(ipv6 est un protocole)
+
+
+Identification du destinataire: l'identifiant de la source et du destinataire sont obligatoires (infos obligatoires determinées par l'IETF)
+
+
+Système de communications:
+-Unidirectionnel (half duplex) - l'un se tait, l'autre écoute
+-Multidirectionnel (full duplex) - les deux terminaux peuvent communiquer en même temps
+
+fréquence haute: moins de portée mais plus de bande passante disponible (longueur d'onde courte)
+fréquence basse: plus de portée mais moins de bande passante disponible (longueur d'onde grande)
+
+dans l'espace on utilise des hyperfréquences (fréquences hautes) car il y a peu d'obstacles et l'onde se diffuse beaucoup plus facilement
+
+(aparté: rouge, basse fréquence de la lumière => infrarouge)
+
+
+
+Modèles en couches (OSI, TCP/IP): les couches
+
+TCP/IP est un ensemble de protocoles: pile protocolaire
+
+couches faibles, plus proches du matériel (la plupart du temps on travaille en couche 1 ou 2)
+
+
+Couche niveau 1: manipulation de bits, trains de données (ac une en-tête et une queue) gérés par les cartes réseaux
+
+désencapsulation: passage d'une couche infèrieure à couche supèrieure (sens inverse: encapsulation)
+
+
+Couche niveau 2: trames, trame wifi ou ethernet par exemple (nouvelle en-tête et queue, différente de celle en couche niveau 1)
+on y trouve les adresses MAC (adresses matérielles: 48 bits, divisés en deux parties)
+24 premiers bits correspondent au constructeur ou à l'éditeur de la carte réseau
+24 derniers bits correspondent à l'ID de l'interface (interface: point de connection à un réseau physique ou virtuel)
+les adresses MAC sont determinées par une organisation internationale
+en-tête d'une trame: ethertype (determine entre autres le type de message de niveau 3: ipv4 ou ipv6) et l'addresse du destinataire
+queue d'une trame: clé
+intérieur de la trame: paquet ip
+
+
+Couche de niveau 3: paquets (nouvelle en-tête et queue) en-tête contient les adresses IP de la source et de la destination
+type de service, pour la priorité
+Addresses ipv4 (les plus utilisées). Elles ont une longueur fixe de 32 bits (4 blocs d'un octet)
+1.2.3.4 (valeur minimum pour chaque octet 0, valeur max 255)
+Une adresse ip a toujours un masque, l'association des deux permet de connaitre la plage d'adresses dans laquelle on se trouve (sous-réseau)
+
+limite des adresses (que l'on réserve):
+ip de début: réseau
+ip de fin: diffusion (broadcast)
+
+sur 32 bits, une adresse est divisée en deux parties: Net ID et Host ID. On utilise un masque pour savoir ou la première se termine et où la deuxième commence
+
+
+Couche de niveau 4: Datagramme, ports
+
+
+Couche de niveau 5: Protocoles utilisateurs
+
+
+
+Débit (invariable, la quantité envoyée à la seconde) != bande passante (varie, aloue une quantité de débit)
+
+
+
+2^7 = 128
+2^6 = 64
+2^5 = 32
+2^4 = 16
+2^3 = 8
+2^2 = 4
+2^1 = 2
+2^0 = 1
+
+11000000 => 128 + 64 = 192

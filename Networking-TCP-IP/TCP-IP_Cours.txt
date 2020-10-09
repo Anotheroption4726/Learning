@@ -1,0 +1,302 @@
+https://static-course-assets.s3.amazonaws.com/ITN6/fr/index.html#1.2.4.4
+
+#1.2.4.4
+
+
+
+[[[[LAN, WAN ET INTERNET]]]]
+
+
+COMPOSANTS D'UN RESEAU
+
+-Appareils et Supports: Les périphériques et les supports représentent les éléments physiques ou le matériel du réseau. Le matériel correspond souvent aux composants visibles de la plate-forme réseau, par exemple un ordinateur portable, un ordinateur de bureau, un commutateur, un routeur, un point d'accès sans fil ou le câblage qui sert à relier les périphériques.
+
+-Services et Processus: Les services incluent de nombreuses applications de réseau courantes utilisées quotidiennement, comme les services d'hébergement de messagerie et les services d'hébergement web. Les processus fournissent les fonctionnalités qui dirigent et déplacent les messages à travers le réseau.
+
+
+PERIPHERIQUES FINAUX
+
+Un périphérique final est la source ou la destination d'un message transmis sur le réseau. Pour pouvoir les distinguer les uns des autres, tous les périphériques finaux d'un réseau sont identifiés au moyen d'une adresse.
+
+
+PERIPHERIQUES RESEAU INTERMEDIAIRES
+
+Les périphériques intermédiaires fournissent la connectivité et s'assurent que les données sont transmises sur le réseau. Ils connectent les périphériques finaux individuels au réseau et peuvent connecter plusieurs réseaux individuels afin de former un interréseau. Ils utilisent l'adresse du périphérique final de destination, ainsi que les informations concernant les interconnexions réseau, pour déterminer le chemin que doivent emprunter les messages à travers le réseau.
+Exemples: Routeurs, Routeurs sans fils, Commutateurs LAN, Commutateurs multicouche, Applications de pare-feu...
+
+
+SUPPORTS RESEAU
+
+-Fils métalliques réunis en câbles : les données sont codées en impulsions électriques.
+
+-Fibres de verre ou plastiques (câble de fibre optique) : les données sont codées sous forme d'impulsions lumineuses.
+
+-Transmission sans fil : les données sont codées en utilisant les longueurs d'onde du spectre électromagnétique.
+
+
+REPRESENTATIONS DU RESEAU
+
+-1a) Périphériques finaux: ordinateur de bureau, ordinateur portable, imprimante, téléphone IP, tablette sans fil, système de téléprésence
+
+-1b) Périphériques intermédiaires: routeur, routeur sans fil, commutateur LAN, commutateur multicouche, application de pare-feu
+
+-1c) Supports réseau: supports sans fil, médias LAN, médias WAN
+
+-2a) Carte réseau: une carte réseau, ou adaptateur de réseau local, fournit la connexion physique au réseau à partir d'un périphérique final.
+
+-2b) Port physique: connecteur ou prise sur un périphérique réseau par lequel/laquelle le support est connecté à un périphérique final ou à autre périphérique réseau.
+
+-2c) Interface: ports spécifiques sur un périphérique réseau qui se connectent à des réseaux individuels. Puisque les routeurs sont utilisés pour interconnecter des réseaux, les ports sur un routeur sont appelés des interfaces réseau.
+
+Remarque: les termes « port » et « interface » sont souvent utilisés l'un pour l'autre.
+
+
+SCHEMAS DE TOPOLOGIE
+
+Les diagrammes de topologie fournissent une représentation visuelle des connexions réseau:
+
+-Diagrammes de topologie physique: indiquent l'emplacement physique des périphériques intermédiaires et des câbles.
+
+-Diagrammes de topologie logique: identifient les périphériques, les ports, et le schéma d'adressage.
+
+
+TYPES DE RESEAU
+
+Les types de réseau varient en fonction de la taille de la zone couverte, le nombre d'utilisateurs connectés, le nombre et les types de services disponibles et le domaine de responsabilité.
+
+- LAN (Local Area Network) ou réseau local : infrastructure réseau reliant les utilisateurs et les périphériques finaux dans une zone géographique peu étendue ; il s'agit généralement d'un réseau de petite ou moyenne entreprise ou d'un réseau domestique, dont le propriétaire et le gestionnaire sont un individu ou un service IT.
+
+- WAN (Wide Area Network) ou réseau étendu : infrastructure réseau permettant d'accéder à d'autres réseaux au sein d'une zone géographique étendue, qui appartient généralement à un prestataire de services et dont la gestion est assurée par ce dernier.
+
+- Réseau intermédiaire (MAN) : infrastructure réseau qui couvre une zone plus vaste qu'un LAN, mais moins étendue qu'un WAN (par exemple, une ville). Les MAN sont généralement gérés par une seule entité, comme une grande entreprise.
+
+- LAN sans fil (WLAN) : infrastructure similaire à un réseau local, mais sans fil. Elle relie des utilisateurs et des terminaux situés dans une zone peu étendue.
+
+- Réseau de stockage SAN : infrastructure réseau conçue pour prendre en charge des serveurs de fichiers et pour fournir des fonctionnalités de stockage, de récupération et de réplication de données.
+
+
+RESEAUX LOCAUX
+
+Un réseau local (LAN) est une infrastructure réseau qui couvre une zone peu étendue. Les LAN relient des périphériques finaux dans une zone limitée administrée par une seule entreprise ou personne. Le contrôle administratif qui gère les stratégies de sécurité et de contrôle d'accès s'applique au niveau du réseau. Le réseau local fournit une bande passante très élevée aux périphériques finaux et aux périphériques intermédiaires internes.
+
+
+RESEAUX ETENDUS
+
+Un réseau étendu (WAN) est une infrastructure réseau qui couvre une zone étendue. Les réseaux étendus sont généralement gérés par des prestataires de services ou des fournisseurs d'accès à Internet (FAI).
+
+-Les WAN relient des LAN sur des zones étendues couvrant des villes, des états, des provinces, des pays ou des continents.
+
+-Les WAN sont habituellement gérés par plusieurs prestataires de services.
+
+-Les réseaux WAN fournissent généralement des liaisons à plus bas débit entre les réseaux locaux.
+
+
+INTERNET ET EXTRANETS
+
+Internet est un ensemble de réseaux interconnectés à l'échelle internationale (interréseaux, dont le terme Internet est une abréviation). Internet n'est pas détenu par une personne ou un groupe. Garantir une communication efficace sur cette infrastructure hétérogène requiert l'application de technologies et de normes cohérentes et communément reconnues, ainsi que la coopération entre de nombreux organismes gouvernementaux. Certains organismes ont été créés pour gérer la structure et la normalisation des protocoles et des processus Internet. Ces organismes incluent l'Internet Engineering Task Force (IETF), l'Internet Corporation for Assigned Names and Numbers (ICANN) et l'Internet Architecture Board (IAB), entre autres.
+
+Remarque : le terme internet (avec un « i » minuscule) est utilisé pour décrire plusieurs réseaux interconnectés. Pour faire référence au système global de réseaux informatiques interconnectés ou World Wide Web, c'est le terme Internet (avec un « I » majuscule) qu'il convient d'utiliser.
+
+Une entreprise peut utiliser un extranet pour fournir un accès sécurisé aux personnes qui travaillent pour une autre entreprise, mais qui ont besoin d'accéder aux données de l'entreprise en question.
+
+-Internet: monde entier.
+
+-Extranet: fournisseurs, clients, collaborateurs
+
+-Intranet: entreprise uniquement
+
+
+CONNEXIONS INTERNET DES BUREAUX A DOMICILE ET DES PETITS BUREAUX
+
+-Câble : généralement proposé par les fournisseurs de services de télévision par câble, le signal de données Internet est transmis grâce au câble utilisé pour la télévision par câble. Il offre une connexion permanente à Internet haut débit.
+
+-DSL : les lignes d'abonné numérique offrent une connexion permanente à Internet haut débit. La technologie DSL utilise une ligne téléphonique. En général, un utilisateur de bureau à domicile ou de petit bureau se connecte à l'aide d'une ligne ADSL (Asymmetric Digital Subscriber Line), sur laquelle la vitesse descendante est supérieure à la vitesse ascendante.
+
+-Cellulaire : l'accès Internet cellulaire utilise un réseau de téléphonie mobile. Partout où vous captez un signal cellulaire, vous pouvez accéder à Internet. Les performances sont cependant limitées par les fonctionnalités du téléphone et de la station de base à laquelle l'appareil est connecté.
+
+-Satellite : la disponibilité de l'accès Internet par satellite constitue un réel avantage dans les régions qui n'ont aucune autre possibilité d'accéder à Internet. Les paraboles nécessitent une visibilité directe sur le satellite.
+
+-Ligne commutée : option peu onéreuse nécessitant une ligne téléphonique et un modem. La faible bande passante des connexions par ligne commutée n'est généralement pas suffisante pour les transferts de données importants, mais cette solution reste utile pour accéder à Internet lors d'un déplacement.
+
+
+CONNEXIONS INTERNET D'ENTREPRISE
+
+-Lignes louées : les lignes louées sont des circuits dédiés appartenant au réseau du fournisseur d'accès qui relient des bureaux distants pour permettre la transmission de données et/ou de communications vocales privées. Les circuits sont généralement loués sur une base mensuelle ou annuelle. Cette solution peut être onéreuse.
+
+-WAN Ethernet : les réseaux WAN Ethernet étendent la technologie d'accès des réseaux LAN au réseau étendu. Ethernet est une technologie LAN que vous découvrirez dans un autre chapitre. Les avantages de la technologie Ethernet sont en passe de s'appliquer au réseau étendu.
+
+-DSL : la DSL d'entreprise est disponible dans divers formats. La SDSL (ligne d'abonné numérique à débit symétrique) est largement utilisée. Cette solution est similaire à la version grand public de la technologie DSL, mais elle offre les mêmes débits de téléchargement ascendant et descendant.
+
+-Satellite : comme c'est le cas pour les utilisateurs de bureau à domicile et de petits bureaux, le service par satellite peut fournir une connexion lorsqu'aucune solution par câble n'est disponible.
+
+
+RESEAUX DISTINCTS TRADITIONNELS
+
+Imaginez une école construite il y a trente ans. À cette époque, certaines classes étaient reliées au réseau de données, au réseau téléphonique et au réseau de télévision. Ces réseaux distincts ne pouvaient pas communiquer entre eux, chaque réseau utilisait des technologies différentes pour le transport du signal de communication. Chaque réseau avait son propre ensemble de règles et de normes pour garantir le bon fonctionnement des communications.
+
+
+RESEAU CONVERGENT
+
+Aujourd'hui, les réseaux de données, téléphoniques et de télévision distincts sont en train de converger. Contrairement aux réseaux spécialisés, les réseaux convergents peuvent transmettre des données, de la voix et des flux vidéo entre différents types d'appareil, par le biais d'une même infrastructure réseau. Cette infrastructure réseau utilise le même ensemble de règles, de contrats et de normes de mise en œuvre.
+
+
+CARACTERISTIQUES DE BASE DES ARCHITECTURE DES RESEAUX
+
+-Tolérance aux pannes
+-Évolutivité
+-Qualité de service (QoS)
+-Sécurité
+
+
+TOLERANCE AUX PANNES
+
+Les réseaux tolérants aux pannes s'appuient sur plusieurs chemins entre la source et la destination d'un message. Si l'un des chemins est défaillant, le message peut instantanément être envoyé par le biais d'une autre liaison. Le fait de disposer de plusieurs chemins vers une destination s'appelle la redondance.
+
+L'un des moyens pour les réseaux fiables d'assurer la redondance consiste à mettre en œuvre un réseau à commutation de paquets. La commutation de paquets fractionne le trafic en paquets qui sont acheminés sur un réseau partagé. Un message unique, tel qu'un e-mail ou un flux vidéo, est fractionné en de nombreux blocs de message appelés paquets. Chaque paquet comporte les informations d'adressage nécessaires de la source et de la destination du message. Les routeurs du réseau commutent les paquets en fonction de l'état du réseau à ce moment-là. Cela signifie que tous les paquets d'un seul message peuvent emprunter des chemins très différents pour parvenir à la destination.
+
+Ce n'est pas le cas dans les réseaux à commutation de circuits utilisés traditionnellement pour les communications voix. Un réseau à commutation de circuits établit un circuit dédié entre la source et la destination de sorte que les utilisateurs puissent communiquer. Si l'appel est interrompu de façon imprévue, les utilisateurs doivent établir une nouvelle connexion.
+
+
+EVOLUTIVITE
+
+Un réseau évolutif est en mesure de s'étendre rapidement afin de prendre en charge de nouveaux utilisateurs et applications sans que cela n'affecte les performances du service fourni aux utilisateurs existants. En outre, les réseaux sont évolutifs étant donné que les concepteurs font appel à des normes et à des protocoles reconnus. Ainsi, les fournisseurs de logiciel et de matériel peuvent se concentrer sur l'amélioration des produits et des services, sans se soucier d'avoir à développer un nouvel ensemble de règles pour assurer leur fonctionnement dans le réseau.
+
+
+QUALITE DE SERVICE (QoS)
+
+Un encombrement survient lorsqu'une demande excessive de bande passante dépasse les capacités disponibles. La bande passante réseau est mesurée en fonction du nombre de bits pouvant être transmis en une seconde, soit en « bits par seconde » (bit/s). Lorsque plusieurs communications sont initiées simultanément sur le réseau, la demande de bande passante peut excéder la quantité disponible, ce qui génère un encombrement du réseau. Lorsque le volume de trafic est supérieur au volume pouvant être transporté sur le réseau, les périphériques placent les paquets en file d'attente dans la mémoire en attendant que des ressources se libèrent. Lorsqu'une politique de Qualité de service (QoS) est mise en œuvre, le routeur peut gérer le flux de données et le trafic voix en donnant la priorité aux communications voix (par exemple) en cas de congestion du réseau.
+
+
+SECURITE
+
+Deux aspects de la sécurité du réseau doivent être pris en compte : la sécurité de l'infrastructure réseau et la sécurité de l'information.
+
+Sécuriser l'infrastructure réseau implique de sécuriser matériellement les périphériques qui assurent la connectivité du réseau et d'empêcher tout accès non autorisé au logiciel de gestion qu'ils hébergent.
+
+Sécuriser l'information consiste à protéger les informations contenues dans les paquets transmis sur le réseau, ainsi que les informations stockées sur les périphériques reliés au réseau. Pour atteindre ces objectifs de sécurité du réseau, il faut respecter trois exigences:
+
+-Confidentialité : garantir la confidentialité des données consiste à limiter l'accès aux données aux destinataires désignés et autorisés.
+
+-Intégrité : assurer l'intégrité des données consiste à veiller à ce que les informations ne soient pas modifiées lors de leur transmission de leur point d'origine à leur destination.
+
+-Disponibilité : assurer la disponibilité des données consiste à veiller à ce que les utilisateurs autorisés puissent accéder en temps voulu et de façon fiable aux services de données.
+
+
+BYOD
+
+Le BYOD consiste à donner aux utilisateurs finaux la liberté d'utiliser leurs propres outils pour accéder aux informations et communiquer au sein d'un réseau d'entreprise ou de campus universitaire. Ces outils personnels incluent notamment des ordinateurs portables, des netbooks, des tablettes, des smartphones et des lecteurs électroniques. Le BYOD, c'est pour tout type d'appareil, quel que soit son propriétaire, et partout. Par exemple, dans le passé, un étudiant qui avait besoin d'accéder au réseau du campus ou à Internet devait utiliser l'un des ordinateurs de l'école.
+
+
+CLOUD COMPUTING
+
+Le cloud computing fonctionne grâce aux data centers. Un data center héberge des systèmes informatiques et les composants associés.
+
+-Clouds Publics
+-Clouds Privés
+-Clouds Personnalisés
+-Clouds Hybrides
+
+
+RESEAU SUR COURANT ELECTRIQUE
+
+Le réseau sur courant électrique est une tendance émergente dans le domaine des réseaux domestiques, il permet d'utiliser le câblage électrique existant pour connecter des périphériques. Le concept « pas de nouveaux câbles » repose sur la possibilité de connecter un périphérique au réseau grâce à n'importe quelle prise électrique. Cela permet d'éliminer les coûts liés à l'installation de câbles de données, et cela sans augmenter la facture d'électricité. Grâce au câblage électrique existant, le réseau sur courant porteur transmet des informations en envoyant les données sur des fréquences spécifiques.
+
+À l'aide d'un adaptateur secteur standard, les périphériques peuvent se connecter au LAN en utilisant n'importe quelle prise de courant. Le réseau sur courant électrique est particulièrement utile lorsque les points d'accès sans fil ne peuvent pas être utilisés ou ne peuvent pas couvrir tous les périphériques d'un domicile. Le réseau sur courant électrique n'est pas conçu pour remplacer les câblages dédiés aux réseaux de données. Cependant, c'est une alternative viable lorsque les câbles ou les communications sans fil du réseau de données ne sont pas utilisables.
+
+
+MENACES DE SECURITE ENVERS LES RESEAUX
+
+-Virus, vers, et chevaux de Troie : logiciels malveillants et code arbitraire s'exécutant sur un périphérique utilisateur.
+
+-Logiciels espions et publicitaires : logiciels installés sur un périphérique utilisateur qui collectent secrètement des informations sur l'utilisateur.
+
+-Attaques zero-day, également appelées attaques zero-hour : attaques qui se produisent le jour où une vulnérabilité est détectée.
+
+-Attaques de pirates : attaques lancées sur des périphériques utilisateur ou des ressources réseau par une personne qui possède de solides connaissances en informatique.
+
+-Attaques par déni de service : attaques conçues pour ralentir ou bloquer les applications et les processus d'un périphérique réseau.
+
+-Interception et vol de données : attaques visant à acquérir des informations confidentielles à partir du réseau d'une entreprise.
+
+-Usurpation d'identité : attaques visant à recueillir les informations de connexion d'un utilisateur afin d'accéder à des données privées.
+
+Il est également important de prendre en compte les menaces internes. De nombreuses études démontrent que la plupart des violations de données se produisent par la faute des utilisateurs internes du réseau. En raison du développement des stratégies BYOD, les données d'entreprise sont beaucoup plus vulnérables.
+
+
+SOLUTIONS DE SECURITE
+
+-Des antivirus et des logiciels de protection contre les programmes malveillants : leur fonction est d'empêcher la contamination des périphériques finaux par un programme malveillant.
+
+-Un pare-feu : pour bloquer les accès non autorisés au réseau. Il peut s'agir d'un système de pare-feu propre à un hôte unique qui est mis en œuvre pour empêcher l'accès non autorisé au périphérique final, ou d'un service de filtrage de base sur le routeur de la maison pour empêcher l'accès non autorisé depuis l'extérieur du réseau.
+
+En plus de ce qui précède, les réseaux plus étendus et les réseaux des grandes entreprises ont souvent d'autres exigences relatives à la sécurité :
+
+-Des systèmes de pare-feu spécialisés : pour fournir des fonctionnalités de pare-feu plus avancées et filtrer un trafic plus important avec plus de précision.
+
+-Des listes de contrôle d'accès (ACL) : pour filtrer davantage les accès et le transfert de trafic.
+
+-Des systèmes de prévention des intrusions : pour identifier des menaces immédiates, telles que les attaques zero-day ou zero-hour.
+
+-Des réseaux privés virtuels (VPN) : pour fournir un accès sécurisé aux télétravailleurs.
+
+
+SYSTEME D'EXPLOITATION
+
+-Interface graphique utilisateur: Une interface utilisateur graphique telle que Windows, OS X, Apple iOS ou Android, permet à l'utilisateur d'interagir avec le système à l'aide d'un environnement utilisant des graphiques, des icônes, des menus et des fenêtres. Cependant, elles ne disposent pas toujours de toutes les fonctionnalités disponibles dans la CLI. Elles peuvent également tomber en panne ou simplement ne pas fonctionner correctement. C'est pourquoi l'accès aux périphériques réseau se fait habituellement via une CLI. La CLI demande moins de ressources et offre une grande stabilité par rapport à une interface utilisateur graphique.
+
+-Interface en ligne de Commande: Lorsqu'il utilise une interface en ligne de commande, l'utilisateur accède directement au système dans un environnement textuel, en entrant des commandes au clavier dans une invite de commandes. En règle générale, le système exécute la commande en fournissant une sortie textuelle. La CLI nécessite très peu de surcharge pour fonctionner. Cependant, l'utilisateur doit connaître la structure sous-jacente qui contrôle le système.
+
+-Interpréteur de Commandes: Interface utilisateur qui permet aux utilisateurs de demander des tâches spécifiques à l'ordinateur. Ces requêtes peuvent être émises soit via l'interface graphique, soit via l'interface en ligne de commande.
+
+-Noyau: Element qui assure la communication entre le matériel informatique et les logiciels, et gère le mode d'utilisation des ressources matérielles pour satisfaire la configuration logicielle.
+
+-Matériel: Partie physique d'un ordinnateur qui intègre des éléments électroniques.
+
+Remarque : le système d'exploitation des routeurs domestiques est généralement appelé « firmware ». La méthode la plus courante pour configurer un routeur domestique est d'utiliser une interface utilisateur graphique basée sur navigateur web.
+
+
+METHODES D'ACCES
+
+-Console: Le périphérique est accessible même si aucun service réseau n'a été configuré
+
+
+2.1.1.2
+
+7.1.1.1
+
+ADRESSES IPV4 AU FORMAT BINAIRE
+
+Le format binaire est un système de numération utilisant les chiffres 0 et 1 qui sont appelés des bit. Le système de numération décimal utilise 10 chiffres, de 0 à 9. Les hôtes, les serveurs et les périphériques réseau utilisent l'adressage binaire. Chaque adresse est une chaîne de 32 bits divisée en quatre parties appelées octets. Chaque octet contient 8 bits séparés par un point. Il peut être difficile de s'en sortir avec les nombres binaires. Pour simplifier leur utilisation, les adresses IPv4 sont souvent exprimées en notation décimale à point.
+
+
+CONVERSION DU FORMAT BINAIRE AU FORMAT DECIMAL
+
+Pour convertir une adresse IPv4 binaire en équivalent décimal à point, divisez l'adresse IPv4 en quatre octets de 8 bits. Appliquez ensuite la valeur pondérée binaire au premier octet binaire et calculez. Par exemple, supposons que 11000000.10101000.00001011.00001010 est l'adresse IPv4 binaire d'un hôte. Pour convertir l'adresse binaire au format décimal, commencez par le premier octet. Saisissez la valeur binaire à 8 bits sous la valeur pondérée de la première ligne, puis effectuez le calcul pour obtenir le nombre décimal 192. Ce résultat correspond au premier octet de la notation en décimale à point. Convertissez ensuite le deuxième octet. Vous obtenez la valeur décimale 168, qui correspond au deuxième octet. Convertissez les troisième et quatrième octets pour compléter l'adresse IP. Vous obtenez 192.168.11.10.
+
+
+CONVERSION DE NOMBRES DECIMAUX EN NOMBRES BINAIRES
+
+Le nombre décimal de l'octet (n) est-il égal ou supérieur au bit de poids fort (128). Si la réponse est non, indiquez la valeur binaire 0 dans la valeur pondérée 128. Si la réponse est oui, indiquez la valeur binaire 1 dans la valeur pondérée 128 et soustrayez 128 au nombre décimal. On poursuit l'examen de la valeur décimale jusqu'à ce que toutes les valeurs pondérées aient été indiquées et que la valeur binaire équivalente ait été obtenue.
+
+
+MASQUE DE SOUS-RESEAU
+
+La configuration IPv4 d'un hôte comprend trois adresses IPv4 décimales à point :
+
+-L'adresse IPv4, qui est l'adresse IPv4 unique de l'hôte
+
+-Le masque de sous-réseau, qui sert à identifier la partie réseau et la partie hôte d'une adresse IPv4,
+
+-La passerelle par défaut, qui indique la passerelle locale (c'est-à-dire l'adresse IPv4 de l'interface du routeur local) permettant d'atteindre les réseaux distants.
+
+Lorsqu'une adresse IPv4 est attribuée à un périphérique, le masque de sous-réseau est utilisé pour déterminer l'adresse du réseau auquel le périphérique appartient. L'adresse réseau représente tous les périphériques du même réseau. Pour identifier les parties réseau et hôte d'une adresse IPv4, chaque bit du masque de sous-réseau est comparé à l'adresse IPv4, de gauche à droite. Les 1 dans le masque de sous-réseau représentent la partie réseau, et les 0 représentent la partie hôte. Notez que le masque de sous-réseau ne contient pas réellement la partie réseau ou hôte d'une adresse IPv4 : il indique uniquement à l'ordinateur où rechercher ces parties dans une adresse IPv4 donnée. En réalité, le processus utilisé pour identifier la partie réseau et la partie hôte est appelé l'opération AND.
+
+
+OPERATION AND LOGIQUE
+
+1 AND 1 = 1
+0 AND 1 = 0
+0 AND 0 = 0
+1 AND 0 = 0
+
+La logique AND (ET) est l'une des trois opérations binaires de base, appliquées en logique numérique. Les deux autres sont les opérations OR (OU) et NOT (NON). Bien que les trois opérations soient utilisées dans les réseaux de données, seule l'opération AND permet de déterminer l'adresse réseau. Pour identifier l'adresse réseau d'un hôte IPv4, l'adresse IPv4 est soumise bit par bit à l'opération AND de manière logique avec le masque de sous-réseau. Lorsque cette opération AND est appliquée entre l'adresse et le masque de sous-réseau, le résultat obtenu est l'adresse réseau.
