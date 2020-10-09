@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+  </head>
+  <body>
+  	<center id="boxCenter">
+  	<h1>Démineur</h1>
+      <select name="difficulty" id="difficulty">
+
+        <option value="beginner">Débutant : 9x9 cases, 10 bombes</option>
+        <option value="medium">Intermédiaire : 16x16 cases, 40 bombes</option>
+        <option value="expert">Expert : 22x22 cases, 100 bombes</option>
+        <option value="master">Maître : 30x30 cases, 250 bombes</option>
+
+      </select>
+
+      <input type="submit" id="" value="Nouvelle partie" onclick="start()" />
+
+      <span id="timer">Temps :  00:00</span>
+    </center>
+
+    <center><table id="tableauDemineur">
+        <!--<tr>
+            <th><img src="./images/empty.png">1</th>
+            <th><img src="./images/empty.png">2</th>
+            <th><img src="./images/empty.png">3</th>
+        </tr>
+        <tr>
+            <td><img src="./images/empty.png"></td>
+            <td><img src="./images/empty.png"></td>
+            <td><img src="./images/empty.png"></td>
+        </tr>
+        <tr>
+            <td><img src="./images/empty.png"></td>
+            <td><img src="./images/empty.png"></td>
+            <td><img src="./images/empty.png"></td>
+        </tr>-->
+    </table></center>
+
+
+
+  	<script type="text/javascript" src="demineur.js"></script>
+  </body>
+</html>

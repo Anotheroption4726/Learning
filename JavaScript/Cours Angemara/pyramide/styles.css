@@ -1,0 +1,65 @@
+html {
+	height:95%;
+}
+
+body {
+	display:flex;
+	flex-direction:column;
+	background-color:#dfdfdf;
+	height:100%;
+}
+
+header p {
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	margin-bottom:20px;
+}
+
+section, section article {
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+
+section#pyramid {
+	height:90%;
+}
+
+section#pyramid section {
+	flex-direction:row;
+}
+
+section#pyramid section#infos {
+	flex-direction:row;
+	width:100%;
+	margin-top:20px;
+}
+
+section#pyramid section#infos article {
+	height:initial;
+	border-width:0;
+}
+
+section#pyramid article {
+	border-width:1px;
+	border-style:solid;
+	border-color:rgba(0, 0, 0, 0.5);
+}
+
+pre {
+	width:90%;
+	height:80%;
+	background-color:#eaeaea;
+	padding:5px;
+	border-width:1px;
+	border-style:solid;
+	border-color:rgba(0, 0, 0, 0.5);
+	overflow-y: scroll;
+}
+
+.marginT {
+	margin-top:-1px;
+}
