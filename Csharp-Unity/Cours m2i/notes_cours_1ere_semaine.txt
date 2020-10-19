@@ -1,0 +1,29 @@
+ESPACE
+	angles d'Euler: 3 rotations successives
+	quaternion: une seule rotation
+
+
+CAMERA
+	frustum: pyramide tronquée (proportion visible de l'espace)
+
+	orthographique
+
+	perspective
+
+
+
+
+RACCOURCIS
+	F: focaliser la caméra sur l'objet
+	ALT: tourner autour de l'objet
+
+
+
+GITIGNORE
+	Library
+	Logs
+	obj
+	temp
+	user settings
+	.vs
+	- optionnel: packages
