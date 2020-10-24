@@ -1,0 +1,98 @@
+Beaucoup de travail perso. Tester, faire des choses
+
+
+magicavoxel + gimp + sourcestream
+
+
+1er projet : Unity 3D + gestion de prod
+    3 membres
+    unity, taiga, excel, git
+
+        . Developper un jeu d'arcade
+            - Unity3D / C#
+            - Architecture logicielle
+            - Modélisation mathématique des briques de gameplay
+            - Versionnage sous git
+            - Fun & juiciness
+        
+        . Gerer sa prod en professionnel
+            - Production Agile & Scrum
+            - Evaluation du projet
+            - Planification et staffing : Excel-like
+            - Scrum board : Taïga
+            - Reporting et Presentation : PowerPoint-like
+        
+        . Créer certains assets 3D pour le jeu
+
+        . Présenter les resultats
+    
+Les regles du jeu : 
+
+    - Projet en binome
+    - Calendrier, 19/10/2020 au 28/01/2021
+
+    - Projet surtout tech en managerial (pas ou peu de game design)
+    - 3 metiers seront expérimentés : dev, chef de proj, artiste 3D
+
+    - Chaque binôme choisis un jeu d'arcade parmit une liste fournie. Un jeu de la liste ne peut être choisis qu'une seule fois
+
+    - Tout devra être developpé maison
+    - Les graphismes principaux devront être fait maison
+    - Quelle que soit la vue caméra choisie, les graphismes devront être réalisés en 3d
+
+    - Le jeu doit être sonorisé (sons libre de droit)
+
+Cahier des charges du jeu :
+
+    - PC Windows
+    - Implementer :
+        . Le core gameplay du jeu d'arcade classique selectionné :
+            - Camera (2D/ 3Diso / 3D)
+            - Toutes les capacités du joueurs
+            - la diversité et les capa des pnj
+            - Les contrôles les mieux adaptés (jeux a la manette, souris dans les menus)
+
+        . Une ou plusieurs boucles de gameplay micro
+        . Un écran de titre/ menu principale, tableau des scores, ecran de selection/definition du joueur, un écran de selection de niveau, un écran de victoire et de defaite, un écran de crédits (options est optionnel)
+        . Un Hud
+        . Un workflow general du jeu :
+            - Menu -> Player Selection -> Level Selection, -> Play -> Pause/resume -> victory/gameOver -> Replay/Menu
+        . Plusieurs levels de jeux (3 min)
+        . Save des highscores
+        . 10 min d'exp de jeu, il doit être Fun
+        . God mod : faire gagner le niveau et passer au level suivant
+    - Un executable, un fichier ReleaseNote ... 
+
+Projet de fin d'etudes :   
+    4 membres (profs)
+
+
+Unity 
+
+jours/hommes : nombre de jours par hommes (j*H)
+
+
+
+Dans Unity, les fichiers a versionner sont :
+
+asset (uniquement ce qui va être utile au projet)
+packages
+projectSettings
+
+
+
+
+ceux a ne pas versionner sont : 
+
+Library
+Logs
+obj
+temp
+UserSettings
+
+Dans unity touches importantes (raccourci) : 
+
+F (centre sur un objet)
+alt
+ctrl
+

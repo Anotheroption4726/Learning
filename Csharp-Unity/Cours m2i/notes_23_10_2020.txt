@@ -1,0 +1,45 @@
+Diagonale d'un carré de côté 1 = racine carrée de 2
+
+
+
+Repère orthonormé:
+axes de norme 1 et axes perpendiculaires les uns des autres
+
+
+(input: 2 vecteurs) produit scalaire: resultat = nombre
+(input: 2 vecteurs) produit vectoriel: resultat = vecteur perpendiculaire aux deux premiers (en input)
+
+
+
+translation: mouvement uniforme à vittesse constante
+
+
+
+
+
+Fichiers/dossiers à la racine du projet qui s'occupent de Visual studio (à mettre ds le gitignore)
+	.vs
+	Logs
+	obj
+
+
+
+
+
+
+
+types: variables complexes composées de plein d'autres variables
+En C#, les types sont rangés dans la partie "stack" de la mémoire vive (plus accessibles) alors que les classes sont rangées dans le "heap"
+C'est pour cette raison que Unity sera toujours plus lent que Unreal
+
+
+
+se renseigner sur la mécanique cinétique (couples/torques)
+
+
+
+Doc Unity:
+https://docs.unity3d.com/ScriptReference/ForceMode.html
+https://docs.unity3d.com/ScriptReference/Rigidbody-velocity.html
+https://docs.unity3d.com/ScriptReference/Vector3.ClampMagnitude.html
+https://docs.unity3d.com/ScriptReference/MonoBehaviour.html

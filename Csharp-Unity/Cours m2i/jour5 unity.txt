@@ -1,0 +1,16 @@
+Pascalcase : nom, methodes, propriétées
+Camelcase : champs, variables
+Ne pas utiliser la methode Rigidbody.velocity mais Rigidbody.AddForce
+
+quaternion.orientation * quaternion.rotation = quaternion.nouvelleorientation
+
+classes stockées dans le Stack(la mémoire immédiate) et structures stockées dans le heap(la memoire étendue)
+Rigidbody.rotation = orientation;
+
+Couple = n/m(newton par metres) exemple de la porte
+
+Lire Mécanique cinétique, dynamique et cinématique
+
+Interpolation linéaire = passer d'une valeur numérique à une autre progressivement
+
+regarder les docs, monobehaviour, rigidbody, mathf, GameObject, transform, vector3
