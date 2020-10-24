@@ -1,0 +1,3 @@
+1_ créer projet Unity
+2_ débuter un répo local
+3_ ajouter un remote
