@@ -18,7 +18,7 @@ public class MyScript : MonoBehaviour
         float hAxis = Input.GetAxis("Horizontal");
         float rotAngle = hAxis * m_RotSpeed * Time.deltaTime;
         //  Vector3(0, 1, 0) == Vector3.up
-        //  m_Transform.Rotate(Vector3.up, rotAngle, Space.Self);
+        //  m_Transform.Rotate(m_Transform.up, rotAngle, Space.Self);
         m_Transform.Rotate(new Vector3(0, 1, 0), rotAngle, Space.Self);
     }
 }
