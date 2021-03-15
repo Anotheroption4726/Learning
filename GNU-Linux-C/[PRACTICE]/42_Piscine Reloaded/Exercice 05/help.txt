@@ -1,8 +1,0 @@
-https://www.tecmint.com/manage-linux-filenames-with-special-characters/
-
-touch "'"KwaMe"'"
-touch "test'"KwaMe"'test"
-touch "?'"KwaMe"'?"
-
-touch "$(printf '\077')"
-touch "$(printf '\077\044')"

@@ -1,0 +1,9 @@
+touch ./"\"\\?\$*'KwaMe'*\$?\\\""
+
+OU
+
+touch ./"\"\?\$*'KwaMe'*\$?\\\""
+
+
+
+https://www.tecmint.com/manage-linux-filenames-with-special-characters/
