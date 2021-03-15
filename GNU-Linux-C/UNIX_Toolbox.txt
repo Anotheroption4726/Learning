@@ -1287,7 +1287,27 @@ _CINNAMON_______________________________________________________________________
 	>> RACCOURCIS
 
 
+		> LIENS
+
+			https://shortcutworld.com/Linux-Mint/linux/Linux-Mint_Shortcuts
+
+
 		> GUI
+
+			- Win + E :
+				Ouvre une nouvelle fenêtre Explorateur de fichiers (File Manager)
+
+			- Win + D :
+				Retour au bureau (desktop)
+
+			- F2 :
+				Renommer le fichier/dossier selectionné
+
+			- Ctrl + Shift + N :
+				Créer un nouveau dossier
+
+			- Alt + Enter :
+				Affiche la fenêtre de propriétés du fichier/dossier selectionné
 
 			- Ctrl + Alt + esc :
 				Arrête et redémarre l'interface graphique Cinnamon
