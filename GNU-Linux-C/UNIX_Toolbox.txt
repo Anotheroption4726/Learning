@@ -554,12 +554,15 @@ _GENERAL________________________________________________________________________
 
 			- ln nomDuFichier1 nomDuFichier2 :
 				Crée un fichier "nomDuFichier2" possédant un lien physique avec "nomDuFichier1". Cette commande ne marche
-				pas sur les répertoires
+				pas sur les répertoires. Quand on fait un lien physique entre deux fichiers, ils partagent le même inode 
+				(identificateur de fichier) donc si l'on supprime nomDuFichier1, nomDuFichier2 reste accessible (et 
+				inversement). On n'a au total qu'un seul fichier accessible par deux noms differents
 
 			- ln -s nomDuFichier1 nomDuFichier2 :
-				Crée un fichier "nomDuFichier2" possédant un lien symbolique avec "nomDuFichier1". Si l'on supprime 
-				"nomDuFichier1", "nomDuFichier2" pointera vers un fichier qui n'existe plus. Le lien symbolique sera cassé, on 
-				parlera alors de « lien mort ». Cette commande marche aussi sur les répertoires
+				Crée un fichier "nomDuFichier2" possédant un lien symbolique avec "nomDuFichier1" (équivalent des raccourcis 
+				sous windows). Si l'on supprime "nomDuFichier1", "nomDuFichier2" pointera vers un fichier qui n'existe plus. 
+				Le lien symbolique sera cassé, on parlera alors de « lien mort ». Cette commande marche aussi sur les 
+				répertoires
 
 
 		> RECHERCHE
@@ -1305,6 +1308,9 @@ _CINNAMON_______________________________________________________________________
 
 			- Ctrl + Shift + N :
 				Créer un nouveau dossier
+
+			- Ctrl + Alt + T :
+				Ouvre une nouvelle fenêtre Terminal
 
 			- Alt + Enter :
 				Affiche la fenêtre de propriétés du fichier/dossier selectionné
