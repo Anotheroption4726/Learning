@@ -17,7 +17,7 @@ _HISTOIRE_______________________________________________________________________
 
 		- Machine à différences & Machine analytique :
 			Inventées (mais non terminées) par Charles Babbage (début du 19e siècle). La machine à différences était capable de 
-			tabuler des fonctions polynôme. La machine analytique était quand à elle plus complexe est avancée. Elle 
+			tabuler des fonctions polynôme. La machine analytique était quand à elle plus complexe et avancée. Elle 
 			incorporait une unité arithmétique et logique (UAL ou ALU en anglais), une structure de contrôle sous forme de 
 			branchements conditionnels et de boucles, et une mémoire intégrée. Cela en faisait la première conception 
 			d'ordinateur polyvalent pouvant être considérée comme étant "Turing-complete". En d'autres termes, sa structure 
@@ -48,7 +48,10 @@ _HISTOIRE_______________________________________________________________________
 			Conçu par Tommy Flowers, il s'agit du premier ordinnateur électronique programmable numérique. Au lieu d'utiliser 
 			des relais électromécaniques, cette machine était équipée de tubes électroniques (ou tubes à vide) qui permettaient 
 			de changer d'état (ouvert/fermé) 1000 fois par secondes environ. Ces tubes étaient plus fiables et solides mais 
-			aussi beaucoup plus coûteux
+			aussi beaucoup plus coûteux. Dans le but de configurer la machine afin qu'elle puisse effectuer les bonnes 
+			opérations, des centaines de fils devaient être branchés à des tableaux de connexion, un peu comme sur un standard 
+			téléphonique de l'époque. Donc, bien que "programmable", cet appareil devait tout de même être configuré en avance 
+			avant d'être capable d'entreprendre un calcul spécifique
 
 		- ENIAC :
 			Premier ordinateur électronique programmable, numérique et polyvalent. Pouvant faire jusqu'à 5000 additions ou 
