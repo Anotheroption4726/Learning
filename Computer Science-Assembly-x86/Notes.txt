@@ -3,6 +3,17 @@ _HISTOIRE_______________________________________________________________________
 
 
 
+	>> LIENS
+
+		- Crash Course: Computer Science [Early Computing & Electronic Computing] :
+			https://www.youtube.com/watch?v=O5nskjZ_GoI
+			https://www.youtube.com/watch?v=LN0ucKNX0hc
+
+		- ColdFusion - Intel - From Inventors of the CPU to Laughing Stock [Part 1 & 2] :
+			https://www.youtube.com/watch?v=JH2nXMv6yZI
+			https://www.youtube.com/watch?v=LoTx9LQIKEA
+
+
 	>> MACHINES
 
 		- Outils anciens :
