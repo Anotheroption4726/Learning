@@ -1340,6 +1340,28 @@ _CINNAMON_______________________________________________________________________
 
 
 
+_I3_TILING_WINDOW_MANAGER______________________________________________________________________________________________________
+
+
+	En fonction de la config choisie, {MOD} peut corespondre soit à la touche 'Alt', soit à la touche 'Windows'
+
+
+	- {MOD} + Enter :
+		Ouvre une nouvelle fenêtre de terminal
+
+	- {MOD} + Shift + Q :
+		Ferme la fenêtre
+		
+	- {MOD} + D :
+		Ouvre le menu d'applications ('dmenu')
+
+
+
+
+
+
+
+
 _YOUTUBE-DL____________________________________________________________________________________________________________________
 
 
