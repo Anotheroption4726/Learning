@@ -1362,6 +1362,23 @@ _I3_TILING_WINDOW_MANAGER_______________________________________________________
 
 
 
+	>> RAPPELS
+	
+		startx i3 (démarrer)
+
+		pcmanfm (file manager)
+
+		xkill (process killer)
+
+		sudo gparted (partition manager)
+
+		subl (text editor)
+
+		systemctl suspend (mise en veille)
+
+
+
+
 	>> RACCOURCIS
 	
 		En fonction de la config choisie, {MOD} peut corespondre soit à la touche 'Alt', soit à la touche 'Windows'
