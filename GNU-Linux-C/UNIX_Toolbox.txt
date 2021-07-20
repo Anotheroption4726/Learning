@@ -1348,20 +1348,32 @@ _CINNAMON_______________________________________________________________________
 _I3_TILING_WINDOW_MANAGER______________________________________________________________________________________________________
 
 
-	En fonction de la config choisie, {MOD} peut corespondre soit à la touche 'Alt', soit à la touche 'Windows'
 
 
-	- {MOD} + Enter :
-		Ouvre une nouvelle fenêtre de terminal
+	>> INSTALLATION ET DEMARRAGE DEPUIS LA CONSOLE
 
-	- {MOD} + Shift + Q :
-		Ferme la fenêtre
-		
-	- {MOD} + D :
-		Ouvre le menu d'applications ('dmenu')
-		
-	- {MOD} + Shift + E :
-		Quitter i3
+		sudo apt install i3
+		sudo apt install xterm
+		startx i3
+
+
+
+
+	>> RACCOURCIS
+	
+		En fonction de la config choisie, {MOD} peut corespondre soit à la touche 'Alt', soit à la touche 'Windows'
+
+		- {MOD} + Enter :
+			Ouvre une nouvelle fenêtre de terminal
+
+		- {MOD} + Shift + Q :
+			Ferme la fenêtre
+
+		- {MOD} + D :
+			Ouvre le menu d'applications ('dmenu')
+
+		- {MOD} + Shift + E :
+			Quitter i3
 
 
 
