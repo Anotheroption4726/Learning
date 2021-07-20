@@ -1370,13 +1370,19 @@ _I3_TILING_WINDOW_MANAGER_______________________________________________________
 			Ouvre une nouvelle fenêtre de terminal
 
 		- {MOD} + Shift + Q :
-			Ferme la fenêtre
+			Ferme la fenêtre selectionnée
 
 		- {MOD} + D :
 			Ouvre le menu d'applications ('dmenu')
 
 		- {MOD} + Shift + E :
 			Quitter i3
+
+		- {MOD} + '2' :
+			Bascule dans l'espace de travail '2'
+
+		- {MOD} + Shift + '2' :
+			Fait passer la fenêtre selectionnée dans l'espace de travail '2'
 
 
 
