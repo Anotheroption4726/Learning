@@ -201,6 +201,9 @@ _GENERAL________________________________________________________________________
 				Eteint le système mais la machine reste allumée. Le système est ramené à son état le plus bas tout en laissant 
 				la machine sous tension
 
+			- systemctl suspend :
+				Met le système en veille (uniquement pour les distributions basées sur Ubuntu à partir de la version 16.04)
+
 			- shutdown -r now :
 				(Redémarre?) Eteint le système ainsi que la machine. La commande demandera automatiquement à l'Advanced 
 				Configuration and Power Interface (ACPI) d'envoyer un signal à l'unité d'alimentation pour éteindre le système
