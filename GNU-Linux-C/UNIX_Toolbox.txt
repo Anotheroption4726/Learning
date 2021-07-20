@@ -1359,6 +1359,9 @@ _I3_TILING_WINDOW_MANAGER_______________________________________________________
 		
 	- {MOD} + D :
 		Ouvre le menu d'applications ('dmenu')
+		
+	- {MOD} + Shift + E :
+		Quitter i3
 
 
 
