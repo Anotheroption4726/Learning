@@ -88,42 +88,42 @@ _GENERAL________________________________________________________________________
 			Pipe sur clavier Apple
 
 		- Ctrl + Alt + F1 :
-			Ouvre le terminal tty1 (le GUI devient inaccessible, necessite un login et un mot de passe utilisateur)
+			Ouvre la console tty1 (le GUI devient inaccessible, necessite un login et un mot de passe utilisateur)
 
 		- Ctrl + Alt + F2 :
-			Ouvre le terminal tty2 sans passer par l'interface graphique
+			Ouvre la console tty2 sans passer par l'interface graphique
 
 		- Ctrl + Alt + F3 :
-			Ouvre le terminal tty3 sans passer par l'interface graphique
+			Ouvre la console tty3 sans passer par l'interface graphique
 
 		- Ctrl + Alt + F4 :
-			Ouvre le terminal tty4 sans passer par l'interface graphique
+			Ouvre la console tty4 sans passer par l'interface graphique
 
 		- Ctrl + Alt + F5 :
-			Ouvre le terminal tty5 sans passer par l'interface graphique
+			Ouvre la console tty5 sans passer par l'interface graphique
 
 		- Ctrl + Alt + F6 :
-			Ouvre le terminal tty6 sans passer par l'interface graphique
+			Ouvre la console tty6 sans passer par l'interface graphique
 
 
-		> TERMINAL
+		> TERMINAL-CONSOLE
 
 			Tous les raccourcis se trouvent dans le dossier /bin.
 
 			- Up :
-				Retrouver les commandes entrées précédemment dans la console
+				Retrouver les commandes entrées précédemment dans le terminal ou la console
 
 			- Ctrl + L :
-				Efface le contenu de la console
+				Efface le contenu du terminal ou de la console
 
 			- Ctrl + d :
-				Déconnexion/quitter la console				
+				Déconnexion/quitter le terminal ou la console				
 
 			- Ctrl + Alt + F7 :
-				Retour en mode interface graphique (si l'on était en train d'utiliser tty1, tty2...)
+				Retour en mode interface graphique (si l'on était en train d'utiliser les consoles tty1, tty2...)
 
 			- Ctrl + c :
-				Arrêter un processus en cours dans le terminal courant
+				Arrêter un processus en cours dans la console ou le terminal courant
 
 			- Ctrl + d :
 				Envoyer l'entrée en attente à l'application. Si aucune saisie n'a été faite, la valeur envoyée est alors égale 
@@ -133,7 +133,7 @@ _GENERAL________________________________________________________________________
 				Suspendre un processus en cours, le mettre en arrière-plan et récupérer l'invité de commandes
 
 			- Ctrl + r :
-				Permet de rechercher et d'executer une commande que l'on a déjà entré dans la console
+				Permet de rechercher et d'executer une commande que l'on a déjà entré dans le terminal ou la console
 
 			- Ctrl + a :
 				Ramène le curseur au début de la commande
@@ -209,7 +209,7 @@ _GENERAL________________________________________________________________________
 				Redémarre le système
 
 			- history :
-				Affiche l'historique des commandes entrées dans la console dans l'ordre chronologique
+				Affiche l'historique des commandes entrées dans le terminal ou la console dans l'ordre chronologique
 
 			- date :
 				Affiche la date courante, l'heure et le fuseau horaire
@@ -218,7 +218,7 @@ _GENERAL________________________________________________________________________
 				Durée de fonctionnement total de l'ordinateur depuis qu'il a été mis en marche
 
 			- clear :
-				Efface le contenu de la console
+				Efface le contenu du terminal ou de la console
 
 			- which nomDeCommande :
 				Affiche le chemin de localisation d'un programme, binaire ou d'une autre commande. Ainsi, 'which python' 
@@ -234,7 +234,7 @@ _GENERAL________________________________________________________________________
 				Fait une recherche dans les descriptions des commandes en utilisant le terme "rechercheDeCommande"
 
 			- echo terme :
-				Affiche le terme "terme" dans le terminal
+				Affiche le terme "terme" dans la console ou le terminal courant
 
 			- echo $0 :
 				Affiche le type de shell que l'on est en train d'utiliser (Bash, Dash, Zsh, Tcsh, Ksh, Fish...). $0 représente
@@ -247,7 +247,7 @@ _GENERAL________________________________________________________________________
 				Rajoute le chemin "/usr/bin/" à la variable "$PATH" (temporairement)
 
 			- exit :
-				Déconnexion/quitter la console mais aussi le mode 'superuser' permanent
+				Déconnexion/quitter le terminal ou la console mais aussi le mode 'superuser' permanent
 
 
 		> UTILISATEUR, GROUPES & SESSION
@@ -458,8 +458,8 @@ _GENERAL________________________________________________________________________
 				une
 
 			- rm -v nomDuFichier :
-				Supprime le fichier spécifié en rajoutant une ligne de dialogue dans la console expliquant ce qui vient 
-				d'être fait
+				Supprime le fichier spécifié en rajoutant une ligne de dialogue dans le terminal ou la console expliquant ce 
+				qui vient d'être fait
 
 			- rm -i nomDuFichier1 nomDuFichier2 :
 				Supprime les fichiers spécifiés mais demande une confirmation pour chacun d'eux ("o" pour "oui" et "n" pour 
@@ -470,7 +470,7 @@ _GENERAL________________________________________________________________________
 
 			- rm -fiv nomDuFichier1 nomDuFichier2 :
 				Force la suppression des fichiers spécifiés mais demande une confirmation pour chacun d'eux, puis rajoute 
-				une ligne de dialogue dans la console expliquant ce qui vient d'être fait
+				une ligne de dialogue dans le terminal ou la console expliquant ce qui vient d'être fait
 
 			- rm -r nomDuDossier :
 				Supprime le dossier spécifié ainsi que tous les fichiers situés à l'intérieur
@@ -532,10 +532,11 @@ _GENERAL________________________________________________________________________
 		> LECTURE DE CONTENU
 
 			- cat nomDuFichier :
-				Affiche le contenu du fichier "nomDuFichier" en texte dans la console. Affiche tout le contenu en une fois
+				Affiche le contenu du fichier "nomDuFichier" en texte dans le terminal ou la console. Affiche tout le contenu 
+				en une fois
 
 			- cat -n nomDuFichier :
-				Affiche le contenu du fichier "nomDuFichier" en texte dans la console avec les lignes numérotées
+				Affiche le contenu du fichier "nomDuFichier" en texte dans le terminal ou la console avec les lignes numérotées
 
 			- less nomDuFichier :
 				Affiche progressivement le contenu du fichier, page par page
@@ -654,12 +655,12 @@ _GENERAL________________________________________________________________________
 				Permet d'utiliser la commande "grep" avec une expression régulière (ou regex, voir "Notes.txt")
 
 			- sort nomDuFichier :
-				Le contenu du fichier "nomDuFichier" est trié alphabétiquement et le résultat est affiché dans la console. Le 
-				fichier n'est pas modifié
+				Le contenu du fichier "nomDuFichier" est trié alphabétiquement et le résultat est affiché dans le terminal ou 
+				la console. Le fichier n'est pas modifié
 
 			- sort -n nomDuFichier :
-				Le contenu du fichier "nomDuFichier" est trié numériquement et le résultat est affiché dans la console. Le 
-				fichier n'est pas modifié
+				Le contenu du fichier "nomDuFichier" est trié numériquement et le résultat est affiché dans le terminal ou la 
+				console. Le fichier n'est pas modifié
 
 			- sort -o nomDuFichier1 nomDuFichier2 :
 				Le contenu du fichier "nomDuFichier2" est trié alphabétiquement et le résultat est stocké dans "nomDuFichier1"
@@ -725,11 +726,12 @@ _GENERAL________________________________________________________________________
 
 			- cat < nomDuFichier :
 				Envoie le contenu du fichier "nomDuFichier" dans l'entrée de la commande "cat". Affiche ensuite le contenu du 
-				fichier "nomDuFichier" en texte dans la console
+				fichier "nomDuFichier" en texte dans le terminal ou la console
 
 			- sort << termeFinal :
 				Entre manuellement le contenu envoyé dans l'entrée de la commande "sort" (tant que le terme "termeFinal" n'a 
-				pas été entré). Le contenu est ensuite trié alphabétiquement et le résultat est affiché dans la console
+				pas été entré). Le contenu est ensuite trié alphabétiquement et le résultat est affiché dans le terminal ou 
+				la console
 
 			- sort -n << termeFinal >> nomDuFichier 2>&1 :
 				Entre manuellement le contenu envoyé dans l'entrée de la commande "sort" (tant que le terme "termeFinal" n'a 
@@ -738,7 +740,7 @@ _GENERAL________________________________________________________________________
 			- ls | sort -n :
 				Récupère la liste des fichiers et dossiers non-cachés (ne commençant pas par ".") contenus dans le répertoire 
 				courant. Le contenu est ensuite envoyé à l'entrée de la commande "sort -n" puis trié numériquement et affiché 
-				dans le terminal
+				dans le terminal ou la console
 
 			- ls | sort -n > nomDuFichier :
 				Récupère la liste des fichiers et dossiers non-cachés (ne commençant pas par ".") contenus dans le répertoire 
@@ -748,12 +750,12 @@ _GENERAL________________________________________________________________________
 			- du | sort -nr | less :
 				Récupère la taille totale que font les dossiers contenus dans le répertoire courant. Le résultat est ensuite 
 				envoyé à l'entrée de la commande "sort -nr" puis trié numériquement du plus grand au plus petit et affiché 
-				progressivement, page par page, dans le terminal
+				progressivement, page par page, dans le terminal ou la console
 
 			- sudo du | grep terme | sort -nr | less :
 				Récupère la taille totale que font les dossiers contenus dans le répertoire courant dont le nom contient le 
 				terme "terme". Le résultat est ensuite envoyé à l'entrée de la commande "sort -nr" puis trié numériquement du 
-				plus grand au plus petit et affiché progressivement, page par page, dans le terminal
+				plus grand au plus petit et affiché progressivement, page par page, dans le terminal ou la console
 
 			- sudo grep log -Ir /var/log  | cut -d : -f 1  | sort | uniq :
 				Affiche et liste tous les noms de fichier contenant le mot "log" dans le répertoire "/var/log" (-I permet 
@@ -777,8 +779,8 @@ _GENERAL________________________________________________________________________
 				temps réel (voir "PS -EF" dans "Notes.txt")
 
 			- ps :
-				Version allégée de la commande "ps -ef". N'affiche que les processus lancés par l'utilisateur courant dans la 
-				console courante
+				Version allégée de la commande "ps -ef". N'affiche que les processus lancés par l'utilisateur courant dans le
+				terminal ou la console courante
 
 			- ps -u nomUtilisateur :
 				Affiche la liste des processus lancés par l'utilisateur "nomUtilisateur"
@@ -813,38 +815,41 @@ _GENERAL________________________________________________________________________
 
 			- cp nomDuFichier nomDuFichierCopie & :
 				Fait une copie du fichier spécifié dans le répertoire courant. Le processus d'éxecution se déroule en 
-				arrière-plan et s'arrête si jamais on ferme la console courante. La sortie standard de la commande continue 
-				aussi à s'afficher dans la console courante
+				arrière-plan et s'arrête si jamais on ferme le terminal ou la console courante. La sortie standard de 
+				la commande continue aussi à s'afficher dans le terminal ou la console courante
 
 			- sudo find -name 'nomDuFichier1' > nomDuFichier2 & :
 				Recherche, à partir du répertoire courant et dans tous les sous-répertoires, le ou les fichier(s) 
-				"nomDuFichier1". Le processus d'éxecution se déroule en arrière-plan et s'arrête si jamais on ferme la console 
-				courante. La sortie standard de la commande et les résultats sont stockés dans le fichier "nomDuFichier2"
+				"nomDuFichier1". Le processus d'éxecution se déroule en arrière-plan et s'arrête si jamais on ferme le 
+				terminal ou la console courante. La sortie standard de la commande et les résultats sont stockés dans le 
+				fichier "nomDuFichier2"
 
 			- sudo find -name 'nomDuFichier1' > nomDuFichier2 2>&1 & :
 				Recherche, à partir du répertoire courant et dans tous les sous-répertoires, le ou les fichier(s) 
-				"nomDuFichier1". Le processus d'éxecution se déroule en arrière-plan et s'arrête si jamais on ferme la console 
-				courante. Les sorties standard et d'erreurs de la commande sont stockées dans le fichier "nomDuFichier2"
+				"nomDuFichier1". Le processus d'éxecution se déroule en arrière-plan et s'arrête si jamais on ferme le 
+				terminal ou la console courante. Les sorties standard et d'erreurs de la commande sont stockées dans le 
+				fichier "nomDuFichier2"
 
 			- nohup cp nomDuFichier nomDuFichierCopie :
 				Fait une copie du fichier spécifié dans le répertoire courant. Le processus d'éxecution se déroule en 
-				arrière-plan et continue de s'exécuter même après la fermeture de la console. La sortie standard de la commande 
-				est par défaut redirigée vers un fichier "nohup.out". "nohup" est très utile lorsqu'on lance un programme sur 
-				un serveur et qu'on veut qu'il continue de fonctionner même après s'être déconnecté
+				arrière-plan et continue de s'exécuter même après la fermeture du terminal ou de la console. La sortie 
+				standard de la commande est par défaut redirigée vers un fichier "nohup.out". "nohup" est très utile 
+				lorsqu'on lance un programme sur un serveur et qu'on veut qu'il continue de fonctionner même après s'être 
+				déconnecté
 
 			- bg :
 				Execute un processus en arrière plan qui a été suspendu avec le raccourci "Ctrl + z" 
 
 			- jobs :
 				Affiche les processus qui sont en arrière-plan (en cours d'éxecution ou suspendus) et qui ont été lancés depuis 
-				la console courante (ceux lancés avec la commande "nohup" ne s'affichent pas)
+				le terminal ou la console courante (ceux lancés avec la commande "nohup" ne s'affichent pas)
 
 			- fg :
-				Fait passer dans la console courante un processus en arrière-plan listé avec la commande "jobs"
+				Fait passer dans le terminal ou la console courante un processus en arrière-plan listé avec la commande "jobs"
 
 			- fg %2 :
-				Fait passer dans la console courante le processus en arrière-plan numéro [2] si il éxiste. Le numéro de chaque 
-				processus est visible avec la commande "jobs"
+				Fait passer dans le terminal ou la console courante le processus en arrière-plan numéro [2] si il éxiste. Le numéro 
+				de chaque processus est visible avec la commande "jobs"
 
 
 		> RESEAU
