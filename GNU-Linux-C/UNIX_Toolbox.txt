@@ -1372,7 +1372,7 @@ _I3_TILING_WINDOW_MANAGER_______________________________________________________
 
 		sudo gparted (partition manager)
 		
-		synaptic (gestionnaire de paquets APT/Debian)
+		sudo synaptic (gestionnaire de paquets APT/Debian)
 		
 		stacer (system cleanup tool)
 
