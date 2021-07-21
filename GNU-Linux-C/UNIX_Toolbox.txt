@@ -1378,6 +1378,8 @@ _I3_TILING_WINDOW_MANAGER_______________________________________________________
 
 		subl (text editor)
 
+		i3lock (verrouillage de l'ecran)
+
 		systemctl suspend (mise en veille)
 
 
@@ -1405,11 +1407,33 @@ _I3_TILING_WINDOW_MANAGER_______________________________________________________
 		- {MOD} + V :
 			La prochaine fenêtre s'ouvrira en bas (verticalement) de la fenêtre selectionnée
 
+		- {MOD} + F :
+			Fait passer la fenêtre selectionnée en mode plein écran
+
+		- {MOD} + R :
+			Passe en mode 'resize' pour redimensionner la fenêtre selectionnée (ECHAP pour quitter)
+
 		- {MOD} + '2' :
 			Bascule dans l'espace de travail '2'
 
 		- {MOD} + Shift + '2' :
 			Fait passer la fenêtre selectionnée dans l'espace de travail '2'
+
+		- {MOD} + E :
+			Bascule les fenêtres en mode horizontal (si l'on est en mode vertical) ou en mode vertical (si l'on est en mode 
+			horizontal)
+
+		- {MOD} + S :
+			Bascule les fenêtres en mode stack
+
+		- {MOD} + W :
+			Bascule les fenêtres en mode tabs
+
+		-{MOD} + Shift + → :
+			Echange la place de la fenêtre selectionnée avec la fenêtre située à sa droite
+
+		-{MOD} + Shift + ↑ :
+			Echange la place de la fenêtre selectionnée avec la fenêtre située au dessus
 
 
 
