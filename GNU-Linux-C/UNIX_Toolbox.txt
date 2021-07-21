@@ -1395,6 +1395,12 @@ _I3_TILING_WINDOW_MANAGER_______________________________________________________
 		- {MOD} + Shift + E :
 			Quitter i3
 
+		- {MOD} + H :
+			La prochaine fenêtre s'ouvrira à droite (horizontalement) de la fenêtre selectionnée
+			
+		- {MOD} + V :
+			La prochaine fenêtre s'ouvrira en bas (verticalement) de la fenêtre selectionnée
+
 		- {MOD} + '2' :
 			Bascule dans l'espace de travail '2'
 
