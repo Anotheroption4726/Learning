@@ -1399,10 +1399,10 @@ _I3_TILING_WINDOW_MANAGER_______________________________________________________
 			Ouvre le menu d'applications ('dmenu')
 
 		- {MOD} + Shift + R :
-			Redémarrer i3 en place
+			Redémarre i3 en place
 
 		- {MOD} + Shift + E :
-			Quitter i3
+			Quitte i3
 
 		- {MOD} + H :
 			La prochaine fenêtre s'ouvrira à droite (horizontalement) de la fenêtre selectionnée
