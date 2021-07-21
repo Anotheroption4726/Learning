@@ -1398,6 +1398,9 @@ _I3_TILING_WINDOW_MANAGER_______________________________________________________
 		- {MOD} + D :
 			Ouvre le menu d'applications ('dmenu')
 
+		- {MOD} + Shift + R :
+			Redémarrer i3 en place
+
 		- {MOD} + Shift + E :
 			Quitter i3
 
@@ -1429,11 +1432,14 @@ _I3_TILING_WINDOW_MANAGER_______________________________________________________
 		- {MOD} + W :
 			Bascule les fenêtres en mode tabs
 
-		-{MOD} + Shift + → :
+		- {MOD} + Shift + → :
 			Echange la place de la fenêtre selectionnée avec la fenêtre située à sa droite
 
-		-{MOD} + Shift + ↑ :
+		- {MOD} + Shift + ↑ :
 			Echange la place de la fenêtre selectionnée avec la fenêtre située au dessus
+
+		- {MOD} + Shift + SPACE :
+			Fait passer la fenêtre selectionnée en mode flotant
 
 
 
