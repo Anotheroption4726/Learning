@@ -1371,6 +1371,8 @@ _I3_TILING_WINDOW_MANAGER_______________________________________________________
 		xkill (process killer)
 
 		sudo gparted (partition manager)
+		
+		stacer (system cleanup tool)
 
 		subl (text editor)
 
