@@ -189,5 +189,5 @@ bindsym $mod+y exec subl
 bindsym $mod+Shift+p exec systemctl suspend
 exec pcmanfm
 exec brave-browser
-assign [class="Pcmanfm"] $ws1
-assign [class="Brave-browser"] $ws2
+#assign [class="Pcmanfm"] $ws1
+#assign [class="Brave-browser"] $ws2
