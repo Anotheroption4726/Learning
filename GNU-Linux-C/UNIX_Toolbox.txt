@@ -867,10 +867,13 @@ _GENERAL________________________________________________________________________
 			https://shapeshed.com/unix-ping/
 
 			- host nomdelhote.com :
-				Renvoie l'adresse IP et le mail reliés au nom de domaine "nomdelhote.com"
+				Affiche l'adresse IP et le mail reliés au nom de domaine "nomdelhote.com"
 
 			- host 92.243.25.239 :
-				Renvoie le nom de domaine relié à l'adresse IP "92.243.25.239"
+				Affiche le nom de domaine relié à l'adresse IP "92.243.25.239"
+
+			- whois nomdelhote.com :
+				Affiche les informations relatives au nom de domaine "nomdelhote.com" (date de création, expiration, pays, ville...)
 
 			- ifconfig :
 				Affiche la liste des interfaces réseaux disponibles sur le système avec leurs détails (notament l'addresse ip 
@@ -890,7 +893,7 @@ _GENERAL________________________________________________________________________
 				pré-installé. L'échange se fait en protocole ICMP (Internet Control Message Protocol)
 
 			- ping nomDeDomaine :
-				Vérifie la connectivité réseau d'un hôte/serveur possédant l'URL "nomDeDomaine" 
+				Vérifie la connectivité réseau d'un hôte/serveur possédant l'URL "nomDeDomaine"
 
 			- ping -b broadcastIp :
 				Vérifie la connectivité réseau d'un hôte/serveur avec tous les appareils connectés sur ce même réseau. 
