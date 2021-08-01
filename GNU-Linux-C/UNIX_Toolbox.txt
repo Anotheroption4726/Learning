@@ -15,14 +15,17 @@ _GENERAL________________________________________________________________________
 
 
 		- ~/.bashrc :
-			Fichier de configuration de la console personnel
+			Fichier de configuration du terminal personnel
 
 		- /etc/bash.bashrc :
-			Fichier de configuration de la console général pour tous les utilisateurs (necessite les droits superuser/root)
+			Fichier de configuration du terminal général pour tous les utilisateurs (necessite les droits superuser/root)
 
 		- ~/.profile :
 			Fichier de configuration de la console du profil courant (lorsqu'on ouvre tty1 par exemple, voir raccourcis GUI). 
 			Pas vraiment utile à configurer (".bashrc" se lance après ".profile" de toute manière)
+
+		- /etc/hosts :
+			Fichier de configuration des noms d'hôtes et de leurs adresses IP correspondantes 
 
 		- /bin :
 			Contient des programmes (exécutables) susceptibles d'être utilisés par tous les utilisateurs de la machine
@@ -76,6 +79,8 @@ _GENERAL________________________________________________________________________
 		alias brave='cd /usr/bin && ./brave-browser' :
 			Alias personnalisé. Si jamais l'on entre la commande "brave", déplace l'utilisateur dans le dossier "/usr/bin" et 
 			lance le navigateur "Brave Browser"
+
+
 
 
 	>> RACCOURCIS
