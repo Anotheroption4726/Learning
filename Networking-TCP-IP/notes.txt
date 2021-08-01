@@ -1,0 +1,3 @@
+Chaque ordinateur relié à l'internet est identifié par une adresse IP. Une adresse IP est une suite de quatre nombres séparés par des points. Par exemple: "86.172.120.28". Cette adresse est au format IPv4. À l'heure actuelle, c’est encore le type d'IP le plus utilisé, mais ces adresses sont appelées petit à petit à être remplacées par la norme IPv6. Bientôt, tout le monde aura donc une IP qui ressemblera plutôt à quelque chose comme ceci :fe80::209:62fa:fb80:29f2.
+
+On peut associer à chaque IP ce qu'on appelle un nom d'hôte (hostname). C'est un nom en toutes lettres plus facile à mémoriser et qui revient exactement au même que d'écrire l'adresse IP. Chaque serveur peut ainsi avoir un nom d'hôte plus facile à retenir.

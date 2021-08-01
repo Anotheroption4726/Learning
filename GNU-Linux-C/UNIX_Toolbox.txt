@@ -861,6 +861,12 @@ _GENERAL________________________________________________________________________
 			https://www.cyberciti.biz/faq/how-to-find-my-public-ip-address-from-command-line-on-a-linux
 			https://shapeshed.com/unix-ping/
 
+			- host nomdelhote.com :
+				Renvoie l'adresse IP et le mail reliés au nom de domaine "nomdelhote.com"
+
+			- host 92.243.25.239 :
+				Renvoie le nom de domaine relié à l'adresse IP "92.243.25.239"
+
 			- ifconfig :
 				Affiche la liste des interfaces réseaux disponibles sur le système avec leurs détails (notament l'addresse ip 
 				"locale" pour un ordinnateur mais aussi l'addresse broadcast du réseau, voir "ifconfig" dans "Notes.txt")
