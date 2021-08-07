@@ -3,9 +3,9 @@ _MODELE_OSI_____________________________________________________________________
 
 
 
-	Le modèle OSI est né en 1984, après la naissance d'Internet. C'est une norme qui préconise comment les ordinateurs devraient communiquer entre eux. Il tient compte des communications existantes, mais aussi des communications futures et de leurs évolutions potentielles. Son objectif est de normaliser les communications pour garantir un maximum d'évolutivité et d'interopérabilité entre les ordinateurs.
+	Le modèle OSI est né en 1984, après la naissance d'Internet. C'est une norme qui préconise comment les ordinateurs devraient communiquer entre eux. Il tient compte des communications existantes, mais aussi des communications futures et de leurs évolutions potentielles. Son objectif est de normaliser les communications pour garantir un maximum d'évolutivité et d'interopérabilité entre les ordinateurs. C'est un modèle théorique, le modèle réellement utilisé étant le modèle TCP/IP.
 
-	Le modèle OSI est un modèle en couches. Cela veut dire qu'il est découpé en plusieurs morceaux appelés couches, qui ont chacune un rôle bien défini:
+	Le modèle OSI est un modèle en couches. Cela veut dire qu'il est découpé en plusieurs morceaux appelés couches (7 en tout), qui ont chacune un rôle bien défini:
 
 
 		7 : Application (RAS ; Matériel associé : proxy)
@@ -23,7 +23,7 @@ _MODELE_OSI_____________________________________________________________________
 		1 : Physique (offrir un support de transmission pour la communication, RAS ; Matériel associé : hub)
 
 
-	Le modèle OSI ajoute deux règles générales entre les couches: chaque couche est indépendante ; chaque couche ne peut communiquer qu'avec une couche adjacente. Rendre les couches indépendantes garantit qu'elles sont interchangeables. Cela veut dire qu'on pourra changer un protocole associé à une couche sans avoir besoin de changer toutes les couches du modèle OSI.
+	Lors de l'envoi de données, on parcourt le modèle OSI de haut en bas, en traversant toutes les couches. Il préconise deux règles générales: chaque couche est indépendante ; chaque couche ne peut communiquer qu'avec une couche adjacente. Rendre les couches indépendantes garantit qu'elles sont interchangeables. Cela veut dire qu'on pourra changer un protocole associé à une couche sans avoir besoin de changer toutes les couches du modèle OSI. Et autoriser la communication qu'entre couches adjacentes garantit que lors de l'envoi d'informations, toutes les couches sont parcourues.
 
 
 
