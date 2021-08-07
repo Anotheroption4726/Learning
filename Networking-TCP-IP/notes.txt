@@ -1,3 +1,40 @@
+_MODELE_OSI____________________________________________________________________________________________________________________
+
+
+
+
+	Le modèle OSI est né en 1984, après la naissance d'Internet. C'est une norme qui préconise comment les ordinateurs devraient communiquer entre eux. Il tient compte des communications existantes, mais aussi des communications futures et de leurs évolutions potentielles. Son objectif est de normaliser les communications pour garantir un maximum d'évolutivité et d'interopérabilité entre les ordinateurs.
+
+	Le modèle OSI est un modèle en couches. Cela veut dire qu'il est découpé en plusieurs morceaux appelés couches, qui ont chacune un rôle bien défini:
+
+
+		7 : Application
+		
+		6 : Présentation
+		
+		5 : Session
+		
+		4 : Transport
+		
+		3 : Réseau
+		
+		2 : Liaison de données
+		
+		1 : Physique
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Chaque ordinateur relié à l'internet est identifié par une adresse IP. Une adresse IP est une suite de quatre nombres séparés par des points. Par exemple: "86.172.120.28". Cette adresse est au format IPv4. À l'heure actuelle, c’est encore le type d'IP le plus utilisé, mais ces adresses sont appelées petit à petit à être remplacées par la norme IPv6. Bientôt, tout le monde aura donc une IP qui ressemblera plutôt à quelque chose comme ceci :fe80::209:62fa:fb80:29f2.
 
 On peut associer à chaque IP ce qu'on appelle un nom d'hôte (hostname). C'est un nom en toutes lettres plus facile à mémoriser et qui revient exactement au même que d'écrire l'adresse IP. Chaque serveur peut ainsi avoir un nom d'hôte plus facile à retenir.
