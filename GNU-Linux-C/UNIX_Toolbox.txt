@@ -21,8 +21,7 @@ _GENERAL________________________________________________________________________
 			Fichier de configuration du terminal général pour tous les utilisateurs (necessite les droits superuser/root)
 
 		- ~/.profile :
-			Fichier de configuration de la console du profil courant (lorsqu'on ouvre tty1 par exemple, voir raccourcis GUI). 
-			Pas vraiment utile à configurer (".bashrc" se lance après ".profile" de toute manière)
+			Fichier de configuration de la console du profil courant (lorsqu'on ouvre tty1 par exemple, voir raccourcis GUI). Pas vraiment utile à configurer (".bashrc" se lance après ".profile" de toute manière)
 
 		- /etc/hosts :
 			Fichier de configuration des noms d'hôtes et de leurs adresses IP correspondantes 
@@ -37,15 +36,13 @@ _GENERAL________________________________________________________________________
 			Fichiers permettant le démarrage de Linux
 
 		- /dev :
-			Fichiers contenant les périphériques. Ce dossier contient des sous-dossiers qui « représentent » chacun un 
-			périphérique. On y retrouve ainsi par exemple le fichier qui représente le lecteur CD
+			Fichiers contenant les périphériques. Ce dossier contient des sous-dossiers qui « représentent » chacun un périphérique. On y retrouve ainsi par exemple le fichier qui représente le lecteur CD
 
 		- /home : 
 			Répertoires personnels des utilisateurs
 
 		- /media :
-			Lorsqu'un périphérique amovible (comme une carte mémoire SD ou une clé USB) est inséré dans votre ordinateur, Linux 
-			vous permet d'y accéder à partir d'un sous-dossier de media
+			Lorsqu'un périphérique amovible (comme une carte mémoire SD ou une clé USB) est inséré dans votre ordinateur, Linux vous permet d'y accéder à partir d'un sous-dossier de media
 
 		- /tmp :
 			Dossier temporaire utilisé par les programmes pour stocker des fichiers
@@ -54,12 +51,10 @@ _GENERAL________________________________________________________________________
 			C'est un des plus gros dossiers, dans lequel vont s'installer la plupart des programmes demandés par l'utilisateur
 
 		- /var :
-			Ce dossier contient des données « variables », souvent des logs (traces écrites de ce qui s'est passé récemment sur 
-			l'ordinateur)
+			Ce dossier contient des données « variables », souvent des logs (traces écrites de ce qui s'est passé récemment sur l'ordinateur)
 
 		- /lib :
-			Dossier contenant les bibliothèques partagées (généralement des fichiers.so) utilisées par les programmes. C'est en 
-			fait là qu'on trouve l'équivalent des.dll de Windows
+			Dossier contenant les bibliothèques partagées (généralement des fichiers.so) utilisées par les programmes. C'est en fait là qu'on trouve l'équivalent des.dll de Windows
 
 
 
@@ -67,8 +62,7 @@ _GENERAL________________________________________________________________________
 	>> ~/.BASHRC CONFIG
 
 		export PATH=$PATH:/usr/bin/ :
-			Rajoute le chemin "/usr/bin/" à la variable "$PATH" (à chaque fois que l'on démarre un nouveau shell "Bash"). Il 
-			s'agit ici d'un exemple, ce chemin fait déjà partie de la variable "$PATH" par défaut
+			Rajoute le chemin "/usr/bin/" à la variable "$PATH" (à chaque fois que l'on démarre un nouveau shell "Bash"). Il s'agit ici d'un exemple, ce chemin fait déjà partie de la variable "$PATH" par défaut
 
 		alias brave='/usr/bin/brave-browser'
 			Alias personnalisé. Lance le navigateur "Brave Browser" si jamais l'on entre la commande "brave"
@@ -77,8 +71,7 @@ _GENERAL________________________________________________________________________
 			Fait un "ls -l" si jamais l'on entre la commande "ll"
 
 		alias brave='cd /usr/bin && ./brave-browser' :
-			Alias personnalisé. Si jamais l'on entre la commande "brave", déplace l'utilisateur dans le dossier "/usr/bin" et 
-			lance le navigateur "Brave Browser"
+			Alias personnalisé. Si jamais l'on entre la commande "brave", déplace l'utilisateur dans le dossier "/usr/bin" et lance le navigateur "Brave Browser"
 
 
 
@@ -131,8 +124,7 @@ _GENERAL________________________________________________________________________
 				Arrêter un processus en cours dans la console ou le terminal courant
 
 			- Ctrl + d :
-				Envoyer l'entrée en attente à l'application. Si aucune saisie n'a été faite, la valeur envoyée est alors égale 
-				à 0. Permet aussi de quitter le mode 'superuser' permanent
+				Envoyer l'entrée en attente à l'application. Si aucune saisie n'a été faite, la valeur envoyée est alors égale à 0. Permet aussi de quitter le mode 'superuser' permanent
 
 			- Ctrl + z :
 				Suspendre un processus en cours, le mettre en arrière-plan et récupérer l'invité de commandes
@@ -185,13 +177,10 @@ _GENERAL________________________________________________________________________
 				Crée un fichier portant le nom "nomDuFichier" dans le répertoire courant, attend 10 secondes, puis le supprime
 
 			- touch fichier.txt && sleep 10 && rm fichier.txt :
-				Crée un fichier portant le nom "nomDuFichier" dans le répertoire courant, attend 10 secondes, puis le supprime. 
-				Cependant, les instructions ne s'enchaîneront que si elles se sont correctement exécutées
+				Crée un fichier portant le nom "nomDuFichier" dans le répertoire courant, attend 10 secondes, puis le supprime. Cependant, les instructions ne s'enchaîneront que si elles se sont correctement exécutées
 
 			- ./nomDuFichier :
-				Exécute le fichier "nomDuFichier" (uniquement si l'utilisateur courant possède les droits d'exécution). Si il y 
-				a des instructions/commandes écrites à l'intérieur du fichier (attention: une instruction par ligne), ces 
-				dernières s'exécutent dans l'ordre
+				Exécute le fichier "nomDuFichier" (uniquement si l'utilisateur courant possède les droits d'exécution). Si il y a des instructions/commandes écrites à l'intérieur du fichier (attention: une instruction par ligne), ces dernières s'exécutent dans l'ordre
 
 
 		> SYSTEME
@@ -203,15 +192,13 @@ _GENERAL________________________________________________________________________
 				Affiche les informations du système (nom de l'ordinnateur, OS, Kernel, Architecture...)
 
 			- sudo halt :
-				Eteint le système mais la machine reste allumée. Le système est ramené à son état le plus bas tout en laissant 
-				la machine sous tension
+				Eteint le système mais la machine reste allumée. Le système est ramené à son état le plus bas tout en laissant la machine sous tension
 
 			- systemctl suspend :
 				Met le système en veille (uniquement pour les distributions basées sur Ubuntu à partir de la version 16.04)
 
 			- shutdown -r now :
-				(Redémarre?) Eteint le système ainsi que la machine. La commande demandera automatiquement à l'Advanced 
-				Configuration and Power Interface (ACPI) d'envoyer un signal à l'unité d'alimentation pour éteindre le système
+				(Redémarre?) Eteint le système ainsi que la machine. La commande demandera automatiquement à l'Advanced Configuration and Power Interface (ACPI) d'envoyer un signal à l'unité d'alimentation pour éteindre le système
 
 			- sudo reboot :
 				Redémarre le système
@@ -229,8 +216,7 @@ _GENERAL________________________________________________________________________
 				Efface le contenu du terminal ou de la console
 
 			- which nomDeCommande :
-				Affiche le chemin de localisation d'un programme, binaire ou d'une autre commande. Ainsi, 'which python' 
-				devrait afficher '/usr/bin/python' et 'which pwd' devrait afficher '/bin/pwd'
+				Affiche le chemin de localisation d'un programme, binaire ou d'une autre commande. Ainsi, 'which python' devrait afficher '/usr/bin/python' et 'which pwd' devrait afficher '/bin/pwd'
 
 			- man nomDeCommande :
 				Affiche la page du manuel de "nomDeCommande"
@@ -245,8 +231,7 @@ _GENERAL________________________________________________________________________
 				Affiche le terme "terme" dans la console ou le terminal courant
 
 			- echo $0 :
-				Affiche le type de shell que l'on est en train d'utiliser (Bash, Dash, Zsh, Tcsh, Ksh, Fish...). $0 représente
-				l'élément "0" d'une commande, càd le type de shell qui la fait fonctionner
+				Affiche le type de shell que l'on est en train d'utiliser (Bash, Dash, Zsh, Tcsh, Ksh, Fish...). $0 représente l'élément "0" d'une commande, càd le type de shell qui la fait fonctionner
 
 			- echo $PATH :
 				Affiche la liste des dossiers contenus dans la variable "$PATH"
@@ -267,42 +252,33 @@ _GENERAL________________________________________________________________________
 				Affiche les informations spécifiques à l'utilisateur "NomUtilisateur"
 
 			- sudo :
-				'Superuser do'. Placé devant une commande, "sudo" permet de donner temporairement les droits superuser/root à 
-				l'utilisateur courant (mot de passe requis)
+				'Superuser do'. Placé devant une commande, "sudo" permet de donner temporairement les droits superuser/root à l'utilisateur courant (mot de passe requis)
 
 			- sudo su :
-				Donne de manière permanente les droits superuser/root à l'utilisateur courant (mot de passe requis). Utiliser 
-				la commande 'exit' ou le raccourci 'Ctrl + d' pour sortir de ce mode
+				Donne de manière permanente les droits superuser/root à l'utilisateur courant (mot de passe requis). Utiliser la commande 'exit' ou le raccourci 'Ctrl + d' pour sortir de ce mode
 					* 'username@computer-J45DS:~$' : '$' indique qu'on est en mode utilisateur normal *
 					* 'username@computer-J45DS:~#' : '#' indique qu'on est en mode superutilisateur *
 
 			- su nomUtilisateur :
-				Démarre un process avec lequel on sera connecté en tant que "nomUtilisateur" (mot de passe requis). On quitte 
-				le process avec le raccourci 'Ctrl + d' ou la commande 'exit'
+				Démarre un process avec lequel on sera connecté en tant que "nomUtilisateur" (mot de passe requis). On quitte le process avec le raccourci 'Ctrl + d' ou la commande 'exit'
 
 			- useradd -m nomUtilisateur :
-				Crée/ajoute un nouvel utilisateur appellé "nomUtilisateur" (necessite les droits superuser/root). L'option "-m" 
-				permet de lui ajouter un dossier "home" à la racine du disque. Attention! Il est impossible de se connecter 
-				avec le compte "nomUtilisateur" tant qu'aucun mot de passe n'a été attribué
+				Crée/ajoute un nouvel utilisateur appellé "nomUtilisateur" (necessite les droits superuser/root). L'option "-m" permet de lui ajouter un dossier "home" à la racine du disque. Attention! Il est impossible de se connecter avec le compte "nomUtilisateur" tant qu'aucun mot de passe n'a été attribué
 
 			- passwd nomUtilisateur :
 				Permet de modifier le mot de passe de l'utilisateur "nomUtilisateur" (necessite les droits superuser/root)
 
 			- usermod -l nomUtilisateurNew nomUtilisateurOld :
-				Change le nom de l'utilisateur "nomUtilisateurOld" en "nomUtilisateurNew" (necessite les droits superuser/root)
-				Attention! Cette commande ne change pas le nom du dossier 'Home' correspondant à l'utilisateur
+				Change le nom de l'utilisateur "nomUtilisateurOld" en "nomUtilisateurNew" (necessite les droits superuser/root). Attention! Cette commande ne change pas le nom du dossier 'Home' correspondant à l'utilisateur
 
 			- usermod -g nomDuGroupe nomUtilisateur :
-				Attribue le groupe "nomDuGroupe" à l'utilisateur "nomUtilisateur" (et remplace l'ancien groupe auquel il 
-				appartenait)
+				Attribue le groupe "nomDuGroupe" à l'utilisateur "nomUtilisateur" (et remplace l'ancien groupe auquel il appartenait)
 
 			- userdel -r nomUtilisateur :
-				Supprime l'utilisateur appellé "nomUtilisateur" (necessite les droits superuser/root). L'option "-r" permet 
-				aussi d'effacer le dossier "home" spécifique à cet utilisateur
+				Supprime l'utilisateur appellé "nomUtilisateur" (necessite les droits superuser/root). L'option "-r" permet aussi d'effacer le dossier "home" spécifique à cet utilisateur
 
 			- cat /etc/passwd :
-				Liste tous les utilisateurs enregistrés sur le système ainsi que leurs UIDs et les groupes auxquels ils 
-				appartiennent
+				Liste tous les utilisateurs enregistrés sur le système ainsi que leurs UIDs et les groupes auxquels ils appartiennent
 
 			- addgroup nomDuGroupe :
 				Ajoute un nouveau groupe nommé "nomDuGroupe" (nécessite les droits superuser/root)
@@ -329,8 +305,7 @@ _GENERAL________________________________________________________________________
 				Ejecte la partition montée dans le répertoire "/media/nomDuDossier"
 
 			- ls :
-				Affiche la liste des fichiers et dossiers non-cachés (ne commençant pas par ".") contenus dans le répertoire 
-				courant
+				Affiche la liste des fichiers et dossiers non-cachés (ne commençant pas par ".") contenus dans le répertoire courant
 
 			- ls nomDuDossier :
 				Affiche la liste des fichiers et dossiers contenus dans le répertoire "nomDuDossier"
@@ -339,8 +314,7 @@ _GENERAL________________________________________________________________________
 				Comme la commande "ls" mais affiche aussi tous les fichiers et dossiers cachés (commençant par ".")
 
 			- ls -l :
-				Comme la commande "ls" mais affiche aussi des informations supplémentaires comme les droits (Voir section 
-				"LS -L" dans le fichier "Notes.txt")
+				Comme la commande "ls" mais affiche aussi des informations supplémentaires comme les droits (Voir section "LS -L" dans le fichier "Notes.txt")
 
 			- ls -la :
 				Comme "ls" mais affiche aussi les fichiers et dossiers cachés ainsi que leurs informations
@@ -352,8 +326,7 @@ _GENERAL________________________________________________________________________
 				Comme "ls -l" mais trie les résultats par ordre chronologique de modification
 
 			- ls -larth :
-				Affiche le détail de tous les fichiers et dossiers (cachés ou pas), organisés en ordre chronologique 
-				(inversé) avec la taille affichée en Ko, Mo, Go, etc...
+				Affiche le détail de tous les fichiers et dossiers (cachés ou pas), organisés en ordre chronologique (inversé) avec la taille affichée en Ko, Mo, Go, etc...
 
 			- ls s* :
 				Affiche tous les fichiers (et dossiers...?) dont le nom commence par la lettre "s"
@@ -377,8 +350,7 @@ _GENERAL________________________________________________________________________
 				Déplace l'utilisateur/session à l'origine de la partition sur laquelle l'OS est installé
 
 			- cd /media/NomUtilisateur/D\:/ :
-				Déplace l'utilisateur/session à l'origine de la partition D\: (uniquement si celle-ci a été préalablement 
-				montée)
+				Déplace l'utilisateur/session à l'origine de la partition D\: (uniquement si celle-ci a été préalablement montée)
 
 			- du :
 				Renvoie la taille totale que font les dossiers contenus dans le dossier
@@ -402,8 +374,7 @@ _GENERAL________________________________________________________________________
 				Crée deux dossiers nommés "nomDuDossier1" et "nomDuDossier2" dans le répertoire courant
 
 			- mkdir -p nomDuDossier1/nomDuDossier2/nomDuDossier3 :
-				Créé le dossier nomDuDossier1, puis à l'intérieur le sous-dossier nomDuDossier2, puis à l'intérieur encore le 
-				sous-dossier nomDuDossier3
+				Créé le dossier nomDuDossier1, puis à l'intérieur le sous-dossier nomDuDossier2, puis à l'intérieur encore le sous-dossier nomDuDossier3
 
 			- touch nomDuFichier :
 				Crée un fichier portant le nom "nomDuFichier" dans le répertoire courant
@@ -415,16 +386,13 @@ _GENERAL________________________________________________________________________
 				Crée un fichier portant le nom spécifié avec l'extention ".txt" dans le répertoire courant
 
 			- mv nomDuFichier nomDuDossier :
-				Change l'emplacement/déplace le fichier "nomDuFichier" (initialement situé dans le dossier courant) dans le 
-				dossier "nomDuDossier" (lui aussi situé dans le dossier courant)
+				Change l'emplacement/déplace le fichier "nomDuFichier" (initialement situé dans le dossier courant) dans le dossier "nomDuDossier" (lui aussi situé dans le dossier courant)
 
 			- mv ~/Documents/nomDuFichier nomDuDossier :
-				Déplace le fichier depuis un dossier spécifié par son chemin vers un autre dossier situé dans le répertoire 
-				courant
+				Déplace le fichier depuis un dossier spécifié par son chemin vers un autre dossier situé dans le répertoire courant
 
 			- mv ~/Documents/nomDuFichier ~/Documents/nomDuDossier :
-				Déplace le fichier depuis un dossier spécifié par son chemin vers un autre dossier lui aussi spécifié par son 
-				chemin
+				Déplace le fichier depuis un dossier spécifié par son chemin vers un autre dossier lui aussi spécifié par son chemin
 
 			- mv nomDuFichierOld nomDuFichierNew :
 				Renomme le fichier "nomDuFichierOld" en "nomDuFichierNew"
@@ -433,52 +401,43 @@ _GENERAL________________________________________________________________________
 				Renomme le fichier "nomDuFichierOld" en "nomDuFichierNew" et le déplace dans le dossier "nomDuDossier"
 
 			- mv nomDuDossier1 nomDuDossier2 :
-				Déplace le dossier "nomDuDossier1" (avec tous les fichiers et sous-dossiers qu'il contient) dans le dossier 
-				"nomDuDossier2"
+				Déplace le dossier "nomDuDossier1" (avec tous les fichiers et sous-dossiers qu'il contient) dans le dossier "nomDuDossier2"
 
 			- cp nomDuFichier nomDuFichierCopie :
 				Fait une copie du fichier spécifié dans le dossier courant
 
 			- cp nomDuFichier nomDuDossier :
-				Fait une copie du fichier spécifié et le place dans le dossier "nomDuDossier" (situé dans le répertoire 
-				courant)
+				Fait une copie du fichier spécifié et le place dans le dossier "nomDuDossier" (situé dans le répertoire courant)
 
 			- cp nomDuFichier nomDuDossier/nomDuFichierCopie :
 				Fait une copie du fichier spcifié, le renomme et le place dans le dossier "nomDuDossier"
 
 			- cp  Documents/nomDuFichier nomDuDossier :
-				Fait une copie du fichier spécifié par son chemin et le place dans le dossier "nomDuDossier" (situé dans le 
-				répertoire courant)
+				Fait une copie du fichier spécifié par son chemin et le place dans le dossier "nomDuDossier" (situé dans le répertoire courant)
 
 			- cp *.jpg nomDuDossier :
 				Fait une copie de tous les fichiers se finissant avec l'extension ".jpg" dans le dossier "nomDuDossier"
 
 			- cp /usr/include/s*.h :
-				Copie tous les fichiers situés dans le dossier courant commençant par "s" et se terminant par "h" dans le 
-				dossier /usr/include.
+				Copie tous les fichiers situés dans le dossier courant commençant par "s" et se terminant par "h" dans le dossier /usr/include.
 
 			- cp -R nomDuDossier nomDuDossierCopie :
-				Fait une copie du dossier spécifié (avec tous les fichiers et sous-dossiers qu'il contient) dans le dossier 
-				courant
+				Fait une copie du dossier spécifié (avec tous les fichiers et sous-dossiers qu'il contient) dans le dossier courant
 
 			- rm nomDuFichier :
-				Supprime le fichier spécifié. Ne pas oublier de rajouter l'extention à la fin du nom si jamais le fichier en a 
-				une
+				Supprime le fichier spécifié. Ne pas oublier de rajouter l'extention à la fin du nom si jamais le fichier en a une
 
 			- rm -v nomDuFichier :
-				Supprime le fichier spécifié en rajoutant une ligne de dialogue dans le terminal ou la console expliquant ce 
-				qui vient d'être fait
+				Supprime le fichier spécifié en rajoutant une ligne de dialogue dans le terminal ou la console expliquant ce qui vient d'être fait
 
 			- rm -i nomDuFichier1 nomDuFichier2 :
-				Supprime les fichiers spécifiés mais demande une confirmation pour chacun d'eux ("o" pour "oui" et "n" pour 
-				"non")
+				Supprime les fichiers spécifiés mais demande une confirmation pour chacun d'eux ("o" pour "oui" et "n" pour "non")
 
 			- rm -f nomDuFichier :
 				Force la suppression du fichier
 
 			- rm -fiv nomDuFichier1 nomDuFichier2 :
-				Force la suppression des fichiers spécifiés mais demande une confirmation pour chacun d'eux, puis rajoute 
-				une ligne de dialogue dans le terminal ou la console expliquant ce qui vient d'être fait
+				Force la suppression des fichiers spécifiés mais demande une confirmation pour chacun d'eux, puis rajoute une ligne de dialogue dans le terminal ou la console expliquant ce qui vient d'être fait
 
 			- rm -r nomDuDossier :
 				Supprime le dossier spécifié ainsi que tous les fichiers situés à l'intérieur
@@ -487,8 +446,7 @@ _GENERAL________________________________________________________________________
 				Supprime le dossier "nomDuDossier" (uniquement si celui-ci ne possède pas de contenu)
 
 			- sudo rm -rf /* :
-				Supprime tout le disque dur depuis la racine, sous-dossiers compris, et ne demande aucune confirmation (à part 
-				le mot de passe superutilisateur). Il n'y a aucune possibilité de récupération, il faut réinstaller Linux
+				Supprime tout le disque dur depuis la racine, sous-dossiers compris, et ne demande aucune confirmation (à part le mot de passe superutilisateur). Il n'y a aucune possibilité de récupération, il faut réinstaller Linux
 
 
 		> PERMISSIONS
@@ -502,8 +460,7 @@ _GENERAL________________________________________________________________________
 				Enlève les droits d'execution au groupe auquel le fichier "nomDuFichier" est associé
 
 			- chmod u-r nomDuFichier :
-				Enlève les droits de lecture à l'utilisateur propriétaire du fichier "nomDuFichier" (aka l'utilisateur qui l'a 
-				créé)
+				Enlève les droits de lecture à l'utilisateur propriétaire du fichier "nomDuFichier" (aka l'utilisateur qui l'a créé)
 
 			- chmod +x nomDuFichier :
 				Donne les droits d'éxecution à l'utilisateur propriétaire, le groupe ainsi qu'à tous les autres utilisateurs
@@ -515,33 +472,28 @@ _GENERAL________________________________________________________________________
 				Enlève tous les droits (0) à tous les utilisateurs (même les invités)
 
 			- chmod 754 nomDuFichier :
-				Donne tous les droits (lecture, écriture et éxecution / 4 + 2 + 1) au propriétaire du fichier, les droits de 
-				lecture et d'execution (4 + 1) au groupe et les droits de lecture (4) à n'importe quel autre utilisateur
+				Donne tous les droits (lecture, écriture et éxecution / 4 + 2 + 1) au propriétaire du fichier, les droits de lecture et d'execution (4 + 1) au groupe et les droits de lecture (4) à n'importe quel autre utilisateur
 
 			- chmod -R 754 nomDuDossier :
-				Applique un changement de droits au dossier "nomDuDossier" qui s'applique aussi sur tous les fichiers et 
-				sous-dossiers que le dossier contient
+				Applique un changement de droits au dossier "nomDuDossier" qui s'applique aussi sur tous les fichiers et sous-dossiers que le dossier contient
 
 			- chown nomUtilisateur nomDuFichier :
 				Le propriétaire du fichier "nomDuFichier" est maintenant "nomUtilisateur" (necessite les droits superuser/root)
 
 			-chown -R nomUtilisateur nomDuDossier :
-				Le propriétaire du dossier "nomDuDossier" (avec tous les fichiers et sous-dossiers qu'il contient) est
-				maintenant "nomUtilisateur" (necessite les droits superuser/root)
+				Le propriétaire du dossier "nomDuDossier" (avec tous les fichiers et sous-dossiers qu'il contient) est maintenant "nomUtilisateur" (necessite les droits superuser/root)
 
 			- chgrp nomDuGroupe nomDuFichier :
 				Le groupe du fichier "nomDuFichier" est maintenant "nomDuGroupe" (necessite les droits superuser/root)
 
 			- chown -R nomUtilisateur:nomDuGroupe nomDuDossier :
-				Le propriétaire du dossier "nomDuDossier" est maintenant "nomUtilisateur" et son groupe est nomDuGroupe (avec 
-				tous les fichiers et sous-dossiers qu'il contient) (necessite les droits superuser/root)
+				Le propriétaire du dossier "nomDuDossier" est maintenant "nomUtilisateur" et son groupe est nomDuGroupe (avec tous les fichiers et sous-dossiers qu'il contient) (necessite les droits superuser/root)
 
 
 		> LECTURE DE CONTENU
 
 			- cat nomDuFichier :
-				Affiche le contenu du fichier "nomDuFichier" en texte dans le terminal ou la console. Affiche tout le contenu 
-				en une fois
+				Affiche le contenu du fichier "nomDuFichier" en texte dans le terminal ou la console. Affiche tout le contenu en une fois
 
 			- cat -n nomDuFichier :
 				Affiche le contenu du fichier "nomDuFichier" en texte dans le terminal ou la console avec les lignes numérotées
@@ -555,62 +507,46 @@ _GENERAL________________________________________________________________________
 				* / : mode recherche *
 
 			- tail -f /var/log/syslog :
-				Lance un process qui va mettre à jour l'affichage de la fin du contenu d'un fichier en temps réel (ici pour 
-				surveiller les log du système)
+				Lance un process qui va mettre à jour l'affichage de la fin du contenu d'un fichier en temps réel (ici pour surveiller les log du système)
 
 
 		> LIENS PHYSIQUES ET SYMBOLIQUES
 
 			- ln nomDuFichier1 nomDuFichier2 :
-				Crée un fichier "nomDuFichier2" possédant un lien physique avec "nomDuFichier1". Cette commande ne marche
-				pas sur les répertoires. Quand on fait un lien physique entre deux fichiers, ils partagent le même inode 
-				(identificateur de fichier) donc si l'on supprime nomDuFichier1, nomDuFichier2 reste accessible (et 
-				inversement). On n'a au total qu'un seul fichier accessible par deux noms differents
+				Crée un fichier "nomDuFichier2" possédant un lien physique avec "nomDuFichier1". Cette commande ne marche pas sur les répertoires. Quand on fait un lien physique entre deux fichiers, ils partagent le même inode (identificateur de fichier) donc si l'on supprime nomDuFichier1, nomDuFichier2 reste accessible (et inversement). On n'a au total qu'un seul fichier accessible par deux noms differents
 
 			- ln -s nomDuFichier1 nomDuFichier2 :
-				Crée un fichier "nomDuFichier2" possédant un lien symbolique avec "nomDuFichier1" (équivalent des raccourcis 
-				sous windows). Si l'on supprime "nomDuFichier1", "nomDuFichier2" pointera vers un fichier qui n'existe plus. 
-				Le lien symbolique sera cassé, on parlera alors de « lien mort ». Cette commande marche aussi sur les 
-				répertoires
+				Crée un fichier "nomDuFichier2" possédant un lien symbolique avec "nomDuFichier1" (équivalent des raccourcis sous windows). Si l'on supprime "nomDuFichier1", "nomDuFichier2" pointera vers un fichier qui n'existe plus. Le lien symbolique sera cassé, on parlera alors de « lien mort ». Cette commande marche aussi sur les répertoires
 
 
 		> RECHERCHE
 
 			- locate nomDeLaRecherche :
-				Affiche tous les fichiers présents sur le système qui contiennent le mot "nomDuFichier" dans leur nom. Que se 
-				soient des fichiers ou des dossiers, il n'y a pas de différence. Cette recherche se fait à partir d'une base de 
-				données mise à jour toutes les 24 heures
+				Affiche tous les fichiers présents sur le système qui contiennent le mot "nomDuFichier" dans leur nom. Que se soient des fichiers ou des dossiers, il n'y a pas de différence. Cette recherche se fait à partir d'une base de données mise à jour toutes les 24 heures
 
 			- sudo updatedb :
 				Met à jour la base de données de fichiers pour la commande "locate"
 
 			- find -name nomDuFichier.txt :
-				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, le ou les fichier(s) 
-				"nomDuFichier.txt". Le nom du fichier doit exactement être "nomDuFichier.txt"
+				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, le ou les fichier(s) "nomDuFichier.txt". Le nom du fichier doit exactement être "nomDuFichier.txt"
 
 			- find ~/Documents/nomDuDossier -name nomDuFichier.txt :
-				Recherche et affiche, depuis "nomDuDossier" et dans tous les sous-répertoires, le ou les fichier(s) 
-				"nomDuFichier.txt"
+				Recherche et affiche, depuis "nomDuDossier" et dans tous les sous-répertoires, le ou les fichier(s) "nomDuFichier.txt"
 
 			- find -name '*terme' :
-				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier se 
-				terminant par le terme "terme"
+				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier se terminant par le terme "terme"
 
 			- find -name 'terme*'' :
-				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier commençant 
-				par le terme "terme"
+				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier commençant par le terme "terme"
 
 			- find -size +10M :
-				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier dont la 
-				taille est supèrieure à 10 Mo. On utilise aussi "k" pour "Ko" et "g" pour "Go"
+				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier dont la taille est supèrieure à 10 Mo. On utilise aussi "k" pour "Ko" et "g" pour "Go"
 
 			- find -size -10M :
-				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier dont la 
-				taille est inférieure à 10 Mo
+				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier dont la taille est inférieure à 10 Mo
 
 			- find -atime 6 :
-				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier dont la 
-				modification a été faite il y a moins de 7 jours
+				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier dont la modification a été faite il y a moins de 7 jours
 
 			- find -type d :
 				Recherche et affiche tous les dossiers contenus à partir du répertoire courant et dans tous les sous-répertoires
@@ -619,56 +555,43 @@ _GENERAL________________________________________________________________________
 				Recherche et affiche tous les fichiers contenus à partir du répertoire courant et dans tous les sous-répertoires
 
 			- find -name nomDuFichier -delete :
-				Recherche et supprime, à partir du répertoire courant et dans tous les sous-répertoires, tous les fichiers 
-				"nomDuFichier"
+				Recherche et supprime, à partir du répertoire courant et dans tous les sous-répertoires, tous les fichiers "nomDuFichier"
 
 			- find -name '*.txt' -delete :
-				Recherche et supprime, à partir du répertoire courant et dans tous les sous-répertoires, tous les fichiers se 
-				terminant par l'extension ".txt"
+				Recherche et supprime, à partir du répertoire courant et dans tous les sous-répertoires, tous les fichiers se terminant par l'extension ".txt"
 
 			- find -name nomDuFichier -exec chmod 000 {} \; :
-				Recherche et retire tous les droits, à partir du répertoire courant et dans tous les sous-répertoires, de tous 
-				les fichiers "nomDuFichier". Les accolades "{}" sont remplacées par "nomDuFichier". La commande doit finir par 
-				"\;" obligatoirement
+				Recherche et retire tous les droits, à partir du répertoire courant et dans tous les sous-répertoires, de tous les fichiers "nomDuFichier". Les accolades "{}" sont remplacées par "nomDuFichier". La commande doit finir par "\;" obligatoirement
 
 			- find -name '*txt' -exec mv {} nomDuDossier \; :
-				Recherche et déplace dans le dossier "nomDuDossier", à partir du répertoire courant et dans tous les 
-				sous-répertoires, tous les fichiers se terminant avec l'extension ".txt"
+				Recherche et déplace dans le dossier "nomDuDossier", à partir du répertoire courant et dans tous les sous-répertoires, tous les fichiers se terminant avec l'extension ".txt"
 
 			- find -name '*~' -o \( -name '#*' -a -name '*#' \) :
-				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier dont le 
-				nom se termine par ~, ou commence et se termine par # 
-				( https://unix.stackexchange.com/questions/50612/how-to-combine-2-name-conditions-in-find )
+				Recherche et affiche, à partir du répertoire courant et dans tous les sous-répertoires, tout fichier dont le nom se termine par ~, ou commence et se termine par # ( https://unix.stackexchange.com/questions/50612/how-to-combine-2-name-conditions-in-find )
 
 
 		> RECHERCHE DANS FICHIER
 
 			- grep terme nomDuFichier :
-				Recherche le mot "terme" dans le fichier "nomDuFichier" et affiche toutes les lignes dans lesquelles le mot a 
-				été trouvé
+				Recherche le mot "terme" dans le fichier "nomDuFichier" et affiche toutes les lignes dans lesquelles le mot a été trouvé
 
 			- grep -n "suite de termes" nomDuFichier :
-				Recherche la suite de mots "suite de termes" dans le fichier "nomDuFichier" et affiche toutes les lignes dans 
-				lesquelles la suite de mots a été trouvé (avec le numéro de chaque ligne)
+				Recherche la suite de mots "suite de termes" dans le fichier "nomDuFichier" et affiche toutes les lignes dans lesquelles la suite de mots a été trouvé (avec le numéro de chaque ligne)
 
 			- grep -v terme nomDuFichier :
-				Recherche le mot "terme" dans le fichier "nomDuFichier" et affiche toutes les lignes dans lesquelles le mot 
-				n'est pas présent
+				Recherche le mot "terme" dans le fichier "nomDuFichier" et affiche toutes les lignes dans lesquelles le mot n'est pas présent
 
 			- grep -r terme nomDuDossier :
-				Recherche le mot "terme" dans le dossier "nomDuDossier" (ainsi que dans tous les sous-répertoires) et affiche 
-				toutes les lignes des fichiers dans lesquelles le mot a été trouvé
+				Recherche le mot "terme" dans le dossier "nomDuDossier" (ainsi que dans tous les sous-répertoires) et affiche toutes les lignes des fichiers dans lesquelles le mot a été trouvé
 
 			- grep -E expression :
 				Permet d'utiliser la commande "grep" avec une expression régulière (ou regex, voir "Notes.txt")
 
 			- sort nomDuFichier :
-				Le contenu du fichier "nomDuFichier" est trié alphabétiquement et le résultat est affiché dans le terminal ou 
-				la console. Le fichier n'est pas modifié
+				Le contenu du fichier "nomDuFichier" est trié alphabétiquement et le résultat est affiché dans le terminal ou la console. Le fichier n'est pas modifié
 
 			- sort -n nomDuFichier :
-				Le contenu du fichier "nomDuFichier" est trié numériquement et le résultat est affiché dans le terminal ou la 
-				console. Le fichier n'est pas modifié
+				Le contenu du fichier "nomDuFichier" est trié numériquement et le résultat est affiché dans le terminal ou la console. Le fichier n'est pas modifié
 
 			- sort -o nomDuFichier1 nomDuFichier2 :
 				Le contenu du fichier "nomDuFichier2" est trié alphabétiquement et le résultat est stocké dans "nomDuFichier1"
@@ -683,13 +606,10 @@ _GENERAL________________________________________________________________________
 				Affiche le contenu du fichier "nomDuFichier" mais sans les lignes qui sont présentes en double
 
 			- cut -c 2-5 nomDuFichier :
-				Affiche le contenu du fichier "nomDuFichier" mais en conservant uniquement les caractères 2 à 5 de chaque 
-				ligne. Malheuresement, dû à l'encodage des caractères, la commande "cut" se base sur le nombre d'octets et 
-				ce dernier n'est pas forcément égal au nombre de caractères
+				Affiche le contenu du fichier "nomDuFichier" mais en conservant uniquement les caractères 2 à 5 de chaque ligne. Malheuresement, dû à l'encodage des caractères, la commande "cut" se base sur le nombre d'octets et ce dernier n'est pas forcément égal au nombre de caractères
 
 			- cut -c -3 noms.txt :
-				Affiche le contenu du fichier "nomDuFichier" mais en conservant uniquement les 3 premiers caractères de chaque 
-				ligne
+				Affiche le contenu du fichier "nomDuFichier" mais en conservant uniquement les 3 premiers caractères de chaque ligne
 
 			- cut -c 3- nomDuFichier :
 				Affiche le contenu du fichier "nomDuFichier" mais qu'à partir des 3 premiers caractères de chaque ligne
@@ -711,63 +631,46 @@ _GENERAL________________________________________________________________________
 				Crée un nouveau fichier "nomDuFichier" contenant les informations de la sortie standard de la commande "ls"
 
 			- ls >> nomDuFichier :
-				Rajoute à la fin du fichier "nomDuFichier" les informations de la sortie standard de la commande "ls". Crée un 
-				nouveau fichier si jamais "nomDuFichier" n'éxiste pas
+				Rajoute à la fin du fichier "nomDuFichier" les informations de la sortie standard de la commande "ls". Crée un nouveau fichier si jamais "nomDuFichier" n'éxiste pas
 
 			- sort nomDuFichier1 2> nomDuFichier2 :
 				Crée un nouveau fichier "nomDuFichier2" contenant les informations de la sortie d'erreurs de la commande "sort"
 
 			- sort nomDuFichier1 2>> nomDuFichier2 :
-				Rajoute à la fin du fichier "nomDuFichier2" les informations de la sortie d'erreurs de la commande "sort". Crée 
-				un nouveau fichier si jamais "nomDuFichier2" n'éxiste pas
+				Rajoute à la fin du fichier "nomDuFichier2" les informations de la sortie d'erreurs de la commande "sort". Crée un nouveau fichier si jamais "nomDuFichier2" n'éxiste pas
 
 			- echo "export EDITOR=nano" >>  ~/.bashrc :
 				Etablir l'éditeur de texte "Nano" comme éditeur de texte par défaut pour l'utilisateur courant
 
 			- sort nomDuFichier1 > nomDuFichier2 2> nomDuFichier3 :
-				Crée un nouveau fichier "nomDuFichier2" contenant les informations de la sortie standard de la commande "sort" 
-				et un nouveau fichier "nomDuFichier3" contenant les informations de la sortie d'erreurs
+				Crée un nouveau fichier "nomDuFichier2" contenant les informations de la sortie standard de la commande "sort" et un nouveau fichier "nomDuFichier3" contenant les informations de la sortie d'erreurs
 
 			- sort nomDuFichier1 > nomDuFichier2 2>&1 :
-				Crée un nouveau fichier "nomDuFichier2" contenant les informations de la sortie standard et de la sortie 
-				d'erreurs de la commande "sort"
+				Crée un nouveau fichier "nomDuFichier2" contenant les informations de la sortie standard et de la sortie d'erreurs de la commande "sort"
 
 			- cat < nomDuFichier :
-				Envoie le contenu du fichier "nomDuFichier" dans l'entrée de la commande "cat". Affiche ensuite le contenu du 
-				fichier "nomDuFichier" en texte dans le terminal ou la console
+				Envoie le contenu du fichier "nomDuFichier" dans l'entrée de la commande "cat". Affiche ensuite le contenu du fichier "nomDuFichier" en texte dans le terminal ou la console
 
 			- sort << termeFinal :
-				Entre manuellement le contenu envoyé dans l'entrée de la commande "sort" (tant que le terme "termeFinal" n'a 
-				pas été entré). Le contenu est ensuite trié alphabétiquement et le résultat est affiché dans le terminal ou 
-				la console
+				Entre manuellement le contenu envoyé dans l'entrée de la commande "sort" (tant que le terme "termeFinal" n'a pas été entré). Le contenu est ensuite trié alphabétiquement et le résultat est affiché dans le terminal ou la console
 
 			- sort -n << termeFinal >> nomDuFichier 2>&1 :
-				Entre manuellement le contenu envoyé dans l'entrée de la commande "sort" (tant que le terme "termeFinal" n'a 
-				pas été entré). Le contenu est ensuite trié numériquement puis stocké à la fin du fichier "nomDuFichier"
+				Entre manuellement le contenu envoyé dans l'entrée de la commande "sort" (tant que le terme "termeFinal" n'a pas été entré). Le contenu est ensuite trié numériquement puis stocké à la fin du fichier "nomDuFichier"
 
 			- ls | sort -n :
-				Récupère la liste des fichiers et dossiers non-cachés (ne commençant pas par ".") contenus dans le répertoire 
-				courant. Le contenu est ensuite envoyé à l'entrée de la commande "sort -n" puis trié numériquement et affiché 
-				dans le terminal ou la console
+				Récupère la liste des fichiers et dossiers non-cachés (ne commençant pas par ".") contenus dans le répertoire courant. Le contenu est ensuite envoyé à l'entrée de la commande "sort -n" puis trié numériquement et affiché dans le terminal ou la console
 
 			- ls | sort -n > nomDuFichier :
-				Récupère la liste des fichiers et dossiers non-cachés (ne commençant pas par ".") contenus dans le répertoire 
-				courant. Le résultat est ensuite envoyé à l'entrée de la commande "sort -n" puis trié numériquement et stocké 
-				dans le fichier "nomDuFichier"
+				Récupère la liste des fichiers et dossiers non-cachés (ne commençant pas par ".") contenus dans le répertoire courant. Le résultat est ensuite envoyé à l'entrée de la commande "sort -n" puis trié numériquement et stocké dans le fichier "nomDuFichier"
 
 			- du | sort -nr | less :
-				Récupère la taille totale que font les dossiers contenus dans le répertoire courant. Le résultat est ensuite 
-				envoyé à l'entrée de la commande "sort -nr" puis trié numériquement du plus grand au plus petit et affiché 
-				progressivement, page par page, dans le terminal ou la console
+				Récupère la taille totale que font les dossiers contenus dans le répertoire courant. Le résultat est ensuite envoyé à l'entrée de la commande "sort -nr" puis trié numériquement du plus grand au plus petit et affiché progressivement, page par page, dans le terminal ou la console
 
 			- sudo du | grep terme | sort -nr | less :
-				Récupère la taille totale que font les dossiers contenus dans le répertoire courant dont le nom contient le 
-				terme "terme". Le résultat est ensuite envoyé à l'entrée de la commande "sort -nr" puis trié numériquement du 
-				plus grand au plus petit et affiché progressivement, page par page, dans le terminal ou la console
+				Récupère la taille totale que font les dossiers contenus dans le répertoire courant dont le nom contient le terme "terme". Le résultat est ensuite envoyé à l'entrée de la commande "sort -nr" puis trié numériquement du plus grand au plus petit et affiché progressivement, page par page, dans le terminal ou la console
 
 			- sudo grep log -Ir /var/log  | cut -d : -f 1  | sort | uniq :
-				Affiche et liste tous les noms de fichier contenant le mot "log" dans le répertoire "/var/log" (-I permet 
-				d'exclure les fichiers binaires). Les résultats sont triés et les doublons supprimés
+				Affiche et liste tous les noms de fichier contenant le mot "log" dans le répertoire "/var/log" (-I permet d'exclure les fichiers binaires). Les résultats sont triés et les doublons supprimés
 
 
 		> PROCESSUS
@@ -782,29 +685,22 @@ _GENERAL________________________________________________________________________
 				Lance un processus qui affiche une évolution graphique de la charge du processeur à travers le temps
 
 			- ps -ef :
-				Affiche la liste de tous les processus de tous les utilisateurs (même les daemons) qui tournent sur le système 
-				au moment où la commande est lancée (similaire à la commande "ps -ax"...?). Cette liste n'est pas actualisée en 
-				temps réel (voir "PS -EF" dans "Notes.txt")
+				Affiche la liste de tous les processus de tous les utilisateurs (même les daemons) qui tournent sur le système au moment où la commande est lancée (similaire à la commande "ps -ax"...?). Cette liste n'est pas actualisée en temps réel (voir "PS -EF" dans "Notes.txt")
 
 			- ps :
-				Version allégée de la commande "ps -ef". N'affiche que les processus lancés par l'utilisateur courant dans le
-				terminal ou la console courante
+				Version allégée de la commande "ps -ef". N'affiche que les processus lancés par l'utilisateur courant dans le terminal ou la console courante
 
 			- ps -u nomUtilisateur :
 				Affiche la liste des processus lancés par l'utilisateur "nomUtilisateur"
 
 			- top :
-				Liste interactive et régulièrement mise à jour de tous les processus de tous les utilisateurs (même les 
-				daemons) qui tournent sur le système. Taper "h" pour l'aide et "k" pour tuer un processus (PID est alors 
-				demandé), voir aussi: https://www.unixtutorial.org/commands/top
+				Liste interactive et régulièrement mise à jour de tous les processus de tous les utilisateurs (même les daemons) qui tournent sur le système. Taper "h" pour l'aide et "k" pour tuer un processus (PID est alors demandé), voir aussi: https://www.unixtutorial.org/commands/top
 
 			- pstree -pn :
-				Répertorie le PID de chaque processus et les organise avec leurs parents. Affiche la relation de tous les 
-				processus dans une structure arborescente
+				Répertorie le PID de chaque processus et les organise avec leurs parents. Affiche la relation de tous les processus dans une structure arborescente
 
 			- htop :
-				Comme la commande "top" mais avec plus de détails, de couleurs et de fonctionnallités. A installer avec la 
-				commande "apt-get":
+				Comme la commande "top" mais avec plus de détails, de couleurs et de fonctionnallités. A installer avec la commande "apt-get":
 					sudo apt-get update
 					sudo apt-get install htop
 				Voir aussi: https://delightlylinux.wordpress.com/2014/03/24/htop-a-better-process-viewer-then-top/
@@ -822,42 +718,28 @@ _GENERAL________________________________________________________________________
 				Arrête l'ensemble des processus liés à "nomDuProcessus"
 
 			- cp nomDuFichier nomDuFichierCopie & :
-				Fait une copie du fichier spécifié dans le répertoire courant. Le processus d'éxecution se déroule en 
-				arrière-plan et s'arrête si jamais on ferme le terminal ou la console courante. La sortie standard de 
-				la commande continue aussi à s'afficher dans le terminal ou la console courante
+				Fait une copie du fichier spécifié dans le répertoire courant. Le processus d'éxecution se déroule en arrière-plan et s'arrête si jamais on ferme le terminal ou la console courante. La sortie standard de la commande continue aussi à s'afficher dans le terminal ou la console courante
 
 			- sudo find -name 'nomDuFichier1' > nomDuFichier2 & :
-				Recherche, à partir du répertoire courant et dans tous les sous-répertoires, le ou les fichier(s) 
-				"nomDuFichier1". Le processus d'éxecution se déroule en arrière-plan et s'arrête si jamais on ferme le 
-				terminal ou la console courante. La sortie standard de la commande et les résultats sont stockés dans le 
-				fichier "nomDuFichier2"
+				Recherche, à partir du répertoire courant et dans tous les sous-répertoires, le ou les fichier(s) "nomDuFichier1". Le processus d'éxecution se déroule en arrière-plan et s'arrête si jamais on ferme le terminal ou la console courante. La sortie standard de la commande et les résultats sont stockés dans le fichier "nomDuFichier2"
 
 			- sudo find -name 'nomDuFichier1' > nomDuFichier2 2>&1 & :
-				Recherche, à partir du répertoire courant et dans tous les sous-répertoires, le ou les fichier(s) 
-				"nomDuFichier1". Le processus d'éxecution se déroule en arrière-plan et s'arrête si jamais on ferme le 
-				terminal ou la console courante. Les sorties standard et d'erreurs de la commande sont stockées dans le 
-				fichier "nomDuFichier2"
+				Recherche, à partir du répertoire courant et dans tous les sous-répertoires, le ou les fichier(s) "nomDuFichier1". Le processus d'éxecution se déroule en arrière-plan et s'arrête si jamais on ferme le terminal ou la console courante. Les sorties standard et d'erreurs de la commande sont stockées dans le fichier "nomDuFichier2"
 
 			- nohup cp nomDuFichier nomDuFichierCopie :
-				Fait une copie du fichier spécifié dans le répertoire courant. Le processus d'éxecution se déroule en 
-				arrière-plan et continue de s'exécuter même après la fermeture du terminal ou de la console. La sortie 
-				standard de la commande est par défaut redirigée vers un fichier "nohup.out". "nohup" est très utile 
-				lorsqu'on lance un programme sur un serveur et qu'on veut qu'il continue de fonctionner même après s'être 
-				déconnecté
+				Fait une copie du fichier spécifié dans le répertoire courant. Le processus d'éxecution se déroule en arrière-plan et continue de s'exécuter même après la fermeture du terminal ou de la console. La sortie standard de la commande est par défaut redirigée vers un fichier "nohup.out". "nohup" est très utile lorsqu'on lance un programme sur un serveur et qu'on veut qu'il continue de fonctionner même après s'être déconnecté
 
 			- bg :
 				Execute un processus en arrière plan qui a été suspendu avec le raccourci "Ctrl + z" 
 
 			- jobs :
-				Affiche les processus qui sont en arrière-plan (en cours d'éxecution ou suspendus) et qui ont été lancés depuis 
-				le terminal ou la console courante (ceux lancés avec la commande "nohup" ne s'affichent pas)
+				Affiche les processus qui sont en arrière-plan (en cours d'éxecution ou suspendus) et qui ont été lancés depuis le terminal ou la console courante (ceux lancés avec la commande "nohup" ne s'affichent pas)
 
 			- fg :
 				Fait passer dans le terminal ou la console courante un processus en arrière-plan listé avec la commande "jobs"
 
 			- fg %2 :
-				Fait passer dans le terminal ou la console courante le processus en arrière-plan numéro [2] si il éxiste. Le numéro 
-				de chaque processus est visible avec la commande "jobs"
+				Fait passer dans le terminal ou la console courante le processus en arrière-plan numéro [2] si il éxiste. Le numéro de chaque processus est visible avec la commande "jobs"
 
 
 		> RESEAU
@@ -886,19 +768,13 @@ _GENERAL________________________________________________________________________
 				Réactive l'interface "eth0" (filaire). Le trafic peut circuler par l'interface "eth0"
 
 			- ping 86.172.120.28 :
-				Vérifie la connectivité réseau d'un hôte/serveur possédant l'addresse IP "86.172.120.28" (suite de quatre 
-				nombres séparés par des points). Cette commande envoie un paquet de données à l'adresse spécifiée avec le 
-				message "PING" et obtient une réponse appelée latence. Un ping rapide à faible latence (généralement mesuré en 
-				millisecondes) signifie une connexion plus rapide. Chaque système d'exploitation moderne possède un ping 
-				pré-installé. L'échange se fait en protocole ICMP (Internet Control Message Protocol)
+				Vérifie la connectivité réseau d'un hôte/serveur possédant l'addresse IP "86.172.120.28" (suite de quatre nombres séparés par des points). Cette commande envoie un paquet de données à l'adresse spécifiée avec le message "PING" et obtient une réponse appelée latence. Un ping rapide à faible latence (généralement mesuré en millisecondes) signifie une connexion plus rapide. Chaque système d'exploitation moderne possède un ping pré-installé. L'échange se fait en protocole ICMP (Internet Control Message Protocol)
 
 			- ping nomDeDomaine :
 				Vérifie la connectivité réseau d'un hôte/serveur possédant l'URL "nomDeDomaine"
 
 			- ping -b broadcastIp :
-				Vérifie la connectivité réseau d'un hôte/serveur avec tous les appareils connectés sur ce même réseau. 
-				L'addresse de broadcast "broadcastIp" est une adresse de diffusion retrouvable grace à la comande "ifconfig", 
-				elle est utilisée pour transmettre à tous les appareils
+				Vérifie la connectivité réseau d'un hôte/serveur avec tous les appareils connectés sur ce même réseau. L'addresse de broadcast "broadcastIp" est une adresse de diffusion retrouvable grace à la comande "ifconfig", elle est utilisée pour transmettre à tous les appareils
 
 			- arp -a :
 				Pas trop compris, affiche des infos sur des trucs connectés (la box, l'Ipad...) mais ça à l'air cool
@@ -924,8 +800,7 @@ _ARCHIVAGE & COMPRESSION________________________________________________________
 				f : assemble l'archive dans un fichier
 
 		- tar -cvf archive.tar nomDuFichier1 nomDuFichier2 nomDuFichier3 :
-			Assemble et crée un archive "archive.tar" à partir des fichiers "nomDuFichier1", "nomDuFichier2" et "nomDuFichier3" 
-			contenus dans le dossier courant
+			Assemble et crée un archive "archive.tar" à partir des fichiers "nomDuFichier1", "nomDuFichier2" et "nomDuFichier3" contenus dans le dossier courant
 
 		- tar -tf archive.tar :
 			Affiche la liste des fichiers contenus dans l'archive "archive.tar"
@@ -943,8 +818,7 @@ _ARCHIVAGE & COMPRESSION________________________________________________________
 			Décompresse le fichier "archive.tar.gz" dans le dossier courant
 
 		- bzip2 archive.tar :
-			Compresse l'archive "archive.tar" en fichier ".bz2". "bzip2" compresse mieux que "gzip" mais est plus lent et moins 
-			utilisé que ce dernier
+			Compresse l'archive "archive.tar" en fichier ".bz2". "bzip2" compresse mieux que "gzip" mais est plus lent et moins utilisé que ce dernier
 
 		- bunzip2 archive.tar.bz2 :
 			Décompresse le fichier "archive.tar.bz2" dans le dossier courant
@@ -995,8 +869,7 @@ _ARCHIVAGE & COMPRESSION________________________________________________________
 			Installation du paquet "unrar"
 
 		- unrar e archive.rar :
-			Décompresse et extrait le contenu du fichier "archive.rar" dans le dossier courant. Le format ".rar" est 
-			propriétaire. La méthode de décompression a été publiée mais pour compresser il faut avoir une license
+			Décompresse et extrait le contenu du fichier "archive.rar" dans le dossier courant. Le format ".rar" est propriétaire. La méthode de décompression a été publiée mais pour compresser il faut avoir une license
 
 		- unrar l archive.rar :
 			Affiche la liste des fichiers contenus dans l'archive compressé "archive.rar"
@@ -1055,8 +928,7 @@ _NANO___________________________________________________________________________
 			Afficher à quel endroit du fichier le curseur est positionné (ligne, colonne…)
 
 		- Ctrl + w :
-			Rechercher dans le fichier. "Ctrl + c" pour annuler. Pour continuer la recherche (passer au terme suivant), il faut
-			refaire "Ctrl + w" puis directement taper sur "Entrée"
+			Rechercher dans le fichier. "Ctrl + c" pour annuler. Pour continuer la recherche (passer au terme suivant), il faut refaire "Ctrl + w" puis directement taper sur "Entrée"
 
 		- Ctrl + o :
 			Sauvegarder
@@ -1074,8 +946,7 @@ _NANO___________________________________________________________________________
 			Ouvre "nomDuFichier.txt" dans nano et autorise l'utilisation de la souris
 
 		- nano -i nomDuFichier.txt :
-			Ouvre "nomDuFichier.txt" dans nano avec indentation automatique. L'alinéa (tabulations) de la ligne précédente est 
-			respecté lorsqu'on passe à la ligne suivante
+			Ouvre "nomDuFichier.txt" dans nano avec indentation automatique. L'alinéa (tabulations) de la ligne précédente est respecté lorsqu'on passe à la ligne suivante
 
 		- nano -mi nomDuFichier.txt :
 			Ouvre "nomDuFichier.txt" dans nano avec autorisation d'utilisation de la souris et indentation automatique
@@ -1130,8 +1001,7 @@ _SSH____________________________________________________________________________
 	>> GESTION DU PROCESS
 
 		- ps -ef | grep ssh :
-			Affiche le process ssh qui s'est lancé automatiquement au démarrage du système. Dans mon cas le process affiché 
-			ressemblait à "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+			Affiche le process ssh qui s'est lancé automatiquement au démarrage du système. Dans mon cas le process affiché ressemblait à "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
 
 		- sudo /etc/init.d/ssh start :
 			Démarre le serveur ssh
@@ -1158,24 +1028,19 @@ _AT & CONTRAB___________________________________________________________________
 		Installation du paquet "cron" (pour utiliser crontab)
 
 	- at 14:17 :
-		Les commandes entrées par l'utilisateur s'exécuteront à 14:17. Utiliser le raccourci "Ctrl + D" pour sortir de l'arrêté 
-		de commande
+		Les commandes entrées par l'utilisateur s'exécuteront à 14:17. Utiliser le raccourci "Ctrl + D" pour sortir de l'arrêté de commande
 
 	- at 14:17 tomorrow :
-		Les commandes entrées par l'utilisateur s'exécuteront à 14:17 le lendemain. Utiliser le raccourci "Ctrl + D" pour 
-		sortir de l'arrêté de commande
+		Les commandes entrées par l'utilisateur s'exécuteront à 14:17 le lendemain. Utiliser le raccourci "Ctrl + D" pour sortir de l'arrêté de commande
 
 	- at 14:17 11/15/10 :
-		Les commandes entrées par l'utilisateur s'exécuteront à 14:17 le 11/15/10. Utiliser le raccourci "Ctrl + D" pour sortir 
-		de l'arrêté de commande
+		Les commandes entrées par l'utilisateur s'exécuteront à 14:17 le 11/15/10. Utiliser le raccourci "Ctrl + D" pour sortir de l'arrêté de commande
 
 	- at now + 1 minute :
-		Les commandes entrées par l'utilisateur s'exécuteront dans 1 minute. Utiliser le raccourci "Ctrl + D" pour sortir 
-		de l'arrêté de commande
+		Les commandes entrées par l'utilisateur s'exécuteront dans 1 minute. Utiliser le raccourci "Ctrl + D" pour sortir de l'arrêté de commande
 
 	- at 4pm + 3 days :
-		Les commandes entrées par l'utilisateur s'exécuteront à 16:00 dans 3 jours. Utiliser le raccourci "Ctrl + D" pour 
-		sortir de l'arrêté de commande
+		Les commandes entrées par l'utilisateur s'exécuteront à 16:00 dans 3 jours. Utiliser le raccourci "Ctrl + D" pour sortir de l'arrêté de commande
 
 	- atq :
 		Affiche la liste commandes qui sont en attente d'éxécution. Chaque job possède un nnuméro attribué
@@ -1190,8 +1055,7 @@ _AT & CONTRAB___________________________________________________________________
 		Affiche la contrab actuelle de l'utilisateur "root"
 
 	- contrab -e :
-		Ouvre un éditeur de texte pour modifier la contrab de l'utilisateur courant. La crontab exige de passer par cette 
-		commande pour modifier le fichier de configuration, c'est comme ça
+		Ouvre un éditeur de texte pour modifier la contrab de l'utilisateur courant. La crontab exige de passer par cette commande pour modifier le fichier de configuration, c'est comme ça
 
 	- contrab -r :
 		Supprime la contrab de l'utilisateur courant
@@ -1264,8 +1128,7 @@ _APT____________________________________________________________________________
 			Dossier des dépôts PPA (Personal Package Archives) présents sur le système
 
 		- /etc/apt/sources.list.d/official-package-repositories.list :
-			Fichier source contenant la liste des dépôts et leurs urls sur Linux Mint. Ne pas modifier manuellement, pour cela
-			il vaut mieux utiliser l'interface graphique "Software Sources"
+			Fichier source contenant la liste des dépôts et leurs urls sur Linux Mint. Ne pas modifier manuellement, pour celail vaut mieux utiliser l'interface graphique "Software Sources"
 
 
 
@@ -1291,8 +1154,7 @@ _APT____________________________________________________________________________
 			Met à jour le cache (necessite les droits superuser/root)
 
 		- apt-get upgrade :
-			Installe les dernières versions de tous les paquets présents sur le système (necessite les droits superuser/root).
-			Faire un "apt-get update" avant
+			Installe les dernières versions de tous les paquets présents sur le système (necessite les droits superuser/root). Faire un "apt-get update" avant
 
 		- apt-cache search nomDuPaquet :
 			Effectue une recherche de paquet par nom dans le cache
@@ -1301,8 +1163,7 @@ _APT____________________________________________________________________________
 			Affiche la description et les détails du paquet
 
 		- apt-get install nomDuPaquet :
-			Installe le paquet "nomDuPaquet" ainsi que toutes ses dépendances sur le système (necessite les droits 
-			superuser/root)
+			Installe le paquet "nomDuPaquet" ainsi que toutes ses dépendances sur le système (necessite les droits superuser/root)
 
 		- dpkg -L nomDuPaquet :
 			Liste tous les fichiers, dossiers et chemins présents sur le système correspondant au paquet "nomDuPaquet" installé
@@ -1311,8 +1172,7 @@ _APT____________________________________________________________________________
 			Désinstalle/supprime le paquet "nomDuPaquet" (necessite les droits superuser/root)
 
 		- apt-get purge nomDuPaquet :
-			Désinstalle/supprime le paquet "nomDuPaquet" ainsi que toutes ses dépendances non utilisées (necessite les droits
-			 superuser/root)
+			Désinstalle/supprime le paquet "nomDuPaquet" ainsi que toutes ses dépendances non utilisées (necessite les droits superuser/root)
 
 		- sudo apt-get autoclean && sudo apt-get autoremove :
 			Nettoie le cache et supprime tous les paquets installés par d'autres paquets qui ne sont plus necessaires
@@ -1361,8 +1221,7 @@ _CINNAMON_______________________________________________________________________
 				Arrête et redémarre l'interface graphique Cinnamon
 
 			- Alt + F2 :
-				Lance une interface alternative qui permet d'executer des commandes. 'r', par exemple, arrête et redémarre 
-				l'interface graphique Cinnamon
+				Lance une interface alternative qui permet d'executer des commandes. 'r', par exemple, arrête et redémarre l'interface graphique Cinnamon
 
 			- Ctrl + Alt + L :
 				Verrouillage de l'écran
@@ -1457,8 +1316,7 @@ _I3_TILING_WINDOW_MANAGER_______________________________________________________
 			Fait passer la fenêtre selectionnée dans l'espace de travail '2'
 
 		- {MOD} + E :
-			Bascule les fenêtres en mode horizontal (si l'on est en mode vertical) ou en mode vertical (si l'on est en mode 
-			horizontal)
+			Bascule les fenêtres en mode horizontal (si l'on est en mode vertical) ou en mode vertical (si l'on est en mode horizontal)
 
 		- {MOD} + S :
 			Bascule les fenêtres en mode stack
