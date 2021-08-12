@@ -1099,12 +1099,32 @@ _SSH____________________________________________________________________________
 
 
 
+	>> CHEMINS
+
+		- /etc/ssh/ssh_config :
+			Fichier de configuration SSH
+
+
+
+
 	>> COMMANDES
 
 		- sudo apt-get install openssh-server :
 			Installation du paquet "openssh-server"
 
 		- ssh nomUtilisateur@86.172.120.28 :
+			Démarre une connection SSH avec le login "nomUtilisateur" vers l'appareil possèdant l'adresse ip "86.172.120.28". "nomUtilisateur" doit correspondre à un login déjà présent sur la machine hôte (le mot de passe est ensuite demandé). Pour connaître l'addresse locale d'une machine on peut utiliser sa commande "ifconfig" et pour que la connection s'établisse, l'hôte doit également avoir préalablement démarré un service SSH de son côté. "Ctrl + d" pour quitter tout processus SSH en cours
+
+		- ssh nomUtilisateur@86.172.120.28 -p 12451 :
+			Démarre une connection SSH avec le login "nomUtilisateur" vers l'appareil possèdant l'adresse ip "86.172.120.28" à travers le port "12451". Utile par exemple lorsqu'on essaie de se connecter à une machine située en dehors de son propre réseau (en utilisant une addresse ip publique et le numéro du port attribué par le routeur de l'hôte). Pour connaître l'addresse publique de sa machine, on peut utiliser un service comme "www.whatismyip.com". Le port par défaut utilisé par SSH est le port 22 (ATTENTION! Il ne s'agit pas du port utilisé par le routeur)
+
+		- ssh nomUtilisateur@localhost :
+			Démarre une connection SSH avec le login "nomUtilisateur" vers soi-même
+
+		- sudo /etc/init.d/ssh reload :
+			Permet de relancer SSH si jamais l'on a fait des modifications dans le fichier de configuration du programme
+
+
 
 
 	>> GESTION DU PROCESS
