@@ -66,6 +66,62 @@ _COUCHE 2: LIAISON DE DONNEES___________________________________________________
 
 
 
+
+Protocoles de communication: Telnet, SSH, HTTP (HyperText Transfer Protocol), FTP (File Transfer Protocol), IMAP (Internet Message Access Protocol)
+
+
+
+
+
+
+
+
+
+
+_CHIFFREMENT SSH_______________________________________________________________________________________________________________
+
+
+
+
+	>> Chiffrement Symétrique
+
+
+		Le chiffrement symétrique utilise une seule clé pour chiffrer et déchiffrer. Avec cette méthode, on utilise une clé (un mot de passe secret) pour chiffrer un message. Pour déchiffrer ensuite le message, il faut que le client et le serveur connaissent tous les deux la clé de chiffrement. Il faut donc que le client envoie d'abord au serveur la clé en clair pour que celui-ci puisse déchiffrer ses futurs messages.
+
+
+
+
+	>> Chiffrement Asymétrique
+
+
+		Le chiffrement asymétrique utilise une clé pour chiffrer (dite "publique"), et une autre pour déchiffrer (dite "privée"). Une clé publique peut être transmise en clair sur un réseau, ce n'est pas grave si un pirate l'intercepte. En revanche, une clé privée doit rester secrète. Avec ce type d'algorithme, on peut ainsi chiffrer tout message que l'on envoie grace à une clé publique mise à disposition par un destinataire. Mais personne d'autre que le destinataire ne peut déchiffrer le message car personne ne connait sa clé privée. Il éxiste des tonnes d'algorithmes de chiffrement. L'algorithme de chiffrement asymétrique le plus connu s'appelle "RSA".
+
+
+
+
+	SSH utilise les deux chiffrements: asymétrique et symétrique. On utilise d'abord le chiffrement asymétrique pour s'échanger une clé secrète de chiffrement symétrique. Ensuite, on utilise en continu cette clé de chiffrement symétrique pour chiffrer la suite des échanges.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Chaque ordinateur relié à l'internet est identifié par une adresse IP. Une adresse IP est une suite de quatre nombres séparés par des points. Par exemple: "86.172.120.28". Cette adresse est au format IPv4. À l'heure actuelle, c’est encore le type d'IP le plus utilisé, mais ces adresses sont appelées petit à petit à être remplacées par la norme IPv6. Bientôt, tout le monde aura donc une IP qui ressemblera plutôt à quelque chose comme ceci :fe80::209:62fa:fb80:29f2.
 
 On peut associer à chaque IP ce qu'on appelle un nom d'hôte (hostname). C'est un nom en toutes lettres plus facile à mémoriser et qui revient exactement au même que d'écrire l'adresse IP. Chaque serveur peut ainsi avoir un nom d'hôte plus facile à retenir.
+
+
+
+
+
+
